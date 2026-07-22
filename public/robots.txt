@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://local2pdf.com/sitemap.xml

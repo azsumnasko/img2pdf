@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://local2pdf.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://local2pdf.com/tools/image-to-pdf</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://local2pdf.com/tools/jpg-to-pdf</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://local2pdf.com/tools/png-to-pdf</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://local2pdf.com/tools/webp-to-pdf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://local2pdf.com/tools/heic-to-pdf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://local2pdf.com/tools/combine-images-to-pdf</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://local2pdf.com/tools/photos-to-pdf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://local2pdf.com/tools/screenshot-to-pdf</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://local2pdf.com/privacy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://local2pdf.com/terms</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+</urlset>

@@ -1,0 +1,34 @@
+{
+  "name": "localpdf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Privacy-first image-to-PDF converter that works entirely in your browser",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "heic-decode": "^2.1.0",
+    "next": "^16.2.11",
+    "pdf-lib": "^1.17.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@types/node": "^24.3.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "axe-core": "^4.12.1",
+    "jsdom": "^26.1.0",
+    "playwright": "^1.61.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  }
+}
