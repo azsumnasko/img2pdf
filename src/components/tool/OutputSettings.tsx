@@ -110,6 +110,9 @@ export function OutputSettings({
           <select id="margins" value={marginPreset} onChange={(e) => onMarginChange(e.target.value as MarginPreset)}>
             {MARGIN_OPTIONS.map((m) => <option key={m.value} value={m.value}>{m.label}</option>)}
           </select></div>
+        <div className="setting-group"><label htmlFor="filename">Filename</label>
+          <input id="filename" type="text" value={filename} onChange={(e) => onFilenameChange(e.target.value)} maxLength={80} />
+        </div>
         <div className="setting-group"><label htmlFor="quality">Quality</label>
           <select id="quality" value={quality} onChange={(e) => onQualityChange(e.target.value as QualityPreset)}>
             {QUALITY_OPTIONS.map((q) => <option key={q.value} value={q.value}>{q.label}</option>)}

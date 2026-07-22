@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convert Images to PDF — Private & Free | No Upload",
+  title: "PDF to JPG Locally — No Upload, High Quality | LocalPDF",
   description:
-    "Convert JPG, PNG, WebP, and HEIC to PDF free. Combine up to 25 images into one PDF. No signup, no watermark, no upload. Your files stay on your device.",
-  alternates: { canonical: "https://local2pdf.com/tools/image-to-pdf" },
+    "Convert PDF pages to high-quality JPG images. Choose resolution (up to 300 DPI) and quality. All processing happens in your browser — no upload, no signup, no watermark.",
+  alternates: { canonical: "https://local2pdf.com/tools/pdf-to-jpg" },
   openGraph: {
-    title: "Convert Images to PDF — Private & Free | No Upload",
+    title: "PDF to JPG Locally — No Upload, High Quality | LocalPDF",
     description:
-      "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 pages per conversion.",
-    url: "https://local2pdf.com/tools/image-to-pdf",
+      "Render PDF pages as JPG images privately. Adjust DPI and quality. No upload, no signup, no watermark.",
+    url: "https://local2pdf.com/tools/pdf-to-jpg",
     type: "website",
   },
 };
 
-export default function ImageToPdfLayout({ children }: { children: React.ReactNode }) {
+export default function PdfToJpgLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
@@ -24,9 +24,9 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "LocalPDF — Image to PDF Converter",
+              name: "LocalPDF — PDF to JPG Converter",
               description:
-                "Convert JPG, PNG, WebP, and HEIC images to PDF privately in your browser. No upload, no signup, no watermark.",
+                "Convert PDF pages to JPG images locally in your browser. Choose DPI and quality. No upload, no signup, no watermark.",
               applicationCategory: "UtilitiesApplication",
               operatingSystem: "All",
               offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -38,23 +38,23 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Are my images uploaded to LocalPDF servers?",
+                  name: "Are my PDF files uploaded to LocalPDF servers?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "No. All image processing happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.",
+                    text: "No. All PDF rendering and image conversion happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Which image formats can I convert to PDF?",
+                  name: "What DPI should I choose for PDF to JPG conversion?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "LocalPDF supports JPEG, PNG, WebP, and HEIC images. You can convert up to 25 images at once into a single PDF.",
+                    text: "150 DPI is a good balance of quality and file size for most uses. Use 300 DPI for print-quality output, 200 DPI for presentations, and 96 DPI for quick previews or web use.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is LocalPDF free?",
+                  name: "Is PDF to JPG conversion free?",
                   acceptedAnswer: {
                     "@type": "Answer",
                     text: "Yes. LocalPDF is completely free. There is no signup, no watermark, and unlimited conversions.",
@@ -62,10 +62,10 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
                 },
                 {
                   "@type": "Question",
-                  name: "Can I convert images to PDF on my phone?",
+                  name: "Can I convert password-protected PDFs to JPG?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. LocalPDF works on mobile browsers including iPhone Safari and Android Chrome.",
+                    text: "Password-protected PDFs cannot be processed. You must unlock or remove the password before using this tool.",
                   },
                 },
               ],
@@ -76,7 +76,7 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
-                { "@type": "ListItem", position: 3, name: "Image to PDF", item: "https://local2pdf.com/tools/image-to-pdf" },
+                { "@type": "ListItem", position: 3, name: "PDF to JPG", item: "https://local2pdf.com/tools/pdf-to-jpg" },
               ],
             },
           ]),

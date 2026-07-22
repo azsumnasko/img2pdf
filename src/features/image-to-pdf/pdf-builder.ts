@@ -72,7 +72,8 @@ async function decodeImage(
     const canvas = useOffscreen ? new OffscreenCanvas(cw, ch) : document.createElement("canvas");
     canvas.width = cw;
     canvas.height = ch;
-    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D;
+    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null;
+    if (!ctx) return { canvas, manualRotation: rotationDegrees };
 
     applyExifOrientation(ctx, exifOrientation, nw, nh);
     ctx.drawImage(img!, 0, 0, nw, nh);
@@ -93,7 +94,8 @@ function resizeCanvas(
   const canvas = useOffscreen ? new OffscreenCanvas(outW, outH) : document.createElement("canvas");
   canvas.width = outW;
   canvas.height = outH;
-  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D;
+  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null;
+  if (!ctx) return source;
   ctx.fillStyle = background;
   ctx.fillRect(0, 0, outW, outH);
   ctx.drawImage(source as any, 0, 0, outW, outH);
@@ -116,7 +118,8 @@ function applyManualRotation(
   const canvas = useOffscreen ? new OffscreenCanvas(cw, ch) : document.createElement("canvas");
   canvas.width = cw;
   canvas.height = ch;
-  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D;
+  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D | null;
+  if (!ctx) return source;
 
   ctx.translate(cw / 2, ch / 2);
   ctx.rotate((rotation * Math.PI) / 180);
@@ -139,7 +142,7 @@ function canvasToBytes(
     } else {
       canvas.toBlob(
         (blob) =>
-          blob ? blob.arrayBuffer().then((buf) => resolve(new Uint8Array(buf))) : reject(new Error("encode failed")),
+          blob ? blob.arrayBuffer().then((buf) => resolve(new Uint8Array(buf))).catch(reject) : reject(new Error("encode failed")),
         mime,
         quality
       );

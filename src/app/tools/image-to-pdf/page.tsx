@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useProject } from "@/lib/useProject";
 import { revokeThumbnail } from "@/features/image-to-pdf/image-processor";
 import { FileDropzone } from "@/components/tool/FileDropzone";
@@ -66,13 +66,18 @@ export default function ImageToPdfPage() {
 
   const warnings = project.state.phase === "editing" && project.state.validationWarnings?.length ? project.state.validationWarnings : null;
 
+  const pagesRef = useRef(project.pages);
+  pagesRef.current = project.pages;
+  const stateRef = useRef(project.state);
+  stateRef.current = project.state;
+
   useEffect(() => {
     return () => {
-      for (const page of project.pages) {
+      for (const page of pagesRef.current) {
         revokeThumbnail(page.thumbnailUrl);
       }
-      if (project.state.phase === "success") {
-        URL.revokeObjectURL(project.state.result.objectUrl);
+      if (stateRef.current.phase === "success" && "result" in stateRef.current) {
+        URL.revokeObjectURL(stateRef.current.result.objectUrl);
       }
     };
   }, []);

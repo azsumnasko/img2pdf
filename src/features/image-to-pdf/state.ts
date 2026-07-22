@@ -188,8 +188,8 @@ export function projectReducer(project: Project, action: ProjectAction): Project
     case "SET_ACTIVE_PAGE":
       return {
         ...project,
-        activePageIndex: action.pageId
-          ? Math.max(0, project.pages.findIndex((p) => p.id === action.pageId))
+        activePageIndex: action.pageId !== null
+          ? (() => { const idx = project.pages.findIndex((p) => p.id === action.pageId); return idx >= 0 ? idx : project.activePageIndex; })()
           : null,
       };
 
@@ -252,6 +252,7 @@ export function projectReducer(project: Project, action: ProjectAction): Project
 
     case "RESET": {
       const defaults = createDefaultSettings();
+      const wasCustom = project.settings.pageSize === "custom";
       return {
         ...createEmptyProject(),
         settings: {
@@ -259,8 +260,8 @@ export function projectReducer(project: Project, action: ProjectAction): Project
           pageSize: (project.settings.pageSize === "image" || project.settings.pageSize === "custom")
             ? defaults.pageSize
             : project.settings.pageSize,
-          customWidthMm: project.settings.customWidthMm,
-          customHeightMm: project.settings.customHeightMm,
+          customWidthMm: wasCustom ? project.settings.customWidthMm : undefined,
+          customHeightMm: wasCustom ? project.settings.customHeightMm : undefined,
           orientation: project.settings.orientation,
           fitMode: project.settings.fitMode,
           marginsMm: project.settings.marginsMm,

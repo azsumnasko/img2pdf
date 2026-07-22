@@ -24,9 +24,14 @@ const MAX_PAGES = DEFAULT_CONFIG.maxPagesPerJob;
 export function useProject() {
   const [project, dispatch] = useReducer(projectReducer, null, createEmptyProject);
   const abortRef = useRef<AbortController | null>(null);
+  const genRef = useRef(0);
 
   const addFiles = useCallback(async (files: FileList | File[]) => {
+    if (convertingRef.current) return;
+    convertingRef.current = true;
+    const gen = ++genRef.current;
     dispatch({ type: "SET_VALIDATING" });
+    try {
 
     const fileArray = Array.from(files);
     const validPages: ProjectPage[] = [];
@@ -65,15 +70,24 @@ export function useProject() {
       }
     }
 
+    if (genRef.current !== gen) { convertingRef.current = false; return; }
+
     if (validPages.length === 0 && errors.length > 0) {
       dispatch({ type: "SET_ERROR", errors, recoverable: false });
       return;
     }
 
     dispatch({ type: "SET_EDITING", pages: validPages, validationErrors: errors });
+    } finally {
+      convertingRef.current = false;
+    }
   }, []);
 
   const addMoreFiles = useCallback(async (files: FileList | File[]) => {
+    if (convertingRef.current) return;
+    convertingRef.current = true;
+    const gen = ++genRef.current;
+    try {
     const fileArray = Array.from(files);
     const validPages: ProjectPage[] = [];
     const errors: ValidationError[] = [];
@@ -99,10 +113,15 @@ export function useProject() {
       }
     }
 
+    if (genRef.current !== gen) { convertingRef.current = false; return; }
+
     if (validPages.length > 0) {
       dispatch({ type: "ADD_PAGES", pages: validPages, validationWarnings: errors.length > 0 ? errors : undefined });
     } else if (errors.length > 0) {
       dispatch({ type: "ADD_PAGES", pages: [], validationWarnings: errors });
+    }
+    } finally {
+      convertingRef.current = false;
     }
   }, [project.pages]);
 
@@ -139,7 +158,7 @@ export function useProject() {
   const convertingRef = useRef(false);
 
   const startConversion = useCallback(async () => {
-    if (convertingRef.current) return;
+    if (convertingRef.current || project.pages.length === 0) return;
     convertingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
@@ -155,7 +174,7 @@ export function useProject() {
         }
       );
 
-      if (controller.signal.aborted) { convertingRef.current = false; return; }
+      if (controller.signal.aborted) { convertingRef.current = false; abortRef.current = null; return; }
 
       const blob = new Blob([pdfBytes as unknown as BlobPart], { type: "application/pdf" });
       const objectUrl = URL.createObjectURL(blob);
@@ -175,12 +194,19 @@ export function useProject() {
   }, [project.pages, project.settings]);
 
   const cancelConversion = useCallback(() => {
-    abortRef.current?.abort();
+    if (!abortRef.current) return;
+    abortRef.current.abort();
+    abortRef.current = null;
+    convertingRef.current = false;
     dispatch({ type: "CANCEL_CONVERSION" });
+    dispatch({ type: "SET_ERROR", errors: [{ fileIndex: -1, fileName: "", errorCode: "CANCELLED", message: "Conversion cancelled." }], recoverable: false });
   }, []);
 
   const reset = useCallback(() => {
     abortRef.current?.abort();
+    abortRef.current = null;
+    convertingRef.current = false;
+    genRef.current++;
     for (const page of project.pages) revokeThumbnail(page.thumbnailUrl);
     if (project.state.phase === "success") URL.revokeObjectURL(project.state.result.objectUrl);
     dispatch({ type: "RESET" });

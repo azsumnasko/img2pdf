@@ -32,6 +32,7 @@ describe("projectReducer", () => {
       rotationDegrees: 0 as const,
       thumbnailUrl: "blob:test",
       status: "ready" as const,
+      selected: false,
     };
     const withPage = projectReducer(project, {
       type: "SET_EDITING",
@@ -55,6 +56,7 @@ describe("projectReducer", () => {
       rotationDegrees: 0 as const,
       thumbnailUrl: "blob:test",
       status: "ready" as const,
+      selected: false,
     };
     const withPage = projectReducer(project, {
       type: "SET_EDITING",
