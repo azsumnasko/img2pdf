@@ -47,10 +47,9 @@ export default function ExtractImagesFromPdfPage() {
     <ErrorBoundary>
     <main className="tool-page">
       <div className="tool-hero">
-        <h1 className="tool-title">Extract Images from PDF Locally</h1>
+        <h1 className="tool-title">Render PDF Pages as Images (Beta)</h1>
         <p className="tool-subtitle">
-          Extract images from PDF pages at high resolution. No upload, no signup — your file stays on your device.
-          <br /><span className="beta-badge" style={{ display: "inline-block", marginTop: "0.5rem", padding: "0.125rem 0.5rem", fontSize: "0.75rem", background: "var(--color-accent)", color: "#fff", borderRadius: "999px", fontWeight: 600 }}>Beta</span>
+          Render PDF pages to high-resolution PNGs right in your browser. No upload, no signup — your file stays on your device.
         </p>
         <div className="tool-hero-badges">
           <PrivacyBadge />
@@ -82,8 +81,8 @@ export default function ExtractImagesFromPdfPage() {
                 </div>
               )}
 
-              <div className="toast toast--info" style={{ marginBottom: "1rem", fontSize: "0.8125rem", color: "var(--color-text-secondary)" }}>
-                This tool renders PDF pages as high-resolution PNGs. True embedded image extraction (preserving original image data) is not yet supported — images are extracted via page rendering.
+              <div className="toast toast--warning" role="alert" style={{ marginBottom: "1rem", fontSize: "0.8125rem" }}>
+                This tool renders PDF pages as images. True embedded image extraction is coming soon. For single pages, use PDF to PNG instead.
               </div>
 
               <PdfPageGrid

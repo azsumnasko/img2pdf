@@ -175,14 +175,15 @@ export function useOrganizer() {
     dispatch({ type: "SET_PROCESSING" });
 
     try {
-      const pagesToRemove = new Set<number>();
-      for (const p of state.pages) {
-        if (p.selected && p.sourceDocIndex === 0) pagesToRemove.add(p.sourcePageNumber - 1);
-      }
-      if (pagesToRemove.size === 0) {
-        dispatch({ type: "SET_ERROR", message: "No pages selected for deletion.", recoverable: true });
+      const selectedPages = state.pages.filter(p => p.selected && p.sourceDocIndex === 0);
+      if (selectedPages.length === 0 || selectedPages.length >= state.pages.filter(p => p.sourceDocIndex === 0).length) {
+        dispatch({ type: "SET_ERROR", message: "A PDF must contain at least one page. Deselect at least one page to keep.", recoverable: true });
         processingRef.current = false;
         return;
+      }
+      const pagesToRemove = new Set<number>();
+      for (const p of selectedPages) {
+        pagesToRemove.add(p.sourcePageNumber - 1);
       }
       const pdfBytes = await deletePdfPages(state.documents[0]!, pagesToRemove, () => {
         dispatch({ type: "SET_PROGRESS", progress: { current: 1, total: 1, label: "Removing pages..." } });

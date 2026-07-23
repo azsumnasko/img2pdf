@@ -8,9 +8,12 @@ export function Footer() {
       <div className="app-footer-inner">
         <div className="footer-brand">
           <span className="footer-logo">Local2PDF</span>
-          <p className="footer-tagline">Privacy-first image to PDF converter</p>
+          <p className="footer-tagline">Privacy-first PDF tools — all processing on your device</p>
         </div>
         <nav className="footer-links" aria-label="Footer navigation">
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/security">Security</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Use</Link>
           <a href="#" onClick={(e) => { e.preventDefault(); }} className="consent-settings-link">Privacy choices</a>

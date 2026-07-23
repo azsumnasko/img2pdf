@@ -186,7 +186,7 @@ export default function SplitPdfPage() {
       <section className="how-it-works">
         <h2>How to split PDF files</h2>
         <ol className="steps">
-          <li className="step"><span className="step-number">1</span><div><h3>Upload your PDF</h3><p>Select the PDF you want to split — it stays in your browser.</p></div></li>
+          <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Select the PDF you want to split — it stays in your browser.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Choose split mode</h3><p>Split every page, by custom ranges, or every N pages.</p></div></li>
           <li className="step"><span className="step-number">3</span><div><h3>Download your files</h3><p>Download individual PDFs or a ZIP archive with all split pages.</p></div></li>
         </ol>

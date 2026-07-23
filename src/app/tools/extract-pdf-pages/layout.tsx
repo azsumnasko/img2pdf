@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Extract PDF Pages Locally — Private & Free | Local2PDF",
+    title: "Extract PDF Pages Locally — Private & Free",
   description:
     "Extract specific pages from a PDF into a new file. No upload, no signup, no watermark. Select pages and extract in your browser.",
   alternates: { canonical: "https://local2pdf.com/tools/extract-pdf-pages" },
   openGraph: {
-    title: "Extract PDF Pages Locally — Private & Free | Local2PDF",
+  title: "Extract PDF Pages Locally — Private & Free",
     description:
       "Extract pages from any PDF. Combine into one file or get separate pages. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/extract-pdf-pages",

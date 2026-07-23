@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Photos to PDF Locally — Private & Free | Local2PDF",
+    title: "Photos to PDF Locally — Private & Free",
   description:
     "Convert photos to PDF locally in your browser. Ideal for photo albums and photo prints. Adjust page size, orientation, and margins. No upload, no signup.",
   alternates: { canonical: "https://local2pdf.com/tools/photos-to-pdf" },
   openGraph: {
-    title: "Photos to PDF Locally — Private & Free | Local2PDF",
+  title: "Photos to PDF Locally — Private & Free",
     description:
       "Turn photos into PDF albums privately. Customize layout and page size. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/photos-to-pdf",

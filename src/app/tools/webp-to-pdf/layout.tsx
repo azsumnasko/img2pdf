@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WebP to PDF Locally — Private & Free | Local2PDF",
+    title: "WebP to PDF Locally — Private & Free",
   description:
     "Convert WebP images to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup, no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/webp-to-pdf" },
   openGraph: {
-    title: "WebP to PDF Locally — Private & Free | Local2PDF",
+  title: "WebP to PDF Locally — Private & Free",
     description:
       "Convert WebP images to PDF privately. Customize layout and page size. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/webp-to-pdf",

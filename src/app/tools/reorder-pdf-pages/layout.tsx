@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Reorder PDF Pages Locally — Drag, Sort & Save | Local2PDF",
+    title: "Reorder PDF Pages Locally — Drag, Sort & Save",
   description:
     "Rearrange PDF pages online in your browser. Move pages left or right to reorder. No upload, no signup, no watermark — your file stays private.",
   alternates: { canonical: "https://local2pdf.com/tools/reorder-pdf-pages" },
   openGraph: {
-    title: "Reorder PDF Pages Locally — Drag, Sort & Save | Local2PDF",
+  title: "Reorder PDF Pages Locally — Drag, Sort & Save",
     description:
       "Rearrange pages in any PDF. Free, private, and runs entirely in your browser. No file uploads.",
     url: "https://local2pdf.com/tools/reorder-pdf-pages",

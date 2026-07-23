@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Add Page Numbers to PDF Locally — Free & Private | Local2PDF",
+    title: "Add Page Numbers to PDF Locally — Free & Private",
   description:
     "Add page numbers to any PDF with customizable position, alignment, format, and color. No upload, no signup — all in your browser.",
   alternates: { canonical: "https://local2pdf.com/tools/add-page-numbers-to-pdf" },
   openGraph: {
-    title: "Add Page Numbers to PDF Locally — Free & Private | Local2PDF",
+  title: "Add Page Numbers to PDF Locally — Free & Private",
     description:
       "Insert page numbers into your PDF with full control over position, style, and format. Private, browser-based processing.",
     url: "https://local2pdf.com/tools/add-page-numbers-to-pdf",

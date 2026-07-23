@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resize PDF Pages Locally — Change Page Size Free | Local2PDF",
+    title: "Resize PDF Pages Locally — Change Page Size Free",
   description:
     "Resize PDF pages to standard formats (A4, A3, Letter, Legal) or custom dimensions. Scale to fit or center without scaling — all in your browser.",
   alternates: { canonical: "https://local2pdf.com/tools/resize-pdf-pages" },
   openGraph: {
-    title: "Resize PDF Pages Locally — Change Page Size Free | Local2PDF",
+  title: "Resize PDF Pages Locally — Change Page Size Free",
     description:
       "Resize PDF pages to A4, Letter, or custom sizes. Scale to fit or center content. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/resize-pdf-pages",

@@ -83,7 +83,7 @@ export default function DeletePdfPagesPage() {
 
               {allSelected && (
                 <div className="toast toast--warning" role="alert" style={{ marginTop: "var(--space-4)" }}>
-                  <span>You have selected all pages. Deleting every page will produce an empty PDF.</span>
+                  <span>You cannot delete all pages. A PDF must contain at least one page.</span>
                 </div>
               )}
               {selectedCount > 0 && !allSelected && (
@@ -173,7 +173,7 @@ export default function DeletePdfPagesPage() {
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
           <details className="faq-item"><summary>Can I undo a page deletion?</summary><p>Your original file is never modified. If you change your mind, click Start Over and select the file again.</p></details>
-          <details className="faq-item"><summary>What happens if I delete all pages?</summary><p>You will see a warning. You can proceed but the result will be an empty PDF.</p></details>
+          <details className="faq-item"><summary>What happens if I delete all pages?</summary><p>Deleting all pages is blocked — a PDF must contain at least one page. Deselect at least one page before proceeding.</p></details>
         </div>
       </section>
     </main>

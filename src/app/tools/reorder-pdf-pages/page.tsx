@@ -35,7 +35,7 @@ export default function ReorderPdfPagesPage() {
       <div className="tool-hero">
         <h1 className="tool-title">Reorder PDF Pages Locally</h1>
         <p className="tool-subtitle">
-          Rearrange the pages in your PDF by moving them left or right. No upload, no signup — your file stays private.
+          Drag pages into the desired order, or use the arrow buttons to move pages left or right. No upload, no signup — your file stays private.
         </p>
         <div className="tool-hero-badges">
           <PrivacyBadge />
@@ -79,7 +79,7 @@ export default function ReorderPdfPagesPage() {
               />
             </div>
             <div className="editor-settings">
-              <p style={{ fontSize: "0.875rem", color: "var(--color-text-secondary)" }}>Use the <strong>&larr; &rarr;</strong> buttons below each page to reorder, or select multiple pages and rotate in batch.</p>
+              <p style={{ fontSize: "0.875rem", color: "var(--color-text-secondary)" }}>Drag pages into the desired order, or use the <strong>&larr; &rarr;</strong> buttons below each page to reorder. You can also select multiple pages and rotate in batch.</p>
               <div className="setting-group">
                 <label htmlFor="reorder-filename">Output filename</label>
                 <input id="reorder-filename" type="text" value={filename} onChange={(e) => setFilename(e.target.value)} />
@@ -151,7 +151,7 @@ export default function ReorderPdfPagesPage() {
         <h2>How to reorder PDF pages</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Click or drag and drop the PDF whose pages you want to reorder.</p></div></li>
-          <li className="step"><span className="step-number">2</span><div><h3>Rearrange pages</h3><p>Use the arrow buttons to move pages left or right to your desired order.</p></div></li>
+          <li className="step"><span className="step-number">2</span><div><h3>Rearrange pages</h3><p>Drag pages into the desired order, or use the arrow buttons to move pages left or right.</p></div></li>
           <li className="step"><span className="step-number">3</span><div><h3>Save your PDF</h3><p>Download the reordered PDF — all done privately in your browser.</p></div></li>
         </ol>
       </section>

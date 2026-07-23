@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to PNG Locally — No Upload, Lossless Quality | Local2PDF",
+    title: "PDF to PNG Locally — No Upload, Lossless Quality",
   description:
     "Convert PDF pages to lossless PNG images. Perfect for diagrams, text, and screenshots. All processing happens in your browser — no upload, no signup, no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-png" },
   openGraph: {
-    title: "PDF to PNG Locally — No Upload, Lossless Quality | Local2PDF",
+  title: "PDF to PNG Locally — No Upload, Lossless Quality",
     description:
       "Render PDF pages as PNG images privately. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-png",

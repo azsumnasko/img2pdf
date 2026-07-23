@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Split PDF Locally — Separate Pages Without Upload | Local2PDF",
+    title: "Split PDF Locally — Separate Pages Without Upload",
   description:
     "Split a PDF into individual pages or custom ranges in your browser. No upload, no signup, no watermark. Extract pages fast and free.",
   alternates: { canonical: "https://local2pdf.com/tools/split-pdf" },
   openGraph: {
-    title: "Split PDF Locally — Separate Pages Without Upload | Local2PDF",
+  title: "Split PDF Locally — Separate Pages Without Upload",
     description:
       "Split a PDF into separate files. Choose every page, custom ranges, or every N pages. All in your browser.",
     url: "https://local2pdf.com/tools/split-pdf",

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "N-Up PDF Locally — Multiple Pages Per Sheet | Local2PDF",
+    title: "N-Up PDF Locally — Multiple Pages Per Sheet",
   description:
     "Arrange multiple PDF pages on a single sheet. Create 2-up, 4-up, or 8-up layouts with adjustable padding. No upload, no signup.",
   alternates: { canonical: "https://local2pdf.com/tools/n-up-pdf" },
   openGraph: {
-    title: "N-Up PDF Locally — Multiple Pages Per Sheet | Local2PDF",
+  title: "N-Up PDF Locally — Multiple Pages Per Sheet",
     description:
       "Combine multiple PDF pages onto one sheet with N-up layouts. Choose 2-up, 4-up, 6-up, 8-up, or 9-up. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/n-up-pdf",

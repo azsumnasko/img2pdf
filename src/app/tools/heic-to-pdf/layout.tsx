@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HEIC to PDF Locally — Private & Free | Local2PDF",
+    title: "HEIC to PDF Locally — Private & Free",
   description:
     "Convert HEIC images (iPhone/iPad photos) to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup.",
   alternates: { canonical: "https://local2pdf.com/tools/heic-to-pdf" },
   openGraph: {
-    title: "HEIC to PDF Locally — Private & Free | Local2PDF",
+  title: "HEIC to PDF Locally — Private & Free",
     description:
       "Convert HEIC iPhone photos to PDF privately. No upload, no signup, no watermark — all processing happens locally.",
     url: "https://local2pdf.com/tools/heic-to-pdf",

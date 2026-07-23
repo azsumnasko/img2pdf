@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to Text Locally — Extract Text Without Upload | Local2PDF",
+    title: "PDF to Text Locally — Extract Text Without Upload",
   description:
     "Extract text from PDF files directly in your browser. Fast extraction from text-based PDFs. No upload, no signup, no watermark — completely private.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-text" },
   openGraph: {
-    title: "PDF to Text Locally — Extract Text Without Upload | Local2PDF",
+  title: "PDF to Text Locally — Extract Text Without Upload",
     description:
       "Extract text from PDFs privately in your browser. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-text",

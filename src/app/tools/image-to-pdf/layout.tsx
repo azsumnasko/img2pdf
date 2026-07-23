@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convert Images to PDF — Private & Free | No Upload",
+    title: "Convert Images to PDF — Private & Free",
   description:
     "Convert JPG, PNG, WebP, and HEIC to PDF free. Combine up to 25 images into one PDF. No signup, no watermark, no upload. Your files stay on your device.",
   alternates: { canonical: "https://local2pdf.com/tools/image-to-pdf" },
   openGraph: {
-    title: "Convert Images to PDF — Private & Free | No Upload",
+  title: "Convert Images to PDF — Private & Free",
     description:
       "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 pages per conversion.",
     url: "https://local2pdf.com/tools/image-to-pdf",

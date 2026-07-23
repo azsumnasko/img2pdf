@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Screenshot to PDF Locally — Private & Free | Local2PDF",
+    title: "Screenshot to PDF Locally — Private & Free",
   description:
-    "Convert screenshots to PDF locally in your browser. Paste from clipboard or upload screenshot files. Adjust page size and orientation. No upload, no signup.",
+    "Convert screenshots to PDF locally in your browser. Paste from clipboard or select screenshot files. Adjust page size and orientation. No upload, no signup.",
   alternates: { canonical: "https://local2pdf.com/tools/screenshot-to-pdf" },
   openGraph: {
-    title: "Screenshot to PDF Locally — Private & Free | Local2PDF",
+  title: "Screenshot to PDF Locally — Private & Free",
     description:
-      "Convert screenshots to PDF privately. Paste from clipboard or upload files. No upload, no signup, no watermark.",
+      "Convert screenshots to PDF privately. Paste from clipboard or select files. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/screenshot-to-pdf",
     type: "website",
   },
@@ -26,7 +26,7 @@ export default function ScreenshotToPdfLayout({ children }: { children: React.Re
               "@type": "SoftwareApplication",
               name: "Local2PDF — Screenshot to PDF Converter",
               description:
-                "Convert screenshots to PDF locally in your browser. Paste from clipboard or upload screenshot files. No upload, no signup, no watermark.",
+                "Convert screenshots to PDF locally in your browser. Paste from clipboard or select screenshot files. No upload, no signup, no watermark.",
               applicationCategory: "UtilitiesApplication",
               operatingSystem: "All",
               offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -65,7 +65,7 @@ export default function ScreenshotToPdfLayout({ children }: { children: React.Re
                   name: "Can I combine multiple screenshots into one PDF?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. You can upload multiple screenshots or paste them sequentially to combine them into a single multi-page PDF document.",
+                    text: "Yes. You can select multiple screenshots or paste them sequentially to combine them into a single multi-page PDF document.",
                   },
                 },
               ],

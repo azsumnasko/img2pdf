@@ -47,7 +47,7 @@ export default function CompressPdfPage() {
       <div className="tool-hero">
         <h1 className="tool-title">Compress PDF Locally</h1>
         <p className="tool-subtitle">
-          Reduce your PDF file size without uploading — all compression happens in your browser.
+          Safe optimization reduces metadata overhead. Image-heavy mode re-renders pages which may change quality. Results vary by document.
           <br /><span className="beta-badge" style={{ display: "inline-block", marginTop: "0.5rem", padding: "0.125rem 0.5rem", fontSize: "0.75rem", background: "var(--color-accent)", color: "#fff", borderRadius: "999px", fontWeight: 600 }}>Beta</span>
         </p>
         <div className="tool-hero-badges">
@@ -93,7 +93,7 @@ export default function CompressPdfPage() {
               </div>
 
               <p style={{ fontSize: "0.8125rem", color: "var(--color-text-secondary)", marginTop: "var(--space-4)" }}>
-                Compression uses smart algorithms to reduce file size while keeping quality. Your file never leaves your device.
+                Compression removes redundant metadata and optimizes internal structures. Your file never leaves your device.
               </p>
             </div>
             <div className="editor-settings">
@@ -192,7 +192,7 @@ export default function CompressPdfPage() {
         <h2>How to compress a PDF</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Choose the PDF file you want to compress — it stays in your browser.</p></div></li>
-          <li className="step"><span className="step-number">2</span><div><h3>Compress</h3><p>Click "Compress PDF" and the tool reduces file size using smart optimization.</p></div></li>
+          <li className="step"><span className="step-number">2</span><div><h3>Compress</h3><p>Click "Compress PDF" and the tool optimizes internal structures to reduce file size.</p></div></li>
           <li className="step"><span className="step-number">3</span><div><h3>Compare &amp; download</h3><p>See the size difference and download the compressed PDF — all done locally.</p></div></li>
         </ol>
       </section>
@@ -201,7 +201,7 @@ export default function CompressPdfPage() {
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
           <details className="faq-item"><summary>How much can a PDF be compressed?</summary><p>Results vary by content. PDFs with large images often see significant size reduction, while already well-compressed files may show little change. This tool is in beta — results will improve over time.</p></details>
-          <details className="faq-item"><summary>Will compression reduce quality?</summary><p>The safe compression mode preserves visual quality. Some optimization techniques like re-sampling and stream compression are applied intelligently.</p></details>
+          <details className="faq-item"><summary>Will compression reduce quality?</summary><p>Safe compression may produce only small savings. Image-heavy mode re-renders pages at lower quality which always changes the visual output.</p></details>
         </div>
       </section>
     </main>

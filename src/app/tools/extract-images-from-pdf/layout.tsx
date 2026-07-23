@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Extract Images from PDF Locally — No Upload | Local2PDF",
+  title: "Render PDF Pages as Images (Beta)",
   description:
-    "Extract images from PDF pages using high-resolution rendering. No upload, no signup — all processing stays on your device.",
+    "Render PDF pages to high-resolution PNGs right in your browser. No upload, no signup — all processing stays on your device.",
+  robots: { index: false },
   alternates: { canonical: "https://local2pdf.com/tools/extract-images-from-pdf" },
   openGraph: {
-    title: "Extract Images from PDF Locally — No Upload | Local2PDF",
+    title: "Render PDF Pages as Images (Beta)",
     description:
-      "Extract images from any PDF page at high resolution. Free, private, and runs entirely in your browser.",
+      "Render any PDF page to a high-resolution PNG. Free, private, and runs entirely in your browser.",
     url: "https://local2pdf.com/tools/extract-images-from-pdf",
     type: "website",
   },

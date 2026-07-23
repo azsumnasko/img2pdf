@@ -7,6 +7,7 @@
 - [About](https://local2pdf.com/about): Operator, product identity and official facts.
 - [Security](https://local2pdf.com/security): Local processing architecture and limitations.
 - [Privacy](https://local2pdf.com/privacy): Data handling, analytics and advertising.
+- [Contact](https://local2pdf.com/contact): Get support and help.
 - [Terms](https://local2pdf.com/terms): Terms of use.
 - [All PDF Tools](https://local2pdf.com/pdf-tools): Complete tool directory.
 

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Merge PDF Locally — Private, No Upload | Local2PDF",
+    title: "Merge PDF Locally — Private, No Upload",
   description:
     "Combine multiple PDF files into one document privately in your browser. No upload, no signup, no watermark. Rearrange pages before merging.",
   alternates: { canonical: "https://local2pdf.com/tools/merge-pdf" },
   openGraph: {
-    title: "Merge PDF Locally — Private, No Upload | Local2PDF",
+  title: "Merge PDF Locally — Private, No Upload",
     description:
       "Combine multiple PDFs into one file. All processing happens in your browser — your files stay on your device.",
     url: "https://local2pdf.com/tools/merge-pdf",

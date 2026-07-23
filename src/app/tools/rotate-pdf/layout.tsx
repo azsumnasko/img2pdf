@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rotate PDF Pages Locally — Private & Free | Local2PDF",
+    title: "Rotate PDF Pages Locally — Private & Free",
   description:
     "Rotate PDF pages left, right, or 180° in your browser. No upload, no signup, no watermark. Fix upside-down or sideways pages fast.",
   alternates: { canonical: "https://local2pdf.com/tools/rotate-pdf" },
   openGraph: {
-    title: "Rotate PDF Pages Locally — Private & Free | Local2PDF",
+  title: "Rotate PDF Pages Locally — Private & Free",
     description:
       "Rotate individual or all pages in a PDF. Free, private, and runs entirely in your browser.",
     url: "https://local2pdf.com/tools/rotate-pdf",

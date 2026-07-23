@@ -19,6 +19,7 @@ export function AppHeader() {
           <Link href="/tools/merge-pdf">Merge PDF</Link>
           <Link href="/tools/split-pdf">Split PDF</Link>
           <Link href="/tools/pdf-to-jpg">PDF to JPG</Link>
+          <Link href="/about">About</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/terms">Terms</Link>
         </nav>

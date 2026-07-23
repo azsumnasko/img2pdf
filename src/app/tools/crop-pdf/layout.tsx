@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Crop PDF Pages Locally — Trim Margins Free | Local2PDF",
+    title: "Crop PDF Pages Locally — Trim Margins Free",
   description:
     "Crop or trim margins from PDF pages. Remove whitespace and adjust page boundaries — all in your browser.",
   alternates: { canonical: "https://local2pdf.com/tools/crop-pdf" },
   openGraph: {
-    title: "Crop PDF Pages Locally — Trim Margins Free | Local2PDF",
+  title: "Crop PDF Pages Locally — Trim Margins Free",
     description:
       "Crop and trim PDF page margins. Resize pages by removing unwanted whitespace. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/crop-pdf",

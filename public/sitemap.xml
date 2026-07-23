@@ -36,6 +36,9 @@
   <url><loc>https://local2pdf.com/tools/compress-pdf</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
 
   <!-- Info pages -->
+  <url><loc>https://local2pdf.com/about</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://local2pdf.com/contact</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://local2pdf.com/security</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://local2pdf.com/privacy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://local2pdf.com/terms</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 

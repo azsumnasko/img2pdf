@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Delete PDF Pages Locally — Remove Pages Free | Local2PDF",
+    title: "Delete PDF Pages Locally — Remove Pages Free",
   description:
     "Remove unwanted pages from a PDF directly in your browser. No upload, no signup, no watermark. Select and delete pages fast.",
   alternates: { canonical: "https://local2pdf.com/tools/delete-pdf-pages" },
   openGraph: {
-    title: "Delete PDF Pages Locally — Remove Pages Free | Local2PDF",
+  title: "Delete PDF Pages Locally — Remove Pages Free",
     description:
       "Remove pages from any PDF. Free, private, and runs entirely in your browser. Your files never leave your device.",
     url: "https://local2pdf.com/tools/delete-pdf-pages",

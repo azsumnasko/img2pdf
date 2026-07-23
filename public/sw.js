@@ -1,7 +1,9 @@
-const CACHE_NAME = "localpdf-v1";
+const CACHE_NAME = "local2pdf-v1";
 const APP_SHELL = [
   "/",
+  "/pdf-tools",
   "/tools/image-to-pdf",
+  "/about",
   "/privacy",
   "/terms",
   "/manifest.json",

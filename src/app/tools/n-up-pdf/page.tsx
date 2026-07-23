@@ -74,7 +74,7 @@ export default function NUpPdfPage() {
       <div className="tool-hero">
         <h1 className="tool-title">N-Up PDF Locally</h1>
         <p className="tool-subtitle">
-          Fit multiple PDF pages onto a single sheet — great for handouts, slide printouts, and booklet layouts. No upload, no signup.
+          Fit multiple PDF pages onto a single sheet — great for handouts, proof sheets and paper-saving print layouts. No upload, no signup.
         </p>
         <div className="tool-hero-badges">
           <PrivacyBadge />
@@ -206,7 +206,7 @@ export default function NUpPdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>What is an N-up layout?</summary><p>N-up layouts fit multiple pages of a document onto each sheet. It's commonly used for printing slide handouts, booklet drafts, or reducing page count for sharing.</p></details>
+          <details className="faq-item"><summary>What is an N-up layout?</summary><p>N-up layouts fit multiple pages of a document onto each sheet. It&apos;s commonly used for printing slide handouts, proof sheets, or reducing page count for sharing.</p></details>
           <details className="faq-item"><summary>Can I change the page order?</summary><p>Pages are arranged in reading order (left to right, top to bottom). For custom ordering, use the <a href="/tools/reorder-pdf-pages">Reorder PDF pages</a> tool first.</p></details>
         </div>
       </section>

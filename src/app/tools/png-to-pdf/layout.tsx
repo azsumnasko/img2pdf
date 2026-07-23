@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PNG to PDF Locally — Private & Free | Local2PDF",
+    title: "PNG to PDF Locally — Private & Free",
   description:
     "Convert PNG images to PDF locally in your browser. Preserve transparency, adjust page size and margins. No upload, no signup, no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/png-to-pdf" },
   openGraph: {
-    title: "PNG to PDF Locally — Private & Free | Local2PDF",
+  title: "PNG to PDF Locally — Private & Free",
     description:
       "Convert PNG images to PDF privately. Preserve transparency and quality. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/png-to-pdf",

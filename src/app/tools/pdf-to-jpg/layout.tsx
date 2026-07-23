@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to JPG Locally — No Upload, High Quality | Local2PDF",
+    title: "PDF to JPG Locally — No Upload, High Quality",
   description:
     "Convert PDF pages to high-quality JPG images. Choose resolution (up to 300 DPI) and quality. All processing happens in your browser — no upload, no signup, no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-jpg" },
   openGraph: {
-    title: "PDF to JPG Locally — No Upload, High Quality | Local2PDF",
+  title: "PDF to JPG Locally — No Upload, High Quality",
     description:
       "Render PDF pages as JPG images privately. Adjust DPI and quality. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-jpg",

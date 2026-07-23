@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Combine Images to PDF — Private & Free | Local2PDF",
+    title: "Combine Images to PDF — Private & Free",
   description:
     "Combine multiple images (JPG, PNG, WebP, HEIC) into a single PDF locally in your browser. Reorder pages, adjust layout. No upload, no signup.",
   alternates: { canonical: "https://local2pdf.com/tools/combine-images-to-pdf" },
   openGraph: {
-    title: "Combine Images to PDF — Private & Free | Local2PDF",
+  title: "Combine Images to PDF — Private & Free",
     description:
       "Merge multiple images into one PDF privately. Reorder, resize, and customize. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/combine-images-to-pdf",

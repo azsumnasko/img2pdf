@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compress PDF Locally — Reduce File Size | Local2PDF",
+    title: "Compress PDF Locally — Reduce File Size",
   description:
     "Compress PDF files to reduce file size without upload. Lossy and safe compression modes — all processing stays on your device.",
   alternates: { canonical: "https://local2pdf.com/tools/compress-pdf" },
   openGraph: {
-    title: "Compress PDF Locally — Reduce File Size | Local2PDF",
+  title: "Compress PDF Locally — Reduce File Size",
     description:
       "Compress PDF files to save space while keeping quality. Reduce file size entirely in your browser. Free and private.",
     url: "https://local2pdf.com/tools/compress-pdf",
