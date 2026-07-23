@@ -9,7 +9,7 @@ export class ErrorBoundary extends Component<Props, State> {
   state: State = { hasError: false };
 
   static getDerivedStateFromError(error: Error): State {
-    console.error("LocalPDF error boundary caught:", error);
+    console.error("Local2PDF error boundary caught:", error);
     return { hasError: true };
   }
 

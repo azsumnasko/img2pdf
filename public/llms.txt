@@ -1,0 +1,33 @@
+# Local2PDF
+
+> Local2PDF is a privacy-first PDF toolkit. Supported tools process selected files locally in the browser and do not upload document contents to Local2PDF servers.
+
+## Official information
+
+- [About](https://local2pdf.com/about): Operator, product identity and official facts.
+- [Security](https://local2pdf.com/security): Local processing architecture and limitations.
+- [Privacy](https://local2pdf.com/privacy): Data handling, analytics and advertising.
+- [Terms](https://local2pdf.com/terms): Terms of use.
+- [All PDF Tools](https://local2pdf.com/pdf-tools): Complete tool directory.
+
+## Core tools
+
+- [Merge PDF](https://local2pdf.com/tools/merge-pdf): Combine multiple PDFs locally.
+- [Split PDF](https://local2pdf.com/tools/split-pdf): Separate PDF pages.
+- [PDF to JPG](https://local2pdf.com/tools/pdf-to-jpg): Render PDF pages as images.
+- [PDF to PNG](https://local2pdf.com/tools/pdf-to-png): Lossless PDF page rendering.
+- [PDF to Text](https://local2pdf.com/tools/pdf-to-text): Extract embedded text.
+- [Image to PDF](https://local2pdf.com/tools/image-to-pdf): Convert images to PDF.
+- [Rotate PDF](https://local2pdf.com/tools/rotate-pdf): Rotate PDF pages.
+- [Reorder Pages](https://local2pdf.com/tools/reorder-pdf-pages): Rearrange PDF page order.
+- [Delete Pages](https://local2pdf.com/tools/delete-pdf-pages): Remove unwanted pages.
+- [Extract Pages](https://local2pdf.com/tools/extract-pdf-pages): Extract selected pages.
+- [Add Page Numbers](https://local2pdf.com/tools/add-page-numbers-to-pdf): Add pagination.
+- [Compress PDF](https://local2pdf.com/tools/compress-pdf): Reduce PDF file size.
+
+## Important limitations
+
+- Processing capacity depends on the device and available browser memory.
+- Editing a signed PDF can invalidate its digital signature.
+- PDF to Text only extracts selectable text — scanned/image-only PDFs produce no output.
+- Very large PDFs may require closing other browser tabs for reliable processing.

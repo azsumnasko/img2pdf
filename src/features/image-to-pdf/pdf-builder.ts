@@ -221,8 +221,8 @@ export async function buildPdf(
   const warnings: string[] = [];
   let actualPageCount = 0;
 
-  pdfDoc.setProducer("LocalPDF");
-  pdfDoc.setCreator("LocalPDF web app");
+  pdfDoc.setProducer("Local2PDF");
+  pdfDoc.setCreator("Local2PDF web app");
 
   for (let i = 0; i < pages.length; i++) {
     if (signal?.aborted) break;

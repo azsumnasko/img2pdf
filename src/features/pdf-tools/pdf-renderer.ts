@@ -5,11 +5,7 @@ let pdfjsPromise: Promise<typeof import("pdfjs-dist")> | null = null;
 async function getPdfjs() {
   if (!pdfjsPromise) {
     pdfjsPromise = import("pdfjs-dist").then((m) => {
-      try {
-        m.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${m.version}/pdf.worker.min.mjs`;
-      } catch {
-        m.GlobalWorkerOptions.workerSrc = "";
-      }
+      m.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
       return m;
     });
   }

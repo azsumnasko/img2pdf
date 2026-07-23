@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to Text Locally — Extract Text Without Upload | LocalPDF",
+  title: "PDF to Text Locally — Extract Text Without Upload | Local2PDF",
   description:
     "Extract text from PDF files directly in your browser. Fast extraction from text-based PDFs. No upload, no signup, no watermark — completely private.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-text" },
   openGraph: {
-    title: "PDF to Text Locally — Extract Text Without Upload | LocalPDF",
+    title: "PDF to Text Locally — Extract Text Without Upload | Local2PDF",
     description:
       "Extract text from PDFs privately in your browser. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-text",
@@ -24,7 +24,7 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "LocalPDF — PDF to Text Extractor",
+              name: "Local2PDF — PDF to Text Extractor",
               description:
                 "Extract text from PDF files locally in your browser. Fast and private. No upload, no signup, no watermark.",
               applicationCategory: "UtilitiesApplication",
@@ -38,7 +38,7 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Are my PDF files uploaded to LocalPDF servers?",
+                  name: "Are my PDF files uploaded to Local2PDF servers?",
                   acceptedAnswer: {
                     "@type": "Answer",
                     text: "No. All text extraction happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.",
@@ -57,7 +57,7 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
                   name: "Is PDF text extraction free?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. LocalPDF is completely free. There is no signup, no watermark, and unlimited conversions.",
+                    text: "Yes. Local2PDF is completely free. There is no signup, no watermark, and unlimited conversions.",
                   },
                 },
                 {

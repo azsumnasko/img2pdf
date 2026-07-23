@@ -24,7 +24,7 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "LocalPDF — Image to PDF Converter",
+              name: "Local2PDF — Image to PDF Converter",
               description:
                 "Convert JPG, PNG, WebP, and HEIC images to PDF privately in your browser. No upload, no signup, no watermark.",
               applicationCategory: "UtilitiesApplication",
@@ -38,7 +38,7 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Are my images uploaded to LocalPDF servers?",
+                  name: "Are my images uploaded to Local2PDF servers?",
                   acceptedAnswer: {
                     "@type": "Answer",
                     text: "No. All image processing happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.",
@@ -49,15 +49,15 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
                   name: "Which image formats can I convert to PDF?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "LocalPDF supports JPEG, PNG, WebP, and HEIC images. You can convert up to 25 images at once into a single PDF.",
+                    text: "Local2PDF supports JPEG, PNG, WebP, and HEIC images. You can convert up to 25 images at once into a single PDF.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is LocalPDF free?",
+                  name: "Is Local2PDF free?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. LocalPDF is completely free. There is no signup, no watermark, and unlimited conversions.",
+                    text: "Yes. Local2PDF is completely free. There is no signup, no watermark, and unlimited conversions.",
                   },
                 },
                 {
@@ -65,7 +65,7 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
                   name: "Can I convert images to PDF on my phone?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. LocalPDF works on mobile browsers including iPhone Safari and Android Chrome.",
+                    text: "Yes. Local2PDF works on mobile browsers including iPhone Safari and Android Chrome.",
                   },
                 },
               ],

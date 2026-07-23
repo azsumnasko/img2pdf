@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HowItWorks } from "@/components/content/HowItWorks";
 import { FAQ } from "@/components/content/FAQ";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
@@ -5,6 +6,17 @@ import { DEFAULT_CONFIG } from "@/features/image-to-pdf/config";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { MakerPromo } from "@/components/content/MakerPromo";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://local2pdf.com" },
+  openGraph: {
+    title: "Local2PDF — Private PDF Tools & Image to PDF Converter",
+    description:
+      "Free PDF tools that work offline in your browser. Merge, split, rotate, and convert files — no uploads or signup required.",
+    url: "https://local2pdf.com",
+    type: "website",
+  },
+};
 
 export default function HomePage() {
   return (
@@ -79,7 +91,7 @@ export default function HomePage() {
       <section className="privacy-section" aria-labelledby="privacy-title">
         <h2 id="privacy-title">Why Local Processing Matters</h2>
         <p>
-          LocalPDF processes all files directly in your browser. Your documents never leave
+          Local2PDF processes all files directly in your browser. Your documents never leave
           your device — no uploads, no server processing. This means faster conversion,
           complete privacy, and no signup required. Every tool works the same way: select your
           file, make your changes, and download the result. Everything stays on your device.

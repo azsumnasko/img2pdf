@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to JPG Locally — No Upload, High Quality | Local2PDF",
+  title: "JPG to PDF Locally — Private & Free | Local2PDF",
   description:
-    "Convert PDF pages to high-quality JPG images. Choose resolution (up to 300 DPI) and quality. All processing happens in your browser — no upload, no signup, no watermark.",
-  alternates: { canonical: "https://local2pdf.com/tools/pdf-to-jpg" },
+    "Convert JPG images to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup, no watermark — your files stay private.",
+  alternates: { canonical: "https://local2pdf.com/tools/jpg-to-pdf" },
   openGraph: {
-    title: "PDF to JPG Locally — No Upload, High Quality | Local2PDF",
+    title: "JPG to PDF Locally — Private & Free | Local2PDF",
     description:
-      "Render PDF pages as JPG images privately. Adjust DPI and quality. No upload, no signup, no watermark.",
-    url: "https://local2pdf.com/tools/pdf-to-jpg",
+      "Convert JPG images to PDF privately. Customize page size and layout. No upload, no signup, no watermark.",
+    url: "https://local2pdf.com/tools/jpg-to-pdf",
     type: "website",
   },
 };
 
-export default function PdfToJpgLayout({ children }: { children: React.ReactNode }) {
+export default function JpgToPdfLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
@@ -24,9 +24,9 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "Local2PDF — PDF to JPG Converter",
+              name: "Local2PDF — JPG to PDF Converter",
               description:
-                "Convert PDF pages to JPG images locally in your browser. Choose DPI and quality. No upload, no signup, no watermark.",
+                "Convert JPG images to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup, no watermark.",
               applicationCategory: "UtilitiesApplication",
               operatingSystem: "All",
               offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -38,23 +38,23 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Are my PDF files uploaded to Local2PDF servers?",
+                  name: "Are my JPG files uploaded to Local2PDF servers?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "No. All PDF rendering and image conversion happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.",
+                    text: "No. All JPG to PDF conversion happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "What DPI should I choose for PDF to JPG conversion?",
+                  name: "Can I convert multiple JPG images into one PDF?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "150 DPI is a good balance of quality and file size for most uses. Use 300 DPI for print-quality output, 200 DPI for presentations, and 96 DPI for quick previews or web use.",
+                    text: "Yes. You can select multiple JPG images and combine them into a single PDF document. You can also reorder the images before conversion.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "Is PDF to JPG conversion free?",
+                  name: "Is JPG to PDF conversion free?",
                   acceptedAnswer: {
                     "@type": "Answer",
                     text: "Yes. Local2PDF is completely free. There is no signup, no watermark, and unlimited conversions.",
@@ -62,10 +62,10 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
                 },
                 {
                   "@type": "Question",
-                  name: "Can I convert password-protected PDFs to JPG?",
+                  name: "Can I customize the PDF page size for JPG images?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Password-protected PDFs cannot be processed. You must unlock or remove the password before using this tool.",
+                    text: "Yes. You can choose from standard page sizes (A4, Letter, etc.) or fit the page to each image. You can also adjust orientation and margins.",
                   },
                 },
               ],
@@ -76,7 +76,7 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
-                { "@type": "ListItem", position: 3, name: "PDF to JPG", item: "https://local2pdf.com/tools/pdf-to-jpg" },
+                { "@type": "ListItem", position: 3, name: "JPG to PDF", item: "https://local2pdf.com/tools/jpg-to-pdf" },
               ],
             },
           ]),

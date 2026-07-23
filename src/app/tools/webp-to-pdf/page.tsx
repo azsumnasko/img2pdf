@@ -18,7 +18,7 @@ export default function WebpToPdfPage() {
         <Link href="/tools/image-to-pdf" className="btn btn--primary btn--large">Start converting WebP to PDF</Link>
       </div>
       <h2>WebP Browser Compatibility</h2>
-      <p>WebP is supported in Chrome, Firefox, Edge, and Safari. LocalPDF converts WebP images in all modern browsers. The output PDF works universally across all platforms and PDF readers.</p>
+      <p>WebP is supported in Chrome, Firefox, Edge, and Safari. Local2PDF converts WebP images in all modern browsers. The output PDF works universally across all platforms and PDF readers.</p>
       <p style={{ marginTop: "2rem" }}>
         <Link href="/tools/image-to-pdf">Open the free converter</Link> |{" "}
         <Link href="/tools/jpg-to-pdf">JPG to PDF</Link> |{" "}

@@ -6,7 +6,7 @@ export function FAQ() {
     },
     {
       q: "Do I need to create an account?",
-      a: "No. LocalPDF is free to use without any account, signup, or email address.",
+      a: "No. Local2PDF is free to use without any account, signup, or email address.",
     },
     {
       q: "Is there a watermark on the output?",
@@ -30,7 +30,7 @@ export function FAQ() {
     },
     {
       q: "Is this tool free?",
-      a: "Yes. LocalPDF is free to use with no hidden costs. The site is supported by advertising placed away from the tool controls.",
+      a: "Yes. Local2PDF is free to use with no hidden costs. The site is supported by advertising placed away from the tool controls.",
     },
   ];
 

@@ -26,7 +26,7 @@ export default function JpgToPdfPage() {
         <li><strong>Convert and download</strong> — your PDF is built on your device, never uploaded</li>
       </ol>
       <h2>JPEG Quality and File Size</h2>
-      <p>LocalPDF preserves your JPEG images at high quality. Choose the Balanced preset for a good trade-off between quality and file size, Original for the highest fidelity, or Small File to minimize the PDF size for sharing via email or messaging apps.</p>
+      <p>Local2PDF preserves your JPEG images at high quality. Choose the Balanced preset for a good trade-off between quality and file size, Original for the highest fidelity, or Small File to minimize the PDF size for sharing via email or messaging apps.</p>
       <h2>Why Convert JPG to PDF?</h2>
       <p>PDF is the standard format for document sharing. Converting JPG images to PDF ensures they display consistently across all devices, preserve their layout, and can be easily printed, shared, or archived. Unlike individual image files, a PDF keeps multiple pages in a single, organized document.</p>
       <p style={{ marginTop: "2rem" }}>

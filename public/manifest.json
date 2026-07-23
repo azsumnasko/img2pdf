@@ -1,6 +1,6 @@
 {
-  "name": "LocalPDF — Convert Images to PDF",
-  "short_name": "LocalPDF",
+  "name": "Local2PDF — Convert Images to PDF",
+  "short_name": "Local2PDF",
   "description": "Convert images to PDF privately. No upload, no signup.",
   "start_url": "/tools/image-to-pdf",
   "scope": "/",

@@ -1334,6 +1334,12 @@ p { color: var(--color-text-secondary); }
   color: #ffffff;
 }
 
+/* ---- Content-visibility optimization ---- */
+.how-it-works, .faq, .maker-promo, .tool-seo, .privacy-section, .related-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 /* ---- Hero Actions ---- */
 .hero-actions {
   display: flex;

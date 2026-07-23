@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PDF to PNG Locally — No Upload, Lossless Quality | LocalPDF",
+  title: "PDF to PNG Locally — No Upload, Lossless Quality | Local2PDF",
   description:
     "Convert PDF pages to lossless PNG images. Perfect for diagrams, text, and screenshots. All processing happens in your browser — no upload, no signup, no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-png" },
   openGraph: {
-    title: "PDF to PNG Locally — No Upload, Lossless Quality | LocalPDF",
+    title: "PDF to PNG Locally — No Upload, Lossless Quality | Local2PDF",
     description:
       "Render PDF pages as PNG images privately. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-png",
@@ -24,7 +24,7 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "LocalPDF — PDF to PNG Converter",
+              name: "Local2PDF — PDF to PNG Converter",
               description:
                 "Convert PDF pages to PNG images locally in your browser. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
               applicationCategory: "UtilitiesApplication",
@@ -38,7 +38,7 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
               mainEntity: [
                 {
                   "@type": "Question",
-                  name: "Are my PDF files uploaded to LocalPDF servers?",
+                  name: "Are my PDF files uploaded to Local2PDF servers?",
                   acceptedAnswer: {
                     "@type": "Answer",
                     text: "No. All PDF rendering and PNG conversion happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.",
@@ -57,7 +57,7 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
                   name: "Is PDF to PNG conversion free?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. LocalPDF is completely free. There is no signup, no watermark, and unlimited conversions.",
+                    text: "Yes. Local2PDF is completely free. There is no signup, no watermark, and unlimited conversions.",
                   },
                 },
                 {

@@ -391,21 +391,41 @@ export async function compressPdf(
   onProgress?: (current: number, total: number) => void
 ): Promise<{ bytes: Uint8Array; originalSize: number }> {
   const buf = await doc.file.arrayBuffer();
-  const srcDoc = await PDFDocument.load(buf, { ignoreEncryption: true });
   const originalSize = buf.byteLength;
 
   if (strategy === "safe") {
-    srcDoc.setProducer("LocalPDF");
-    srcDoc.setCreator("LocalPDF");
+    const srcDoc = await PDFDocument.load(buf, { ignoreEncryption: true });
+    srcDoc.setProducer("Local2PDF");
+    srcDoc.setCreator("Local2PDF");
     const saved = await srcDoc.save();
     return { bytes: saved, originalSize };
   }
 
-  const total = srcDoc.getPageCount();
+  const { renderPageToCanvas, canvasToBlob } = await import("./pdf-renderer");
+  const newDoc = await PDFDocument.create();
+  newDoc.setProducer("Local2PDF");
+  newDoc.setCreator("Local2PDF");
+
+  const total = doc.pageCount;
+
   for (let i = 0; i < total; i++) {
+    const result = await renderPageToCanvas(buf, i + 1, 1.0);
+    if (result) {
+      try {
+        const blob = await canvasToBlob(result.canvas, "image/jpeg", imageQuality);
+        const imgBytes = new Uint8Array(await blob.arrayBuffer());
+        const embedded = await newDoc.embedJpg(imgBytes);
+        const page = newDoc.addPage([result.width, result.height]);
+        page.drawImage(embedded, { x: 0, y: 0, width: result.width, height: result.height });
+      } catch {
+        newDoc.addPage([612, 792]);
+      }
+    } else {
+      newDoc.addPage([612, 792]);
+    }
     onProgress?.(i + 1, total);
   }
 
-  const saved = await srcDoc.save();
+  const saved = await newDoc.save();
   return { bytes: saved, originalSize };
 }

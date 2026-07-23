@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "N-Up PDF Locally — Multiple Pages Per Sheet | LocalPDF",
+  title: "N-Up PDF Locally — Multiple Pages Per Sheet | Local2PDF",
   description:
     "Arrange multiple PDF pages on a single sheet. Create 2-up, 4-up, or 8-up layouts with adjustable padding. No upload, no signup.",
   alternates: { canonical: "https://local2pdf.com/tools/n-up-pdf" },
   openGraph: {
-    title: "N-Up PDF Locally — Multiple Pages Per Sheet | LocalPDF",
+    title: "N-Up PDF Locally — Multiple Pages Per Sheet | Local2PDF",
     description:
       "Combine multiple PDF pages onto one sheet with N-up layouts. Choose 2-up, 4-up, 6-up, 8-up, or 9-up. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/n-up-pdf",
@@ -24,7 +24,7 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
             {
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "LocalPDF — N-Up PDF",
+              name: "Local2PDF — N-Up PDF",
               description:
                 "Create N-up PDFs with multiple pages per sheet. Private, browser-based processing with no uploads.",
               applicationCategory: "UtilitiesApplication",
@@ -40,6 +40,14 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "N-Up PDF", item: "https://local2pdf.com/tools/n-up-pdf" },
               ],
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                { "@type": "Question", "name": "What N-up layouts are available?", "acceptedAnswer": { "@type": "Answer", "text": "You can choose 2-up, 4-up, 6-up, 8-up, or 9-up. Each layout places that many original pages onto a single sheet." } },
+                { "@type": "Question", "name": "Can I adjust spacing between pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can set a custom padding value to add space between the pages on each sheet." } },
+                { "@type": "Question", "name": "In what order are pages arranged?", "acceptedAnswer": { "@type": "Answer", "text": "Pages flow left-to-right, top-to-bottom across the sheet. For example, a 4-up layout places pages 1-4 on one sheet, 5-8 on the next." } }
+              ]
             },
           ]),
         }}

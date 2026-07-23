@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "LocalPDF terms of use.",
+  description: "Local2PDF terms of use.",
 };
 
 export default function TermsPage() {
@@ -13,26 +13,26 @@ export default function TermsPage() {
 
       <h2>1. Acceptance of Terms</h2>
       <p>
-        By using LocalPDF, you agree to these terms. If you do not agree, please do not use
+        By using Local2PDF, you agree to these terms. If you do not agree, please do not use
         the service.
       </p>
 
       <h2>2. Service Description</h2>
       <p>
-        LocalPDF is a free web-based tool that converts images to PDF format. All processing
+        Local2PDF is a free web-based tool that converts images to PDF format. All processing
         happens locally in your browser. We do not upload, store, or have access to your files.
       </p>
 
       <h2>3. Acceptable Use</h2>
       <p>
         You agree not to use the service for any unlawful purpose. You are responsible for the
-        content of the images you convert and the resulting PDFs. LocalPDF does not review or
+        content of the images you convert and the resulting PDFs. Local2PDF does not review or
         monitor user files.
       </p>
 
       <h2>4. Intellectual Property</h2>
       <p>
-        The LocalPDF website, branding, and code are protected by applicable intellectual
+        The Local2PDF website, branding, and code are protected by applicable intellectual
         property laws. You retain all rights to your images and generated PDFs.
       </p>
 
@@ -45,7 +45,7 @@ export default function TermsPage() {
 
       <h2>6. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by law, LocalPDF shall not be liable for any indirect,
+        To the maximum extent permitted by law, Local2PDF shall not be liable for any indirect,
         incidental, or consequential damages arising from your use of the service.
       </p>
 

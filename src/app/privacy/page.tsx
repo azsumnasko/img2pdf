@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "LocalPDF privacy policy — your images are processed locally and never uploaded.",
+  description: "Local2PDF privacy policy — your images are processed locally and never uploaded.",
 };
 
 export default function PrivacyPage() {
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
 
       <h2>1. Our Privacy Promise</h2>
       <p>
-        LocalPDF converts your images to PDF entirely in your browser. Your files are never
+        Local2PDF converts your images to PDF entirely in your browser. Your files are never
         uploaded to our servers. We do not see, store, or have access to your images, generated
         PDFs, or filenames.
       </p>
