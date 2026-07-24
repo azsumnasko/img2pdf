@@ -1,9 +1,8 @@
-# Local2PDF
+# Local2PDF — Full Documentation
 
-> Local2PDF is a privacy-first PDF toolkit. Supported tools process selected files locally in the browser and do not upload document contents to Local2PDF servers.
+> Local2PDF is a privacy-first PDF toolkit. Supported tools process selected files locally in the browser and do not upload document contents to Local2PDF servers. Operated by Firmify EOOD (Bulgaria).
 
 ## Quick Facts
-
 - **Operator:** Firmify EOOD (Bulgaria)
 - **Pricing:** Free for all PDF tools. No account, no watermark, unlimited conversions.
 - **Image-to-PDF limit:** Up to 25 images per conversion. PDF tools have device-dependent limits.
@@ -11,43 +10,83 @@
 - **Supported formats:** JPG, PNG, WebP, HEIC (images); PDF input for all organizer/convert tools.
 - **Contact:** support@local2pdf.com | privacy@local2pdf.com | security@local2pdf.com
 
-## Official information
+## Technical Architecture
+- **Framework:** Next.js 16 (standalone output)
+- **PDF manipulation:** pdf-lib (merge, split, rotate, reorder, extract, page numbers, n-up)
+- **PDF rendering:** pdfjs-dist (PDF to JPG/PNG, text extraction, thumbnails)
+- **Image processing:** Canvas API, OffscreenCanvas
+- **HEIC support:** Safari native decode; Chrome/Firefox via WASM heic-decode
+- **Multi-file output:** JSZip for ZIP archives
+- **Processing model:** All operations run in the browser main thread with Web Worker option (pdf-worker.ts available)
+- **Worker:** pdf.worker.min.mjs bundled locally (no CDN dependency)
+- **Security headers:** HSTS, X-Frame-Options DENY, CSP (report-only), X-Content-Type-Options, Referrer-Policy, Permissions-Policy
 
+## Browser Compatibility
+- **Chrome:** Full support (90+)
+- **Firefox:** Full support (90+)
+- **Safari:** Full support (15+), native HEIC decode
+- **Edge:** Full support (90+)
+- **Mobile Safari (iOS):** Full support
+- **Mobile Chrome (Android):** Full support
+- See /compatibility for detailed matrix
+
+## Official Pages
 - [About](https://local2pdf.com/about): Operator, product identity and official facts.
 - [Security](https://local2pdf.com/security): Local processing architecture and limitations.
-- [Privacy](https://local2pdf.com/privacy): Data handling, analytics and advertising.
+- [Privacy](https://local2pdf.com/privacy): Data handling, analytics and advertising for full PDF toolkit.
 - [Contact](https://local2pdf.com/contact): Get support and help.
-- [Terms](https://local2pdf.com/terms): Terms of use.
+- [Terms](https://local2pdf.com/terms): Terms of use with explicit disclaimers for digital signatures, forms, compression quality.
+- [Compatibility](https://local2pdf.com/compatibility): Browser support matrix.
+- [Changelog](https://local2pdf.com/changelog): Product release history.
 - [All PDF Tools](https://local2pdf.com/pdf-tools): Complete tool directory.
 
-## Core tools
+## Core PDF Tools
 
-- [Merge PDF](https://local2pdf.com/tools/merge-pdf): Combine multiple PDFs locally.
-- [Split PDF](https://local2pdf.com/tools/split-pdf): Separate PDF pages.
-- [PDF to JPG](https://local2pdf.com/tools/pdf-to-jpg): Render PDF pages as images.
-- [PDF to PNG](https://local2pdf.com/tools/pdf-to-png): Lossless PDF page rendering.
-- [PDF to Text](https://local2pdf.com/tools/pdf-to-text): Extract embedded text.
-- [Image to PDF](https://local2pdf.com/tools/image-to-pdf): Convert images to PDF.
-- [Rotate PDF](https://local2pdf.com/tools/rotate-pdf): Rotate PDF pages.
-- [Reorder Pages](https://local2pdf.com/tools/reorder-pdf-pages): Rearrange PDF page order.
-- [Delete Pages](https://local2pdf.com/tools/delete-pdf-pages): Remove unwanted pages.
-- [Extract Pages](https://local2pdf.com/tools/extract-pdf-pages): Extract selected pages.
-- [Add Page Numbers](https://local2pdf.com/tools/add-page-numbers-to-pdf): Add pagination.
-- [Compress PDF](https://local2pdf.com/tools/compress-pdf): Reduce PDF file size.
-- [JPG to PDF](https://local2pdf.com/tools/jpg-to-pdf): Convert JPEG images to PDF.
-- [PNG to PDF](https://local2pdf.com/tools/png-to-pdf): Convert PNG images to PDF.
-- [WebP to PDF](https://local2pdf.com/tools/webp-to-pdf): Convert WebP images to PDF.
-- [HEIC to PDF](https://local2pdf.com/tools/heic-to-pdf): Convert HEIC images to PDF.
+### Organize PDF
+- [Merge PDF](https://local2pdf.com/tools/merge-pdf): Combine multiple PDFs into one. Supports page reordering across documents, rotation, and filename control. Preserves page dimensions without rasterization.
+- [Split PDF](https://local2pdf.com/tools/split-pdf): Separate PDF pages. Three modes: every page individually, custom ranges (1-3,5,8-10), every N pages. Multi-file output as ZIP.
+- [Rotate PDF](https://local2pdf.com/tools/rotate-pdf): Rotate pages 90°, 180°, or 270°. Select individual pages or batch-rotate. Rotation applied at PDF metadata level.
+- [Reorder Pages](https://local2pdf.com/tools/reorder-pdf-pages): Rearrange PDF page order by dragging or using arrow buttons. Supports rotation during reorder.
+- [Delete Pages](https://local2pdf.com/tools/delete-pdf-pages): Remove unwanted pages. Select via checkboxes. Blocks zero-page output. Shows remaining page count.
+- [Extract Pages](https://local2pdf.com/tools/extract-pdf-pages): Extract selected pages into a new PDF. Option to combine into one file or separate files. Comparison guide for Extract vs Delete vs Split.
+
+### Convert from PDF
+- [PDF to JPG](https://local2pdf.com/tools/pdf-to-jpg): Render PDF pages as JPG images. DPI presets (96/150/200/300), quality slider (10-100%). Multi-page output as ZIP.
+- [PDF to PNG](https://local2pdf.com/tools/pdf-to-png): Render PDF pages as lossless PNG images. Better for text/diagrams than JPG. Transparent areas composited to white.
+- [PDF to Text](https://local2pdf.com/tools/pdf-to-text): Extract embedded text from PDFs. Fast extraction from text-based PDFs. Scanned/image-only PDFs produce no output. Preview with page separators.
+
+### Improve & Prepare PDF
+- [Add Page Numbers](https://local2pdf.com/tools/add-page-numbers-to-pdf): Add pagination with position (top/bottom), alignment (left/center/right), format (1, Page 1, 1 of N, Page 1 of N), font size, margin, start page, start number, color. Uses Helvetica font (pdf-lib StandardFonts).
+- [Crop PDF](https://local2pdf.com/tools/crop-pdf): Trim PDF margins by entering numeric values (mm) per side. Beta — visual crop selection coming soon. All pages receive the same trim values.
+- [Resize PDF Pages](https://local2pdf.com/tools/resize-pdf-pages): Change PDF page size. Presets: A4, A3, A5, Letter, Legal, Custom. Content scaling behavior depends on selected mode.
+- [N-Up PDF](https://local2pdf.com/tools/n-up-pdf): Place multiple pages per sheet. Layouts: 2-up through 9-up. Output sizes: A4, A3, Letter, Legal. Configurable padding. Note: creates reading-order layouts, not booklet imposition.
+- [Compress PDF](https://local2pdf.com/tools/compress-pdf): Reduce PDF file size. Safe mode does metadata cleanup. Image-heavy mode re-renders pages. Beta — results vary by document. Will warn if output is larger than input.
+
+### Convert Images to PDF
+- [Image to PDF](https://local2pdf.com/tools/image-to-pdf): Convert JPG, PNG, WebP, HEIC to PDF. Up to 25 images. Reorder, rotate, page size, orientation, margins, quality presets.
+- [JPG to PDF](https://local2pdf.com/tools/jpg-to-pdf): Convert JPEG images to PDF format.
+- [PNG to PDF](https://local2pdf.com/tools/png-to-pdf): Convert PNG images to PDF. Transparency composited to white.
+- [WebP to PDF](https://local2pdf.com/tools/webp-to-pdf): Convert WebP images (lossy and lossless) to PDF.
+- [HEIC to PDF](https://local2pdf.com/tools/heic-to-pdf): Convert iPhone HEIC photos to PDF. Safari native decode, Chrome/Firefox via WASM.
 - [Combine Images to PDF](https://local2pdf.com/tools/combine-images-to-pdf): Merge multiple image formats into one PDF.
-- [Photos to PDF](https://local2pdf.com/tools/photos-to-pdf): Convert phone photos to PDF.
-- [Screenshot to PDF](https://local2pdf.com/tools/screenshot-to-pdf): Convert screenshots to PDF.
-- [Crop PDF](https://local2pdf.com/tools/crop-pdf): Crop PDF pages.
-- [Resize PDF Pages](https://local2pdf.com/tools/resize-pdf-pages): Resize PDF pages.
-- [N-Up PDF](https://local2pdf.com/tools/n-up-pdf): Place multiple pages per sheet.
+- [Photos to PDF](https://local2pdf.com/tools/photos-to-pdf): Convert phone photos to PDF. iPhone and Android instructions.
+- [Screenshot to PDF](https://local2pdf.com/tools/screenshot-to-pdf): Convert screenshots to PDF. Clipboard paste support (Ctrl+V).
 
-## Important limitations
-
-- Processing capacity depends on the device and available browser memory.
+## Important Limitations
+- Processing capacity depends on the device and available browser memory. Very large PDFs may require closing other browser tabs.
 - Editing a signed PDF can invalidate its digital signature.
 - PDF to Text only extracts selectable text — scanned/image-only PDFs produce no output.
-- Very large PDFs may require closing other browser tabs for reliable processing.
+- Image-heavy compression re-renders pages, losing text selectability, form fields, and vector graphics.
+- Crop PDF applies numeric margins only; visual crop selection is under development.
+- Extract Images renders PDF pages to PNG; true embedded image extraction is under development.
+- Password-protected PDFs are not supported. Remove password from the file before processing.
+- Content scaling in Resize PDF depends on the selected mode; not all modes reposition content.
+- N-Up PDF creates reading-order layouts, not booklet imposition.
+
+## Dependencies
+- pdf-lib 1.17.1 — PDF creation and manipulation
+- pdfjs-dist 4.10.38 — PDF parsing and rendering (lazy-loaded)
+- heic-decode 2.1.0 — HEIC WASM decoder (lazy-loaded, non-Safari only)
+- jszip 3.10.1 — ZIP archive creation (lazy-loaded)
+- next 16.2.11 — Framework
+- react 19.2.8 — UI library

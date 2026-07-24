@@ -22,11 +22,52 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Local2PDF — Privacy-First PDF Tools",
+    description:
+      "Local2PDF is a privacy-first PDF toolkit that processes files entirely in your browser. No uploads, no accounts, no watermarks.",
+  },
 };
 
 export default function AboutPage() {
   return (
     <main className="content-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "About",
+              description:
+                "Local2PDF is a privacy-first PDF toolkit that processes files entirely in your browser. No uploads, no accounts, no watermarks.",
+              url: "https://local2pdf.com/about",
+              publisher: {
+                "@id": "https://local2pdf.com/#organization",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://local2pdf.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "About",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
       <h1>About Local2PDF</h1>
 
       <p>

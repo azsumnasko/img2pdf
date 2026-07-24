@@ -20,13 +20,36 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Changelog — Local2PDF",
+    description:
+      "Track updates and new features for Local2PDF. See what PDF tools have been added and what changes have been made.",
+  },
 };
 
 const entries = [
   {
+    date: "July 24, 2026",
+    changes: [
+      "SEO optimization: full JSON-LD structured data on all tool pages (WebApplication, FAQPage, BreadcrumbList). Added Twitter cards, CSP header, AI bot directives.",
+    ],
+  },
+  {
+    date: "July 23, 2026",
+    changes: [
+      "Added Compatibility page with browser support matrix and Changelog page.",
+    ],
+  },
+  {
+    date: "July 22, 2026",
+    changes: [
+      "Launched 15 interactive PDF tools: Merge, Split, Rotate, Reorder, Delete, Extract Pages, PDF to JPG/PNG/Text, Add Page Numbers, Crop, Resize, N-Up, Compress, Extract Images.",
+    ],
+  },
+  {
     date: "July 2026",
     changes: [
-      "Added 15 PDF tools: Merge PDF, Split PDF, Rotate PDF, Reorder PDF Pages, Delete PDF Pages, Extract PDF Pages, PDF to JPG, PDF to PNG, PDF to Text, Add Page Numbers to PDF, Crop PDF, Resize PDF Pages, N-Up PDF, Compress PDF, and Extract Images from PDF.",
       "Brand refresh to Local2PDF.",
       "Added About, Contact, and Security pages.",
     ],
@@ -36,6 +59,41 @@ const entries = [
 export default function ChangelogPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Changelog",
+              description:
+                "Track updates and new features for Local2PDF. See what PDF tools have been added and what changes have been made.",
+              url: "https://local2pdf.com/changelog",
+              publisher: {
+                "@id": "https://local2pdf.com/#organization",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://local2pdf.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Changelog",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
       <h1 className="mb-8 text-3xl font-bold">Changelog</h1>
 
       <div className="space-y-10">

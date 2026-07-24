@@ -21,11 +21,52 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Security at Local2PDF",
+    description:
+      "How Local2PDF keeps your data safe with browser-local processing, no file uploads, and strong security practices.",
+  },
 };
 
 export default function SecurityPage() {
   return (
     <main className="content-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Security",
+              description:
+                "How Local2PDF keeps your data safe with browser-local processing, no file uploads, and strong security practices.",
+              url: "https://local2pdf.com/security",
+              publisher: {
+                "@id": "https://local2pdf.com/#organization",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://local2pdf.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Security",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
       <h1>Security at Local2PDF</h1>
 
       <h2>Browser-Local Processing</h2>

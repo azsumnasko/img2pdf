@@ -18,11 +18,52 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy",
+    description:
+      "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+  },
 };
 
 export default function PrivacyPage() {
   return (
     <main className="content-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Privacy Policy",
+              description:
+                "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+              url: "https://local2pdf.com/privacy",
+              publisher: {
+                "@id": "https://local2pdf.com/#organization",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://local2pdf.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Privacy Policy",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
       <h1>Privacy Policy</h1>
       <p><strong>Last updated:</strong> July 2026</p>
 

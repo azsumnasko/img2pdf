@@ -22,11 +22,52 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Local2PDF — Get Support & Help",
+    description:
+      "Contact the Local2PDF team for support, privacy questions, security disclosures, or business inquiries. We aim to respond within 48 hours.",
+  },
 };
 
 export default function ContactPage() {
   return (
     <main className="content-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Contact",
+              description:
+                "Contact the Local2PDF team for support, privacy questions, security disclosures, or business inquiries. We aim to respond within 48 hours.",
+              url: "https://local2pdf.com/contact",
+              publisher: {
+                "@id": "https://local2pdf.com/#organization",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://local2pdf.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Contact",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
       <h1>Contact Local2PDF</h1>
 
       <p>

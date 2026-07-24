@@ -18,11 +18,52 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Use",
+    description:
+      "Terms of use for Local2PDF — a privacy-first PDF toolkit that processes files locally in your browser. Covers acceptable use, disclaimers, intellectual property, and limitations of liability.",
+  },
 };
 
 export default function TermsPage() {
   return (
     <main className="content-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Terms of Use",
+              description:
+                "Terms of use for Local2PDF — a privacy-first PDF toolkit that processes files locally in your browser. Covers acceptable use, disclaimers, intellectual property, and limitations of liability.",
+              url: "https://local2pdf.com/terms",
+              publisher: {
+                "@id": "https://local2pdf.com/#organization",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://local2pdf.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Terms of Use",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
       <h1>Terms of Use</h1>
       <p><strong>Last updated:</strong> July 2026</p>
 

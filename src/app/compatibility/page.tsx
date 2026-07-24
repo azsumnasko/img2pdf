@@ -20,11 +20,52 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Browser Compatibility — Local2PDF",
+    description:
+      "Check which browsers support Local2PDF tools. Chrome, Firefox, Safari, and Edge 90+ are fully supported. All processing happens locally in your browser.",
+  },
 };
 
 export default function CompatibilityPage() {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Browser Compatibility",
+              description:
+                "Check which browsers support Local2PDF tools. Chrome, Firefox, Safari, and Edge 90+ are fully supported. All processing happens locally in your browser.",
+              url: "https://local2pdf.com/compatibility",
+              publisher: {
+                "@id": "https://local2pdf.com/#organization",
+              },
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://local2pdf.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Browser Compatibility",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
       <h1 className="mb-8 text-3xl font-bold">Browser Compatibility</h1>
 
       <p className="mb-8 text-muted-foreground">
