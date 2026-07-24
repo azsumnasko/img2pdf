@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup.",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

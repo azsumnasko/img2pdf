@@ -1,10 +1,10 @@
-FROM node:22-alpine AS base
+FROM node:22.14-alpine AS base
 RUN corepack enable
 
 FROM base AS deps
 WORKDIR /app
-COPY package.json ./
-RUN npm install --frozen-lockfile
+COPY package.json package-lock.json ./
+RUN npm ci
 
 FROM base AS builder
 WORKDIR /app
