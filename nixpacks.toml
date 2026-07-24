@@ -1,2 +1,4 @@
+# Prefer Coolify Build Pack = Dockerfile (./Dockerfile).
+# This file only applies if the service still uses Nixpacks.
 [variables]
 NIXPACKS_NODE_VERSION = "23"
