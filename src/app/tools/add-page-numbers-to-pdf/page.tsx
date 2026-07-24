@@ -236,6 +236,15 @@ export default function AddPageNumbersToPdfPage() {
           <Link href="/tools/resize-pdf-pages">Resize PDF Pages</Link>
         </p>
       </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Add Page Numbers to PDF</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Numbering legal documents</h3><p>Add consistent page numbering to contracts, affidavits, and other legal filings for proper court submission.</p></li>
+          <li className="use-case"><h3>Preparing academic submissions</h3><p>Number theses, dissertations, and research papers to meet university formatting requirements.</p></li>
+          <li className="use-case"><h3>Organizing business reports</h3><p>Add professional page numbers to quarterly reports, proposals, and internal documentation for easy navigation.</p></li>
+        </ul>
+      </section>
     </main>
     </ErrorBoundary>
   );

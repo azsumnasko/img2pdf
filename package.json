@@ -1,8 +1,8 @@
 {
-  "name": "localpdf",
+  "name": "local2pdf",
   "version": "1.0.0",
   "private": true,
-  "description": "Privacy-first image-to-PDF converter that works entirely in your browser",
+  "description": "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

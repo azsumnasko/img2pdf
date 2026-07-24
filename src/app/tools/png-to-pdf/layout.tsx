@@ -31,7 +31,7 @@ export default function PngToPdfLayout({ children }: { children: React.ReactNode
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — PNG to PDF Converter",
               description:
                 "Convert PNG images to PDF locally in your browser. Preserves transparency and image quality. No upload, no signup, no watermark.",

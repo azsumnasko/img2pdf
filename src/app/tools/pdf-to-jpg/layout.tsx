@@ -31,7 +31,7 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — PDF to JPG Converter",
               description:
                 "Convert PDF pages to JPG images locally in your browser. Choose DPI and quality. No upload, no signup, no watermark.",

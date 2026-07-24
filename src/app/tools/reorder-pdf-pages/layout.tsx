@@ -31,7 +31,7 @@ export default function ReorderPdfPagesLayout({ children }: { children: React.Re
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Reorder PDF Pages",
               description:
                 "Rearrange PDF pages in your browser. Move pages to your desired order. Private — your files never leave your device.",

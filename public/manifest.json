@@ -1,8 +1,8 @@
 {
-  "name": "Local2PDF — Convert Images to PDF",
+  "name": "Local2PDF — Private PDF Tools",
   "short_name": "Local2PDF",
-  "description": "Convert images to PDF privately. No upload, no signup.",
-  "start_url": "/tools/image-to-pdf",
+  "description": "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup.",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",

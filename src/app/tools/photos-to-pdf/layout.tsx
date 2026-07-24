@@ -31,7 +31,7 @@ export default function PhotosToPdfLayout({ children }: { children: React.ReactN
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Photos to PDF Converter",
               description:
                 "Convert photos to PDF locally in your browser. Ideal for creating photo albums and printable photo collections. No upload, no signup, no watermark.",
@@ -73,7 +73,7 @@ export default function PhotosToPdfLayout({ children }: { children: React.ReactN
                   name: "What photo formats are supported for PDF conversion?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Most common photo formats are supported including JPG, JPEG, PNG, WebP, HEIC, BMP, and TIFF, depending on your browser's capabilities.",
+                    text: "The tool supports common image formats: JPG, PNG, WebP, and HEIC from your phone's photo library.",
                   },
                 },
               ],

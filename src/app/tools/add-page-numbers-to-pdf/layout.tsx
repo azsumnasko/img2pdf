@@ -31,7 +31,7 @@ export default function AddPageNumbersToPdfLayout({ children }: { children: Reac
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Add Page Numbers to PDF",
               description:
                 "Add customizable page numbers to PDF files privately in your browser. No upload, no signup, no watermark.",

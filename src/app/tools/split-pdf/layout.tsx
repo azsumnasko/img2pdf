@@ -31,7 +31,7 @@ export default function SplitPdfLayout({ children }: { children: React.ReactNode
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Split PDF",
               description:
                 "Split PDF files into individual pages or custom ranges. Private, browser-based processing with no uploads.",

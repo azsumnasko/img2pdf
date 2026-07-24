@@ -21,12 +21,22 @@ export default function JpgToPdfPage() {
       <p>Local2PDF preserves your JPEG images at high quality. Choose the Balanced preset for a good trade-off between quality and file size, Original for the highest fidelity, or Small File to minimize the PDF size for sharing via email or messaging apps.</p>
       <h2>Why Convert JPG to PDF?</h2>
       <p>PDF is the standard format for document sharing. Converting JPG images to PDF ensures they display consistently across all devices, preserve their layout, and can be easily printed, shared, or archived. Unlike individual image files, a PDF keeps multiple pages in a single, organized document.</p>
-      <p style={{ marginTop: "2rem" }}>
-        <Link href="/tools/image-to-pdf">Open the free converter</Link> |{" "}
-        <Link href="/tools/png-to-pdf">PNG to PDF</Link> |{" "}
-        <Link href="/tools/webp-to-pdf">WebP to PDF</Link> |{" "}
-        <Link href="/tools/heic-to-pdf">HEIC to PDF</Link>
-      </p>
+      <section>
+        <h2>Use Cases for Converting JPG to PDF</h2>
+        <ul>
+          <li><strong>Photo printing:</strong> Convert high-resolution JPEG photos to a print-ready PDF for photo labs or home printing.</li>
+          <li><strong>Document scanning:</strong> Combine scanned JPEG pages into a single, organized PDF document for record-keeping and sharing.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Related Tools</h2>
+        <p>
+          <Link href="/tools/image-to-pdf">Open the free converter</Link> |{" "}
+          <Link href="/tools/png-to-pdf">PNG to PDF</Link> |{" "}
+          <Link href="/tools/webp-to-pdf">WebP to PDF</Link> |{" "}
+          <Link href="/tools/heic-to-pdf">HEIC to PDF</Link>
+        </p>
+      </section>
     </main>
   );
 }

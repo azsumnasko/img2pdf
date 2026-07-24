@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Local2PDF — Convert Images to PDF Privately and Free",
+    default: "Local2PDF — Private PDF Tools",
     template: "%s | Local2PDF",
   },
   description:
@@ -25,6 +25,11 @@ export const metadata: Metadata = {
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Local2PDF — Private PDF Tools",
+    description: "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup.",
   },
   robots: {
     index: true,

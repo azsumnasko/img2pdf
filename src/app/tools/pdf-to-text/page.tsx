@@ -175,6 +175,11 @@ export default function PdfToTextPage() {
           <a href="/pdf-tools">All PDF tools</a>
         </p>
       </section>
+
+      <section>
+        <h2>Browser / Device Support</h2>
+        <p>Works in all modern browsers. Text extraction uses the PDF&apos;s built-in text layer. Scanned/image-only PDFs will produce no text — this is a PDF limitation, not a browser limitation.</p>
+      </section>
     </main>
     </ErrorBoundary>
   );

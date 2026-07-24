@@ -186,6 +186,15 @@ export default function DeletePdfPagesPage() {
           <Link href="/tools/rotate-pdf">Rotate PDF</Link>
         </p>
       </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Delete PDF Pages</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Removing blank pages from scans</h3><p>Clean up scanned documents by removing blank or empty pages that add unnecessary bulk to your PDF.</p></li>
+          <li className="use-case"><h3>Removing confidential appendices</h3><p>Strip out confidential or sensitive appendix pages before sharing a document with external parties.</p></li>
+          <li className="use-case"><h3>Cleaning up a document before sharing</h3><p>Remove irrelevant or outdated pages to present a polished, streamlined document to colleagues or clients.</p></li>
+        </ul>
+      </section>
     </main>
     </ErrorBoundary>
   );

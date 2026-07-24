@@ -212,6 +212,22 @@ export default function CropPdfPage() {
           <Link href="/tools/n-up-pdf">N-Up PDF</Link>
         </p>
       </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Crop PDF</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Removing scanner margins</h3><p>Trim away the black borders, shadows, and excess margins that scanners add around document pages.</p></li>
+          <li className="use-case"><h3>Cropping shipping labels</h3><p>Isolate shipping labels from a full-page PDF for cleaner printing or digital record-keeping.</p></li>
+          <li className="use-case"><h3>Trimming excess whitespace</h3><p>Remove unnecessary white space around content to produce a tighter, more professional-looking document.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li><strong>All pages receive the same trim values.</strong> Visual crop selection is under development. Cropped content is permanently removed from the output. Content is not reflowed — cropping only changes page dimensions.</li>
+        </ul>
+      </section>
     </main>
     </ErrorBoundary>
   );

@@ -31,7 +31,7 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — N-Up PDF",
               description:
                 "Create N-up PDFs with multiple pages per sheet. Private, browser-based processing with no uploads.",

@@ -31,7 +31,7 @@ export default function MergePdfLayout({ children }: { children: React.ReactNode
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Merge PDF",
               description:
                 "Combine multiple PDF files into one document privately in your browser. No upload, no signup, no watermark.",

@@ -214,6 +214,22 @@ export default function CompressPdfPage() {
           <Link href="/tools/crop-pdf">Crop PDF</Link>
         </p>
       </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Compress PDF</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Reducing file size for email attachments</h3><p>Shrink large PDFs to fit within email attachment size limits without splitting into multiple files.</p></li>
+          <li className="use-case"><h3>Optimizing scanned documents</h3><p>Compress high-resolution scans and photos embedded in PDFs to make them faster to share and store.</p></li>
+          <li className="use-case"><h3>Saving storage space</h3><p>Batch-compress PDF archives to free up disk space while keeping documents accessible and readable.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li><strong>Safe compression may produce little to no size reduction for already-optimized PDFs.</strong> Image-heavy mode re-renders pages which always changes visual output and loses text selectability, form fields, and vector graphics.</li>
+        </ul>
+      </section>
     </main>
     </ErrorBoundary>
   );

@@ -31,7 +31,7 @@ export default function RotatePdfLayout({ children }: { children: React.ReactNod
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Rotate PDF Pages",
               description:
                 "Rotate PDF pages 90°, 180°, or 270° privately in your browser. No upload, no signup, no watermark.",

@@ -31,7 +31,7 @@ export default function HeicToPdfLayout({ children }: { children: React.ReactNod
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — HEIC to PDF Converter",
               description:
                 "Convert HEIC images (Apple/iPhone photos) to PDF locally in your browser. No upload, no signup, no watermark.",

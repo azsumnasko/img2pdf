@@ -31,7 +31,7 @@ export default function ExtractPdfPagesLayout({ children }: { children: React.Re
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Extract PDF Pages",
               description:
                 "Extract specific pages from a PDF privately in your browser. Combine into one PDF or get separate files.",
@@ -52,7 +52,7 @@ export default function ExtractPdfPagesLayout({ children }: { children: React.Re
             {
               "@type": "FAQPage",
               "mainEntity": [
-                { "@type": "Question", "name": "Can I extract specific page ranges?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enter the pages you want as ranges (e.g., 1-5, 8, 12-15) and choose to combine them into one PDF or get separate files." } },
+                { "@type": "Question", "name": "Can I extract specific page ranges?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select pages by checking their thumbnails. You can select specific pages using the checkboxes, then choose to combine them into one PDF or extract as separate files." } },
                 { "@type": "Question", "name": "Will extracting pages reduce quality?", "acceptedAnswer": { "@type": "Answer", "text": "No. Extracted pages are copied directly from the original file without re-encoding, so quality is fully preserved." } },
                 { "@type": "Question", "name": "Are my PDF contents visible to anyone?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens locally in your browser. Your PDF and its contents never leave your device." } },
                 { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },

@@ -31,7 +31,7 @@ export default function CombineImagesToPdfLayout({ children }: { children: React
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Combine Images to PDF",
               description:
                 "Combine multiple images of various formats into a single PDF locally in your browser. Reorder pages and customize layout. No upload, no signup, no watermark.",

@@ -248,6 +248,11 @@ export default function ExtractPdfPagesPage() {
           </tbody>
         </table>
       </section>
+
+      <section>
+        <h2>Browser / Device Support</h2>
+        <p>Works in all modern browsers. Extracted pages maintain original quality without rasterization. ZIP downloads for multiple files work in all modern browsers.</p>
+      </section>
     </main>
     </ErrorBoundary>
   );

@@ -24,6 +24,21 @@ export default function PhotosToPdfPage() {
         <li>Arrange photos, choose page size (A4 or Letter)</li>
         <li>Tap Convert — the PDF saves to your device</li>
       </ol>
+      <section className="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+          <li>Open the tool on your phone or desktop and select photos from your library</li>
+          <li>Arrange and rotate photos in your chosen page order</li>
+          <li>The PDF is generated entirely on your device and saved directly to your downloads</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Why Convert Photos to PDF</h2>
+        <ul>
+          <li><strong>Photo albums:</strong> Turn a collection of photos into a shareable photo book PDF that anyone can open.</li>
+          <li><strong>Printing:</strong> Prepare photos for printing at standard sizes like A4 or US Letter with adjustable margins.</li>
+        </ul>
+      </section>
       <p style={{ marginTop: "2rem" }}>
         <Link href="/tools/image-to-pdf">Open the converter</Link> |{" "}
         <Link href="/tools/jpg-to-pdf">JPG to PDF</Link> |{" "}

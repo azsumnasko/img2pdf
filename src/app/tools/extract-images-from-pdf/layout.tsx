@@ -32,8 +32,8 @@ export default function ExtractImagesFromPdfLayout({ children }: { children: Rea
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "Local2PDF — Extract Images from PDF",
+              "@type": "WebApplication",
+              name: "Local2PDF — Render PDF Pages as Images (Beta)",
               description:
                 "Extract images from PDF pages as high-resolution PNGs privately in your browser. No upload, no signup.",
               applicationCategory: "UtilitiesApplication",

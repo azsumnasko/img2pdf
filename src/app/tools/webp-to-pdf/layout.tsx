@@ -31,7 +31,7 @@ export default function WebpToPdfLayout({ children }: { children: React.ReactNod
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — WebP to PDF Converter",
               description:
                 "Convert WebP images to PDF locally in your browser. Supports both lossy and lossless WebP. No upload, no signup, no watermark.",

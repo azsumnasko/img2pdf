@@ -31,7 +31,7 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Image to PDF Converter",
               description:
                 "Convert JPG, PNG, WebP, and HEIC images to PDF privately in your browser. No upload, no signup, no watermark.",

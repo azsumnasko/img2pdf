@@ -220,6 +220,22 @@ export default function NUpPdfPage() {
           <Link href="/tools/add-page-numbers-to-pdf">Add Page Numbers</Link>
         </p>
       </section>
+
+      <section className="how-it-works">
+        <h2>When to Use N-Up PDF</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Creating presentation handouts</h3><p>Fit multiple slides per page to create compact, printable handouts for your audience.</p></li>
+          <li className="use-case"><h3>Saving paper when printing</h3><p>Reduce paper usage by printing 2, 4, or more pages on a single sheet.</p></li>
+          <li className="use-case"><h3>Making proof sheets</h3><p>Create thumbnail-style proof sheets to review page layouts and designs at a glance.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li><strong>Pages are scaled down to fit the layout,</strong> which may make small text hard to read. The tool creates reading-order layouts, not booklet imposition. Very large PDFs may take longer to process.</li>
+        </ul>
+      </section>
     </main>
     </ErrorBoundary>
   );

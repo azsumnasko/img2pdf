@@ -31,7 +31,7 @@ export default function DeletePdfPagesLayout({ children }: { children: React.Rea
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Delete PDF Pages",
               description:
                 "Remove unwanted pages from a PDF privately in your browser. No upload, no signup, no watermark.",

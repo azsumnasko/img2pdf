@@ -31,7 +31,7 @@ export default function CropPdfLayout({ children }: { children: React.ReactNode 
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Crop PDF",
               description:
                 "Crop and trim PDF page margins privately in your browser. No upload, no signup, no watermark.",
@@ -54,7 +54,7 @@ export default function CropPdfLayout({ children }: { children: React.ReactNode 
               "mainEntity": [
                 { "@type": "Question", "name": "Can I preview the crop before applying?", "acceptedAnswer": { "@type": "Answer", "text": "Crop margins are entered as numeric values (in mm) on each side. Visual crop selection is under development." } },
                 { "@type": "Question", "name": "Does cropping permanently remove content?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cropping changes the visible page area (crop box). Content outside the crop box is hidden but still present in the file." } },
-                { "@type": "Question", "name": "Can I apply the same crop to all pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can define crop margins once and apply them uniformly to every page, or adjust each page individually." } },
+                { "@type": "Question", "name": "Can I apply the same crop to all pages?", "acceptedAnswer": { "@type": "Answer", "text": "All pages receive the same trim values. Per-page individual crop adjustment is under development." } },
                 { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
                 { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]

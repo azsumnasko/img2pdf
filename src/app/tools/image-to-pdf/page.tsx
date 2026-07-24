@@ -185,7 +185,38 @@ export default function ImageToPdfPage() {
 
       {DEFAULT_CONFIG.enableAds && <AdSlot id="tool-content-1" />}
 
+      <section className="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently asked questions</h2>
+        <div className="faq-list">
+          <details className="faq-item">
+            <summary>Are my images uploaded to Local2PDF servers?</summary>
+            <p>No. All image processing happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Which image formats can I convert to PDF?</summary>
+            <p>Local2PDF supports JPEG, PNG, WebP, and HEIC images. You can convert up to 25 images at once into a single PDF.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Is Local2PDF free?</summary>
+            <p>Yes. Local2PDF is completely free. There is no signup, no watermark, and unlimited conversions.</p>
+          </details>
+          <details className="faq-item">
+            <summary>Can I convert images to PDF on my phone?</summary>
+            <p>Yes. Local2PDF works on mobile browsers including iPhone Safari and Android Chrome.</p>
+          </details>
+        </div>
+      </section>
+
       <MakerPromo />
+
+      <section className="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+          <li>Drop images or paste from clipboard — JPG, PNG, WebP, and HEIC formats are all supported</li>
+          <li>Arrange pages, choose paper size (A4, US Letter, or custom), adjust margins and quality settings</li>
+          <li>Click Convert — your PDF is created entirely on your device, never uploaded to any server</li>
+        </ol>
+      </section>
 
       <section className="tool-seo">
         <h2>Related PDF Tools</h2>
@@ -193,7 +224,10 @@ export default function ImageToPdfPage() {
           <Link href="/tools/jpg-to-pdf">JPG to PDF</Link> |{" "}
           <Link href="/tools/png-to-pdf">PNG to PDF</Link> |{" "}
           <Link href="/tools/webp-to-pdf">WebP to PDF</Link> |{" "}
-          <Link href="/tools/heic-to-pdf">HEIC to PDF</Link>
+          <Link href="/tools/heic-to-pdf">HEIC to PDF</Link> |{" "}
+          <Link href="/tools/screenshot-to-pdf">Screenshot to PDF</Link> |{" "}
+          <Link href="/tools/photos-to-pdf">Photos to PDF</Link> |{" "}
+          <Link href="/tools/combine-images-to-pdf">Combine Images to PDF</Link>
         </p>
       </section>
     </main>

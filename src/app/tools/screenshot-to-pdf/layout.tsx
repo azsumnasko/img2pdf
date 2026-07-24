@@ -31,7 +31,7 @@ export default function ScreenshotToPdfLayout({ children }: { children: React.Re
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Screenshot to PDF Converter",
               description:
                 "Convert screenshots to PDF locally in your browser. Paste from clipboard or select screenshot files. No upload, no signup, no watermark.",

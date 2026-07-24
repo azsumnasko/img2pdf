@@ -31,7 +31,7 @@ export default function ResizePdfPagesLayout({ children }: { children: React.Rea
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — Resize PDF Pages",
               description:
                 "Resize PDF pages to standard or custom sizes privately in your browser. No upload, no signup.",

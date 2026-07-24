@@ -228,6 +228,11 @@ export default function SplitPdfPage() {
           <li><strong>Password-protected PDFs are not supported.</strong> Encrypted or locked PDFs cannot be processed. Remove the password before splitting.</li>
         </ul>
       </section>
+
+      <section>
+        <h2>Browser / Device Support</h2>
+        <p>Works in all modern browsers with JavaScript enabled. ZIP downloads for multi-file output require browser support for JSZip (all modern browsers supported).</p>
+      </section>
     </main>
     </ErrorBoundary>
   );

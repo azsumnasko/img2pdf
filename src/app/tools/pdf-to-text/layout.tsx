@@ -31,7 +31,7 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "WebApplication",
               name: "Local2PDF — PDF to Text Extractor",
               description:
                 "Extract text from PDF files locally in your browser. Fast and private. No upload, no signup, no watermark.",
