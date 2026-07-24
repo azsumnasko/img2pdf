@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/merge-pdf.png",
         width: 1200,
         height: 630,
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Merge PDF Locally — Private, No Upload",
+    description: "Combine multiple PDFs into one file. All processing happens in your browser — your files stay on your device.",
+    images: ["/og/merge-pdf.png"],
+  },
+
 };
 
 export default function MergePdfLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function MergePdfLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/merge-pdf#webapp",
+              url: "https://local2pdf.com/tools/merge-pdf",
               name: "Local2PDF — Merge PDF",
               description:
                 "Combine multiple PDF files into one document privately in your browser. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function MergePdfLayout({ children }: { children: React.ReactNode
               browserRequirements: "Requires JavaScript",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
@@ -50,14 +58,39 @@ export default function MergePdfLayout({ children }: { children: React.ReactNode
               ],
             },
             {
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               "mainEntity": [
                 { "@type": "Question", "name": "Are my PDFs uploaded when merging?", "acceptedAnswer": { "@type": "Answer", "text": "No. The merge happens entirely in your browser. Your files never leave your device." } },
                 { "@type": "Question", "name": "Can I rearrange pages before merging?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can drag and reorder pages from all selected documents before merging." } },
                 { "@type": "Question", "name": "Is there a limit on file size?", "acceptedAnswer": { "@type": "Answer", "text": "There is no hard limit, but performance depends on your device and available memory." } },
                 { "@type": "Question", "name": "Can I merge different file formats?", "acceptedAnswer": { "@type": "Answer", "text": "This tool works with PDF files. To merge images into a PDF, use our JPG/PNG to PDF converter instead." } },
-                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
                 { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to merge PDF files",
+              "description": "Combine multiple PDF files into one document privately in your browser. No upload, no signup, no watermark. Rearrange pages before merging.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select your PDFs",
+                  "text": "Click or drag and drop the PDF files you want to combine."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Reorder your pages",
+                  "text": "Drag and drop to rearrange pages. Rotate individual pages if needed."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Download the merged PDF",
+                  "text": "Click Merge and download your combined PDF — all done in your browser."
+                }
               ]
             },
           ]),

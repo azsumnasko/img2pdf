@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/n-up-pdf.png",
         width: 1200,
         height: 630,
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "N-Up PDF Locally — Multiple Pages Per Sheet",
+    description: "Combine multiple PDF pages onto one sheet with N-up layouts. Choose 2-up, 4-up, 6-up, 8-up, or 9-up. Free, private, browser-based.",
+    images: ["/og/n-up-pdf.png"],
+  },
+
 };
 
 export default function NUpPdfLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/n-up-pdf#webapp",
+              url: "https://local2pdf.com/tools/n-up-pdf",
               name: "Local2PDF — N-Up PDF",
               description:
                 "Create N-up PDFs with multiple pages per sheet. Private, browser-based processing with no uploads.",
@@ -41,8 +50,7 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
               browserRequirements: "Requires JavaScript",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
@@ -50,13 +58,39 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
               ],
             },
             {
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               "mainEntity": [
                 { "@type": "Question", "name": "What N-up layouts are available?", "acceptedAnswer": { "@type": "Answer", "text": "You can choose 2-up, 4-up, 6-up, 8-up, or 9-up. Each layout places that many original pages onto a single sheet." } },
                 { "@type": "Question", "name": "Can I adjust spacing between pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can set a custom padding value to add space between the pages on each sheet." } },
                 { "@type": "Question", "name": "In what order are pages arranged?", "acceptedAnswer": { "@type": "Answer", "text": "Pages flow left-to-right, top-to-bottom across the sheet. For example, a 4-up layout places pages 1-4 on one sheet, 5-8 on the next." } },
                 { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
                 { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to create an N-Up PDF",
+              "description": "Arrange multiple PDF pages on a single sheet. Create 2-up, 4-up, or 8-up layouts with adjustable padding. No upload, no signup.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select your PDF",
+                  "text": "Choose the PDF file you want to rearrange into an N-up layout."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Choose layout & settings",
+                  "text": "Pick how many pages per sheet (2-up, 4-up, etc.), output size, and padding between pages."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Download the result",
+                  "text": "Click \"Create N-Up PDF\" and download — all processing happens in your browser."
+                }
               ]
             },
           ]),

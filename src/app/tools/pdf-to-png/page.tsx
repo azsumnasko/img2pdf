@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PdfPageGrid } from "@/components/tool/PdfPageGrid";
@@ -183,15 +184,15 @@ export default function PdfToPngPage() {
         </ol>
 
         <h2>When to Use PNG Instead of JPG</h2>
-        <p>PNG is ideal for PDFs containing diagrams, charts, screenshots, text, or line art — anything where sharp edges matter. Unlike JPG, PNG uses lossless compression so text stays crisp. For photographs where file size is a priority, <a href="/tools/pdf-to-jpg">PDF to JPG</a> may be a better choice.</p>
+        <p>PNG is ideal for PDFs containing diagrams, charts, screenshots, text, or line art — anything where sharp edges matter. Unlike JPG, PNG uses lossless compression so text stays crisp. For photographs where file size is a priority, <Link href="/tools/pdf-to-jpg">PDF to JPG</Link> may be a better choice.</p>
 
         <h2>Privacy and Security</h2>
         <p>Your PDF never leaves your device. All page rendering happens locally in your browser using the Canvas API. No files are uploaded to any server — your data stays private and secure.</p>
 
         <p style={{ marginTop: "var(--space-6)" }}>
-          <a href="/tools/pdf-to-jpg">PDF to JPG</a> |{" "}
-          <a href="/tools/pdf-to-text">PDF to Text</a> |{" "}
-          <a href="/pdf-tools">All PDF tools</a>
+          <Link href="/tools/pdf-to-jpg">PDF to JPG</Link> |{" "}
+          <Link href="/tools/pdf-to-text">PDF to Text</Link> |{" "}
+          <Link href="/pdf-tools">All PDF tools</Link>
         </p>
       </section>
 

@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/pdf-to-png.png",
         width: 1200,
         height: 630,
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "PDF to PNG Locally — No Upload, Lossless Quality",
+    description: "Render PDF pages as PNG images privately. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
+    images: ["/og/pdf-to-png.png"],
+  },
+
 };
 
 export default function PdfToPngLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/pdf-to-png#webapp",
+              url: "https://local2pdf.com/tools/pdf-to-png",
               name: "Local2PDF — PDF to PNG Converter",
               description:
                 "Convert PDF pages to PNG images locally in your browser. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
               browserRequirements: "Requires JavaScript and Canvas API support",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,38 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "PDF to PNG", item: "https://local2pdf.com/tools/pdf-to-png" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Convert PDF to PNG",
+              "description": "Convert PDF pages to lossless PNG images. Perfect for diagrams, text, and screenshots. All processing happens in your browser — no upload, no signup, no watermark.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select your PDF file",
+                  "text": "click or drag and drop your PDF onto the dropzone."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Choose DPI resolution",
+                  "text": "200 DPI delivers sharp results for diagrams and text."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Convert and download",
+                  "text": "click Convert to PNG. Multi-page PDFs download as a ZIP containing all pages."
+                }
+              ]
             },
           ]),
         }}

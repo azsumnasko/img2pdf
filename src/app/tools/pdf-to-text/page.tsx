@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import Link from "next/link";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
@@ -170,9 +171,9 @@ export default function PdfToTextPage() {
         <p>Your PDF never leaves your device. All text extraction happens locally in your browser. No files are uploaded to any server — your data stays private and secure.</p>
 
         <p style={{ marginTop: "var(--space-6)" }}>
-          <a href="/tools/pdf-to-jpg">PDF to JPG</a> |{" "}
-          <a href="/tools/pdf-to-png">PDF to PNG</a> |{" "}
-          <a href="/pdf-tools">All PDF tools</a>
+          <Link href="/tools/pdf-to-jpg">PDF to JPG</Link> |{" "}
+          <Link href="/tools/pdf-to-png">PDF to PNG</Link> |{" "}
+          <Link href="/pdf-tools">All PDF tools</Link>
         </p>
       </section>
 

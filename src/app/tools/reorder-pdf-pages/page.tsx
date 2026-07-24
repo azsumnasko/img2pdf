@@ -85,6 +85,8 @@ export default function ReorderPdfPagesPage() {
                 <label htmlFor="reorder-filename">Output filename</label>
                 <input id="reorder-filename" type="text" value={filename} onChange={(e) => setFilename(e.target.value)} />
               </div>
+              {/* executeMerge with a single document reorders pages: the merge logic reconstructs
+                  the PDF with pages in the current order, which is exactly how reordering works. */}
               <button className="btn btn--primary btn--large btn--full" onClick={() => executeMerge(filename.endsWith(".pdf") ? filename : `${filename}.pdf`)} type="button" disabled={state.pages.length === 0}>
                 Save Reordered PDF
               </button>

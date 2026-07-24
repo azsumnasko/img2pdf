@@ -4,6 +4,9 @@ import { renderPageToCanvas } from "./pdf-renderer";
 
 async function loadPdfjsDoc(buf: ArrayBuffer) {
   const pdfjs = await import("pdfjs-dist");
+  if (!pdfjs.GlobalWorkerOptions.workerSrc) {
+    pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+  }
   return (await pdfjs.getDocument({ data: buf }).promise);
 }
 
@@ -162,8 +165,9 @@ export async function loadPdfsAndBuildOrganizer(
           height: pageInfo.height,
         });
       }
-    } catch {
-      warnings.push(`${file.name} could not be loaded. The file may be encrypted, corrupted, or not a valid PDF.`);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "could not be loaded";
+      warnings.push(`${file.name}: ${msg}`);
     }
   }
 

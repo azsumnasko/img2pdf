@@ -8,6 +8,9 @@ import { MakerPromo } from "@/components/content/MakerPromo";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  title: "Private PDF Tools — No Upload, Free & Local",
+  description:
+    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark.",
   alternates: { canonical: "https://local2pdf.com" },
   openGraph: {
     title: "Local2PDF — Private PDF Tools & Image to PDF Converter",
@@ -23,6 +26,13 @@ export const metadata: Metadata = {
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Local2PDF — Private PDF Tools",
+    description:
+      "Free PDF tools that work privately in your browser. Merge, split, rotate, and convert files — no uploads or signup required.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -97,6 +107,10 @@ export default function HomePage() {
             <h3>Crop PDF</h3>
             <p>Trim margins and unwanted areas from pages</p>
           </Link>
+          <Link href="/tools/n-up-pdf" className="tool-card">
+            <h3>N-Up PDF</h3>
+            <p>Place multiple pages on one sheet for printing</p>
+          </Link>
         </div>
       </section>
 
@@ -137,100 +151,135 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Are my images uploaded to your servers?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "No. All image processing happens entirely in your browser. Your files never leave your device.",
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "Are my images uploaded to your servers?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "No. All image processing happens entirely in your browser. Your files never leave your device.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Do I need to create an account?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "No. Local2PDF is free to use without any account, signup, or email address.",
+                {
+                  "@type": "Question",
+                  name: "Do I need to create an account?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "No. Local2PDF is free to use without any account, signup, or email address.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Is there a watermark on the output?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "No. There is no watermark, branding, or any other marking added to your PDF.",
+                {
+                  "@type": "Question",
+                  name: "Is there a watermark on the output?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "No. There is no watermark, branding, or any other marking added to your PDF.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "How many images can I convert at once?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The free version supports up to 25 pages per conversion. You can run unlimited conversions.",
+                {
+                  "@type": "Question",
+                  name: "How many images can I convert at once?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The free version supports up to 25 pages per conversion. You can run unlimited conversions.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Which image formats are supported?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "JPEG, PNG, WebP, and HEIC images are supported.",
+                {
+                  "@type": "Question",
+                  name: "Which image formats are supported?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "JPEG, PNG, WebP, and HEIC images are supported.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "What page sizes are available?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "You can choose A4, A3, A5, US Letter, US Legal, fit to image, or enter custom dimensions.",
+                {
+                  "@type": "Question",
+                  name: "What page sizes are available?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "You can choose A4, A3, A5, US Letter, US Legal, fit to image, or enter custom dimensions.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Can I use this offline?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. After your first visit, JPG, PNG, and WebP conversion works offline.",
+                {
+                  "@type": "Question",
+                  name: "Can I use this offline?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. After your first visit, JPG, PNG, and WebP conversion works offline.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Is this tool free?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Local2PDF is free to use with no hidden costs. The site is supported by advertising placed away from the tool controls.",
+                {
+                  "@type": "Question",
+                  name: "Is this tool free?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. Local2PDF is free to use with no hidden costs. The site is supported by advertising placed away from the tool controls.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Can I merge multiple PDF files?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Use the Merge PDF tool to combine several PDFs into a single document. Drag and drop to arrange the order before merging.",
+                {
+                  "@type": "Question",
+                  name: "Can I merge multiple PDF files?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. Use the Merge PDF tool to combine several PDFs into a single document. Drag and drop to arrange the order before merging.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "How do I split a PDF into separate pages?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Use the Split PDF tool to extract every page of a PDF as an individual file, or extract specific pages using the Extract Pages tool.",
+                {
+                  "@type": "Question",
+                  name: "How do I split a PDF into separate pages?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Use the Split PDF tool to extract every page of a PDF as an individual file, or extract specific pages using the Extract Pages tool.",
+                  },
                 },
-              },
-              {
-                "@type": "Question",
-                name: "Can I rotate PDF pages?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. The Rotate PDF tool lets you rotate individual pages or the entire document by 90, 180, or 270 degrees — all processed locally in your browser.",
+                {
+                  "@type": "Question",
+                  name: "Can I rotate PDF pages?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes. The Rotate PDF tool lets you rotate individual pages or the entire document by 90, 180, or 270 degrees — all processed locally in your browser.",
+                  },
                 },
-              },
-            ],
-          }),
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              name: "How to use Local2PDF",
+              description:
+                "Process PDF files privately in your browser with Local2PDF — no uploads, no signup, no watermark.",
+              step: [
+                {
+                  "@type": "HowToStep",
+                  position: 1,
+                  name: "Choose a PDF tool",
+                  text: "Pick from convert images to PDF, merge or split PDFs, rotate or reorder pages, extract text, or export PDF pages as images.",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 2,
+                  name: "Select files from your device",
+                  text: "Add PDF documents and images from your device using drag and drop, the file picker, paste from clipboard, or your camera on mobile.",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 3,
+                  name: "Make your changes locally",
+                  text: "Adjust page order, orientation, margins, quality, and other settings. Everything is processed in your browser — no files are uploaded.",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 4,
+                  name: "Download the result",
+                  text: "Get your converted, merged, or modified file instantly. No signup, no watermark — everything stays on your device.",
+                },
+              ],
+            },
+          ]),
         }}
       />
     </main>

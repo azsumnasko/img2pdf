@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/pdf-to-text.png",
         width: 1200,
         height: 630,
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "PDF to Text Locally — Extract Text Without Upload",
+    description: "Extract text from PDFs privately in your browser. No upload, no signup, no watermark.",
+    images: ["/og/pdf-to-text.png"],
+  },
+
 };
 
 export default function PdfToTextLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/pdf-to-text#webapp",
+              url: "https://local2pdf.com/tools/pdf-to-text",
               name: "Local2PDF — PDF to Text Extractor",
               description:
                 "Extract text from PDF files locally in your browser. Fast and private. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
               browserRequirements: "Requires JavaScript",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,44 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "PDF to Text", item: "https://local2pdf.com/tools/pdf-to-text" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Extract Text from PDF",
+              "description": "Extract text from PDF files directly in your browser. Fast extraction from text-based PDFs. No upload, no signup, no watermark — completely private.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select your PDF file",
+                  "text": "click or drag and drop your PDF onto the dropzone."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Click Extract Text",
+                  "text": "the tool reads the text layer embedded in your PDF."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "View the extracted text",
+                  "text": "text appears in the preview area below with page separators."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 4,
+                  "name": "Download as .txt",
+                  "text": "save the extracted text as a plain text file for further use."
+                }
+              ]
             },
           ]),
         }}

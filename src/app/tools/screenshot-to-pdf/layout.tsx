@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/screenshot-to-pdf.png",
         width: 1200,
         height: 630,
-        alt: "Local2PDF — Private PDF tools in your browser",
+        alt: "Local2PDF — Convert Screenshots to PDF",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Screenshot to PDF Locally — Private & Free",
+    description: "Convert screenshots to PDF privately. Paste from clipboard or select files. No upload, no signup, no watermark.",
+    images: ["/og/screenshot-to-pdf.png"],
+  },
+
 };
 
 export default function ScreenshotToPdfLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function ScreenshotToPdfLayout({ children }: { children: React.Re
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/screenshot-to-pdf#webapp",
+              url: "https://local2pdf.com/tools/screenshot-to-pdf",
               name: "Local2PDF — Screenshot to PDF Converter",
               description:
                 "Convert screenshots to PDF locally in your browser. Paste from clipboard or select screenshot files. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function ScreenshotToPdfLayout({ children }: { children: React.Re
               browserRequirements: "Requires JavaScript and Canvas API support",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,38 @@ export default function ScreenshotToPdfLayout({ children }: { children: React.Re
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "Screenshot to PDF", item: "https://local2pdf.com/tools/screenshot-to-pdf" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Convert Screenshots to PDF",
+              "description": "Convert screenshots to PDF locally in your browser. Paste from clipboard or select screenshot files. Adjust page size and orientation. No upload, no signup.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Paste or drop screenshots",
+                  "text": "Use Ctrl+V / Cmd+V, drag PNG/JPG files, or pick them from your device."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Arrange and set layout",
+                  "text": "Reorder pages, rotate if needed, and choose page size, orientation, and margins."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Download locally",
+                  "text": "Click Convert — the PDF is built in your browser and downloads instantly."
+                }
+              ]
             },
           ]),
         }}

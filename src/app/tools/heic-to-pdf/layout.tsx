@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/heic-to-pdf.png",
         width: 1200,
         height: 630,
-        alt: "Local2PDF — Private PDF tools in your browser",
+        alt: "Local2PDF — Convert HEIC to PDF",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "HEIC to PDF Locally — Private & Free",
+    description: "Convert HEIC iPhone photos to PDF privately. No upload, no signup, no watermark — all processing happens locally.",
+    images: ["/og/heic-to-pdf.png"],
+  },
+
 };
 
 export default function HeicToPdfLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function HeicToPdfLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/heic-to-pdf#webapp",
+              url: "https://local2pdf.com/tools/heic-to-pdf",
               name: "Local2PDF — HEIC to PDF Converter",
               description:
                 "Convert HEIC images (Apple/iPhone photos) to PDF locally in your browser. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function HeicToPdfLayout({ children }: { children: React.ReactNod
               browserRequirements: "Requires JavaScript and Canvas API support",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,38 @@ export default function HeicToPdfLayout({ children }: { children: React.ReactNod
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "HEIC to PDF", item: "https://local2pdf.com/tools/heic-to-pdf" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Convert HEIC to PDF",
+              "description": "Convert HEIC images (iPhone/iPad photos) to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select files",
+                  "text": "Choose iPhone photos from your library or drag HEIC files into the converter."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Adjust settings",
+                  "text": "Safari uses native HEIC support; other browsers load a local WASM decoder as needed."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Convert and download",
+                  "text": "Reorder, rotate, set page size, then download a PDF that anyone can open."
+                }
+              ]
             },
           ]),
         }}

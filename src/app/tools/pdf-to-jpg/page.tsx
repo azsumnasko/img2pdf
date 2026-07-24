@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PdfPageGrid } from "@/components/tool/PdfPageGrid";
@@ -186,15 +187,15 @@ export default function PdfToJpgPage() {
         </ol>
 
         <h2>When to Use JPG Instead of PNG</h2>
-        <p>Choose JPG for photographs, scanned documents, and images where file size matters more than perfect text sharpness. For diagrams, screenshots, or documents with fine text, use the <a href="/tools/pdf-to-png">PDF to PNG</a> converter instead for lossless quality.</p>
+        <p>Choose JPG for photographs, scanned documents, and images where file size matters more than perfect text sharpness. For diagrams, screenshots, or documents with fine text, use the <Link href="/tools/pdf-to-png">PDF to PNG</Link> converter instead for lossless quality.</p>
 
         <h2>Privacy and Security</h2>
         <p>Your PDF never leaves your device. All page rendering happens locally in your browser using the Canvas API. No files are uploaded to any server — your data stays private and secure.</p>
 
         <p style={{ marginTop: "var(--space-6)" }}>
-          <a href="/tools/pdf-to-png">PDF to PNG</a> |{" "}
-          <a href="/tools/pdf-to-text">PDF to Text</a> |{" "}
-          <a href="/pdf-tools">All PDF tools</a>
+          <Link href="/tools/pdf-to-png">PDF to PNG</Link> |{" "}
+          <Link href="/tools/pdf-to-text">PDF to Text</Link> |{" "}
+          <Link href="/pdf-tools">All PDF tools</Link>
         </p>
       </section>
 

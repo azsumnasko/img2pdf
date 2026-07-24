@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/image-to-pdf.png",
         width: 1200,
         height: 630,
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Convert Images to PDF — Private & Free",
+    description: "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 pages per conversion.",
+    images: ["/og/image-to-pdf.png"],
+  },
+
 };
 
 export default function ImageToPdfLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/image-to-pdf#webapp",
+              url: "https://local2pdf.com/tools/image-to-pdf",
               name: "Local2PDF — Image to PDF Converter",
               description:
                 "Convert JPG, PNG, WebP, and HEIC images to PDF privately in your browser. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
               browserRequirements: "Requires JavaScript and Canvas API support",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,38 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "Image to PDF", item: "https://local2pdf.com/tools/image-to-pdf" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How It Works",
+              "description": "Convert JPG, PNG, WebP, and HEIC to PDF free. Combine up to 25 images into one PDF. No signup, no watermark, no upload. Your files stay on your device.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Drop images or paste from clipboard — JPG, PNG, WebP, and HEIC formats are all supported",
+                  "text": "Drop images or paste from clipboard — JPG, PNG, WebP, and HEIC formats are all supported"
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Arrange pages, choose paper size (A4, US Letter, or custom), adjust margins and quality settings",
+                  "text": "Arrange pages, choose paper size (A4, US Letter, or custom), adjust margins and quality settings"
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Click Convert — your PDF is created entirely on your device, never uploaded to any server",
+                  "text": "Click Convert — your PDF is created entirely on your device, never uploaded to any server"
+                }
+              ]
             },
           ]),
         }}

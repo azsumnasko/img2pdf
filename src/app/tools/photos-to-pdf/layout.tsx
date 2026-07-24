@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/photos-to-pdf.png",
         width: 1200,
         height: 630,
-        alt: "Local2PDF — Private PDF tools in your browser",
+        alt: "Local2PDF — photos-to-pdf",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Photos to PDF Locally — Private & Free",
+    description: "Turn photos into PDF albums privately. Customize layout and page size. No upload, no signup, no watermark.",
+    images: ["/og/photos-to-pdf.png"],
+  },
+
 };
 
 export default function PhotosToPdfLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function PhotosToPdfLayout({ children }: { children: React.ReactN
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/photos-to-pdf#webapp",
+              url: "https://local2pdf.com/tools/photos-to-pdf",
               name: "Local2PDF — Photos to PDF Converter",
               description:
                 "Convert photos to PDF locally in your browser. Ideal for creating photo albums and printable photo collections. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function PhotosToPdfLayout({ children }: { children: React.ReactN
               browserRequirements: "Requires JavaScript and Canvas API support",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,38 @@ export default function PhotosToPdfLayout({ children }: { children: React.ReactN
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "Photos to PDF", item: "https://local2pdf.com/tools/photos-to-pdf" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How It Works",
+              "description": "Convert photos to PDF locally in your browser. Ideal for photo albums and photo prints. Adjust page size, orientation, and margins. No upload, no signup.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select files",
+                  "text": "Use Safari (iPhone) or Chrome (Android) and tap Choose images or take new photos."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Adjust settings",
+                  "text": "Reorder and rotate photos, then pick A4, Letter, or fit-to-image layout."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Convert and download",
+                  "text": "The PDF is generated in the browser and saved to your downloads — never uploaded."
+                }
+              ]
             },
           ]),
         }}

@@ -5,7 +5,7 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
 Allow: /
@@ -21,5 +21,10 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# LLM / AI discovery
+# https://local2pdf.com/llms.txt
+# https://local2pdf.com/llms-full.txt
+# https://local2pdf.com/ai.txt
 
 Sitemap: https://local2pdf.com/sitemap.xml

@@ -14,13 +14,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/extract-images-from-pdf.png",
         width: 1200,
         height: 630,
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Render PDF Pages as Images (Beta)",
+    description: "Render any PDF page to a high-resolution PNG. Free, private, and runs entirely in your browser.",
+    images: ["/og/extract-images-from-pdf.png"],
+  },
+
 };
 
 export default function ExtractImagesFromPdfLayout({ children }: { children: React.ReactNode }) {
@@ -33,6 +40,8 @@ export default function ExtractImagesFromPdfLayout({ children }: { children: Rea
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/extract-images-from-pdf#webapp",
+              url: "https://local2pdf.com/tools/extract-images-from-pdf",
               name: "Local2PDF — Render PDF Pages as Images (Beta)",
               description:
                 "Extract images from PDF pages as high-resolution PNGs privately in your browser. No upload, no signup.",
@@ -42,8 +51,7 @@ export default function ExtractImagesFromPdfLayout({ children }: { children: Rea
               browserRequirements: "Requires JavaScript",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
@@ -51,13 +59,39 @@ export default function ExtractImagesFromPdfLayout({ children }: { children: Rea
               ],
             },
             {
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               "mainEntity": [
                 { "@type": "Question", "name": "What image format is used for extraction?", "acceptedAnswer": { "@type": "Answer", "text": "Pages are rendered and exported as high-resolution PNG images. You can adjust the output resolution for quality vs. file size." } },
                 { "@type": "Question", "name": "Can I extract images from all pages at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select 'All pages' to extract every page as a separate image, or pick individual pages to extract only the ones you need." } },
                 { "@type": "Question", "name": "Will the extracted images include text as well?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each page is rendered as a whole, so all visible content including text, images, and graphics is captured in the output." } },
                 { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
                 { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to extract images from PDF",
+              "description": "Render PDF pages to high-resolution PNGs right in your browser. No upload, no signup — all processing stays on your device.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select your PDF",
+                  "text": "Click or drag and drop the PDF you want to extract images from."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Choose pages & resolution",
+                  "text": "Select the pages and pick a DPI — 300 DPI is best for print-quality extraction."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Download images",
+                  "text": "Extract and download high-resolution PNGs — all done in your browser."
+                }
               ]
             },
           ]),

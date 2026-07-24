@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/pdf-to-jpg.png",
         width: 1200,
         height: 630,
         alt: "Local2PDF — Private PDF tools in your browser",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "PDF to JPG Locally — No Upload, High Quality",
+    description: "Render PDF pages as JPG images privately. Adjust DPI and quality. No upload, no signup, no watermark.",
+    images: ["/og/pdf-to-jpg.png"],
+  },
+
 };
 
 export default function PdfToJpgLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/pdf-to-jpg#webapp",
+              url: "https://local2pdf.com/tools/pdf-to-jpg",
               name: "Local2PDF — PDF to JPG Converter",
               description:
                 "Convert PDF pages to JPG images locally in your browser. Choose DPI and quality. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
               browserRequirements: "Requires JavaScript and Canvas API support",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,44 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "PDF to JPG", item: "https://local2pdf.com/tools/pdf-to-jpg" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Convert PDF to JPG",
+              "description": "Convert PDF pages to high-quality JPG images. Choose resolution (up to 300 DPI) and quality. All processing happens in your browser — no upload, no signup, no watermark.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select your PDF file",
+                  "text": "click or drag and drop your PDF onto the dropzone above."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Choose DPI resolution",
+                  "text": "150 DPI for standard use, 300 DPI for print-quality JPGs."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Adjust JPEG quality",
+                  "text": "slide to balance between file size and image clarity."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 4,
+                  "name": "Convert and download",
+                  "text": "click Convert to JPG. For multi-page PDFs you will get a ZIP file containing all pages."
+                }
+              ]
             },
           ]),
         }}

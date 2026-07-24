@@ -397,6 +397,7 @@ export async function compressPdf(
   const originalSize = buf.byteLength;
 
   if (strategy === "safe") {
+    onProgress?.(1, 1);
     const srcDoc = await PDFDocument.load(buf, { ignoreEncryption: true });
     srcDoc.setProducer("Local2PDF");
     srcDoc.setCreator("Local2PDF");

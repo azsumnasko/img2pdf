@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "Local2PDF",
-    title: "Local2PDF — Convert Images to PDF Privately and Free",
+    title: "Local2PDF — Private PDF Tools | No Upload",
     description:
-      "Convert images to PDF entirely in your browser. Your files never leave your device.",
+      "Free private PDF tools in your browser. Merge, split, rotate, convert, and compress — files never leave your device.",
     images: [
       {
         url: "/og-image.png",
@@ -65,7 +65,8 @@ export default function RootLayout({
                   "Privacy-first browser PDF tools that process supported files locally on the user's device.",
                 email: "support@local2pdf.com",
                 sameAs: [
-                  // Add social media and other profile URLs here
+                  "https://github.com/azsumnasko/img2pdf",
+                  "https://www.producthunt.com/products/local2pdf",
                 ],
               },
               {

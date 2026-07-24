@@ -13,13 +13,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og/webp-to-pdf.png",
         width: 1200,
         height: 630,
-        alt: "Local2PDF — Private PDF tools in your browser",
+        alt: "Local2PDF — Convert WebP to PDF",
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "WebP to PDF Locally — Private & Free",
+    description: "Convert WebP images to PDF privately. Customize layout and page size. No upload, no signup, no watermark.",
+    images: ["/og/webp-to-pdf.png"],
+  },
+
 };
 
 export default function WebpToPdfLayout({ children }: { children: React.ReactNode }) {
@@ -32,6 +39,8 @@ export default function WebpToPdfLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "WebApplication",
+              "@id": "https://local2pdf.com/tools/webp-to-pdf#webapp",
+              url: "https://local2pdf.com/tools/webp-to-pdf",
               name: "Local2PDF — WebP to PDF Converter",
               description:
                 "Convert WebP images to PDF locally in your browser. Supports both lossy and lossless WebP. No upload, no signup, no watermark.",
@@ -41,8 +50,7 @@ export default function WebpToPdfLayout({ children }: { children: React.ReactNod
               browserRequirements: "Requires JavaScript and Canvas API support",
             },
             {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
+              "@context": "https://schema.org", "@type": "FAQPage",
               mainEntity: [
                 {
                   "@type": "Question",
@@ -79,13 +87,38 @@ export default function WebpToPdfLayout({ children }: { children: React.ReactNod
               ],
             },
             {
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
+              "@context": "https://schema.org", "@type": "BreadcrumbList",
               itemListElement: [
                 { "@type": "ListItem", position: 1, name: "Home", item: "https://local2pdf.com" },
                 { "@type": "ListItem", position: 2, name: "PDF Tools", item: "https://local2pdf.com/pdf-tools" },
                 { "@type": "ListItem", position: 3, name: "WebP to PDF", item: "https://local2pdf.com/tools/webp-to-pdf" },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              "name": "How to Convert WebP to PDF",
+              "description": "Convert WebP images to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup, no watermark.",
+              "step": [
+                {
+                  "@type": "HowToStep",
+                  "position": 1,
+                  "name": "Select files",
+                  "text": "Drag WebP images into the converter or choose them from your device."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 2,
+                  "name": "Adjust settings",
+                  "text": "Modern browsers decode WebP natively. Arrange pages and pick size, margins, and quality."
+                },
+                {
+                  "@type": "HowToStep",
+                  "position": 3,
+                  "name": "Convert and download",
+                  "text": "Get a PDF that opens everywhere — even on devices that do not support WebP."
+                }
+              ]
             },
           ]),
         }}
