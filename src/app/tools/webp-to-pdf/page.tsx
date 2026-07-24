@@ -1,12 +1,5 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
-
-export const metadata: Metadata = {
-  title: "WebP to PDF — Free Online WebP to PDF Converter | No Upload",
-  description: "Convert WebP images to PDF privately. Combine multiple WebP files into one PDF. No file upload, no signup. Free and private processing.",
-  alternates: { canonical: "https://local2pdf.com/tools/webp-to-pdf" },
-};
 
 export default function WebpToPdfPage() {
   return (

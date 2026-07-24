@@ -2,6 +2,11 @@ import type { OrganizerState, OrganizerPage, PdfDocumentInfo } from "./types";
 import { loadPdfDocument } from "./pdf-operations";
 import { renderPageToCanvas } from "./pdf-renderer";
 
+async function loadPdfjsDoc(buf: ArrayBuffer) {
+  const pdfjs = await import("pdfjs-dist");
+  return (await pdfjs.getDocument({ data: buf }).promise);
+}
+
 export function createEmptyOrganizer(): OrganizerState {
   return {
     documents: [],
@@ -135,10 +140,11 @@ export async function loadPdfsAndBuildOrganizer(
       const docIndex = documents.length - 1;
 
       const pdfBuffer = await file.arrayBuffer();
+      const pdfjsDoc = await loadPdfjsDoc(pdfBuffer);
 
       for (const pageInfo of doc.pages) {
         const pageId = `p-${docIndex}-${pageInfo.pageNumber}-${Math.random().toString(36).slice(2, 7)}`;
-        const rendered = await renderPageToCanvas(pdfBuffer, pageInfo.pageNumber, 0.3);
+        const rendered = await renderPageToCanvas(pdfBuffer, pageInfo.pageNumber, 0.3, pdfjsDoc as any);
 
         let thumbnailUrl = "";
         if (rendered) {

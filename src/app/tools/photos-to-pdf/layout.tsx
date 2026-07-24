@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Turn photos into PDF albums privately. Customize layout and page size. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/photos-to-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -49,7 +57,7 @@ export default function PhotosToPdfLayout({ children }: { children: React.ReactN
                   name: "Can I create a photo album with multiple photos in one PDF?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. You can add multiple photos and arrange them into a single PDF document. Each photo can be placed on its own page or arranged in a grid layout.",
+                    text: "Each photo is placed on its own page. You can reorder pages and adjust page size, orientation, and margins before converting.",
                   },
                 },
                 {

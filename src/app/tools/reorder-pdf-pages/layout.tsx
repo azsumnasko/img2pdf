@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Rearrange pages in any PDF. Free, private, and runs entirely in your browser. No file uploads.",
     url: "https://local2pdf.com/tools/reorder-pdf-pages",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -45,8 +53,10 @@ export default function ReorderPdfPagesLayout({ children }: { children: React.Re
               "@type": "FAQPage",
               "mainEntity": [
                 { "@type": "Question", "name": "How do I reorder pages?", "acceptedAnswer": { "@type": "Answer", "text": "Simply drag and drop page thumbnails into your desired order. You can also use the move-left and move-right buttons." } },
-                { "@type": "Question", "name": "Can I undo a reorder mistake?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can reset to the original page order at any time before saving, or re-drag pages back into position." } },
-                { "@type": "Question", "name": "Is there a maximum number of pages I can reorder?", "acceptedAnswer": { "@type": "Answer", "text": "There is no fixed limit, but performance depends on your device. Large documents with hundreds of pages may be slower to render thumbnails." } }
+                { "@type": "Question", "name": "Can I undo a reorder mistake?", "acceptedAnswer": { "@type": "Answer", "text": "You can use the arrow buttons to manually restore pages to their original position. Clicking Start Over clears the current session and lets you reload the file." } },
+                { "@type": "Question", "name": "Is there a maximum number of pages I can reorder?", "acceptedAnswer": { "@type": "Answer", "text": "There is no fixed limit, but performance depends on your device. Large documents with hundreds of pages may be slower to render thumbnails." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),

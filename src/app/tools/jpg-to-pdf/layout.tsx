@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Convert JPG images to PDF privately. Customize page size and layout. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/jpg-to-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

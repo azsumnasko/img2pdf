@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -225,6 +226,15 @@ export default function AddPageNumbersToPdfPage() {
           <details className="faq-item"><summary>Can I skip numbering the first page?</summary><p>Yes. Set "Start page" to 2 or any page number — pages before that will not be numbered.</p></details>
           <details className="faq-item"><summary>What formats are available?</summary><p>Plain numbers (1, 2, 3), "Page 1", "1 of N", and "Page 1 of N" — with customizable color and font size.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/merge-pdf">Merge PDF</Link> |{" "}
+          <Link href="/tools/n-up-pdf">N-Up PDF</Link> |{" "}
+          <Link href="/tools/resize-pdf-pages">Resize PDF Pages</Link>
+        </p>
       </section>
     </main>
     </ErrorBoundary>

@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Convert HEIC iPhone photos to PDF privately. No upload, no signup, no watermark — all processing happens locally.",
     url: "https://local2pdf.com/tools/heic-to-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

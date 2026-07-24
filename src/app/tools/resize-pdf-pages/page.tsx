@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -226,6 +227,15 @@ export default function ResizePdfPagesPage() {
           <details className="faq-item"><summary>What does "Scale to fit" do?</summary><p>Content scaling behavior depends on the selected mode. &apos;Scale to fit&apos; preserves aspect ratio. &apos;Stretch&apos; changes it. Some modes only change the page size without repositioning content.</p></details>
           <details className="faq-item"><summary>What does "Center without scaling" do?</summary><p>Content keeps its original size and is centered on the new page. If the new page is smaller, content may be clipped. All resize modes change the PDF page dimensions. Content positioning and scaling is applied at the page level only.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/crop-pdf">Crop PDF</Link> |{" "}
+          <Link href="/tools/n-up-pdf">N-Up PDF</Link> |{" "}
+          <Link href="/tools/add-page-numbers-to-pdf">Add Page Numbers</Link>
+        </p>
       </section>
     </main>
     </ErrorBoundary>

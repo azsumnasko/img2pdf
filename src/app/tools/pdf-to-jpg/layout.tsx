@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Render PDF pages as JPG images privately. Adjust DPI and quality. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-jpg",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

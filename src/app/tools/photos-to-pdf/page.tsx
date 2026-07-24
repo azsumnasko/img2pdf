@@ -1,12 +1,5 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
-
-export const metadata: Metadata = {
-  title: "Photos to PDF on iPhone — Convert iPhone Photos Free | No App",
-  description: "Convert iPhone photos to PDF without installing an app. Works in Safari. Select from Photos library, arrange order, and download as PDF. Free.",
-  alternates: { canonical: "https://local2pdf.com/tools/photos-to-pdf" },
-};
 
 export default function PhotosToPdfPage() {
   return (

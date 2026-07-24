@@ -13,6 +13,14 @@ export const metadata: Metadata = {
       "Contact the Local2PDF team for support, privacy questions, security disclosures, or business inquiries.",
     url: "https://local2pdf.com/contact",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

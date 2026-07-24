@@ -15,6 +15,14 @@ export const metadata: Metadata = {
       "Free PDF tools that work offline in your browser. Merge, split, rotate, and convert files — no uploads or signup required.",
     url: "https://local2pdf.com",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

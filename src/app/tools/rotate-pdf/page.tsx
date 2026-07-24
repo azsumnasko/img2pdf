@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -162,6 +163,32 @@ export default function RotatePdfPage() {
           <details className="faq-item"><summary>Can I rotate only certain pages?</summary><p>Yes. Click individual pages or select multiple to rotate only those you want.</p></details>
           <details className="faq-item"><summary>Is rotation lossless?</summary><p>Yes. Rotations are applied at the PDF metadata level so quality is preserved.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/reorder-pdf-pages">Reorder PDF Pages</Link> |{" "}
+          <Link href="/tools/crop-pdf">Crop PDF</Link> |{" "}
+          <Link href="/tools/merge-pdf">Merge PDF</Link>
+        </p>
+      </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Rotate PDF</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Fixing sideways scans</h3><p>Correct pages that were scanned in the wrong orientation (e.g. landscape instead of portrait) so all pages face the same direction.</p></li>
+          <li className="use-case"><h3>Correcting phone-captured documents</h3><p>Phone cameras often capture documents at odd angles. Rotate pages to the correct reading orientation in one click.</p></li>
+          <li className="use-case"><h3>Preparing landscape pages for printing</h3><p>Ensure landscape-oriented tables, charts, or diagrams are oriented correctly so they print properly in a mixed-orientation document.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li><strong>Rotation is applied at the PDF metadata level.</strong> The rotation setting is added to the page metadata — the actual page content is not re-rendered or rasterized. This preserves quality but means the effect is a flag, not a pixel-level transformation.</li>
+          <li><strong>Some PDF viewers may ignore rotation metadata.</strong> Most modern viewers (Chrome, Edge, Adobe Acrobat) respect the rotation flag, but some older or minimal PDF viewers may display pages in their original orientation.</li>
+        </ul>
       </section>
     </main>
     </ErrorBoundary>

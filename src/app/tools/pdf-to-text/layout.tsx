@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Extract text from PDFs privately in your browser. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-text",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

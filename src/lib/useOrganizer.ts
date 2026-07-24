@@ -1,6 +1,6 @@
 "use client";
 
-import { useReducer, useCallback, useRef } from "react";
+import { useReducer, useCallback, useRef, useEffect } from "react";
 import {
   organizerReducer,
   createEmptyOrganizer,
@@ -32,15 +32,21 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    try {
     dispatch({ type: "SET_LOADING" });
     const { documents, pages, warnings } = await loadPdfsAndBuildOrganizer(Array.from(files));
-    if (controller.signal.aborted) { processingRef.current = false; return; }
-    processingRef.current = false;
+    if (controller.signal.aborted) return;
     if (documents.length === 0) {
       dispatch({ type: "SET_ERROR", message: "No valid PDF files could be loaded.", recoverable: false });
       return;
     }
     dispatch({ type: "SET_EDITING", documents, pages, warnings: warnings.length > 0 ? warnings : undefined });
+    } catch {
+      if (controller.signal.aborted) return;
+      dispatch({ type: "SET_ERROR", message: "Failed to load PDF files. The file may be corrupted or unsupported.", recoverable: false });
+    } finally {
+      processingRef.current = false;
+    }
   }, []);
 
   const movePage = useCallback((from: number, to: number) => dispatch({ type: "MOVE_PAGE", fromIndex: from, toIndex: to }), []);
@@ -58,12 +64,22 @@ export function useOrganizer() {
   }, [state.phase]);
 
   const processingRef = useRef(false);
+  const successUrlRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    successUrlRef.current = state.phase.phase === "success" ? state.phase.objectUrl : null;
+  }, [state.phase]);
+
+  const revokePreviousSuccess = () => {
+    if (successUrlRef.current) { URL.revokeObjectURL(successUrlRef.current); successUrlRef.current = null; }
+  };
 
   const executeMerge = useCallback(async (filename: string) => {
     if (processingRef.current || state.documents.length === 0) return;
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -93,6 +109,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -110,6 +127,11 @@ export function useOrganizer() {
       } else {
         const rangeStr = extra?.ranges ?? "";
         const rangeParts = rangeStr.split(/[;,\n]+/).filter(Boolean);
+        if (rangeParts.length === 0) {
+          dispatch({ type: "SET_ERROR", message: "Please enter valid page ranges (e.g. 1-3,5,8-10).", recoverable: true });
+          processingRef.current = false;
+          return;
+        }
         const ranges = rangeParts.map((part, i) => {
           const [startStr, endStr] = part.includes("-") ? part.split("-") : [part, part];
           return { start: parseInt(startStr!, 10), end: parseInt(endStr!, 10), label: `part-${i + 1}` };
@@ -148,6 +170,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -172,6 +195,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -205,6 +229,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -258,37 +283,36 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
       const buf = await state.documents[0]!.file.arrayBuffer();
       const scale = settings.dpi / 72;
       const pages = onlySelected
-        ? state.pages.filter((p) => p.selected).map((p) => p.sourcePageNumber)
-        : state.pages.map((p) => p.sourcePageNumber);
-      const rendered = await renderPagesToCanvas(buf, pages, scale, (c, t) => {
+        ? state.pages.filter((p) => p.selected && p.sourceDocIndex === 0).map((p) => p.sourcePageNumber)
+        : state.pages.filter((p) => p.sourceDocIndex === 0).map((p) => p.sourcePageNumber);
+      const { renderPagesToBlobs } = await import("@/features/pdf-tools/pdf-renderer");
+      const blobs = await renderPagesToBlobs(buf, pages, `image/${format}` as "image/jpeg" | "image/png", scale, settings.jpegQuality, (c, t) => {
         dispatch({ type: "SET_PROGRESS", progress: { current: c, total: t, label: "Rendering pages..." } });
       });
 
       if (controller.signal.aborted) { if (abortRef.current === controller) processingRef.current = false; return; }
 
-      if (rendered.size === 1) {
-        const entries = [...rendered.entries()];
-        const result = entries[0]![1]!;
-        const blob = await canvasToBlob(result.canvas, `image/${format}` as "image/jpeg" | "image/png", settings.jpegQuality);
-        const objectUrl = URL.createObjectURL(blob);
-        dispatch({ type: "SET_SUCCESS", blob, objectUrl, bytes: blob.size, filename: `${filename}.${format}`, warnings: [] });
-      } else {
-        const blobs: Array<{ name: string; blob: Blob }> = [];
-        const sorted = [...rendered.entries()].sort(([a], [b]) => a - b);
-        for (const [pageNum, result] of sorted) {
-          const blob = await canvasToBlob(result!.canvas, `image/${format}` as "image/jpeg" | "image/png", settings.jpegQuality);
-          blobs.push({ name: `${filename}-page-${pageNum}.${format}`, blob });
-        }
+      if (blobs.length === 0) {
+        dispatch({ type: "SET_ERROR", message: "No pages could be rendered.", recoverable: false });
+        processingRef.current = false;
+        return;
+      }
 
+      if (blobs.length === 1) {
+        const b = blobs[0]!;
+        const objectUrl = URL.createObjectURL(b.blob);
+        dispatch({ type: "SET_SUCCESS", blob: b.blob, objectUrl, bytes: b.blob.size, filename: `${filename}.${format}`, warnings: [] });
+      } else {
         const JSZip = (await import("jszip")).default;
         const zip = new JSZip();
-        for (const b of blobs) zip.file(b.name, b.blob);
+        for (const b of blobs) zip.file(`${filename}-page-${b.pageNumber}.${format}`, b.blob);
         const zipBlob = await zip.generateAsync({ type: "blob" });
         const objectUrl = URL.createObjectURL(zipBlob);
         dispatch({ type: "SET_SUCCESS", blob: zipBlob, objectUrl, bytes: zipBlob.size, filename: `${filename}.zip`, warnings: [] });
@@ -307,6 +331,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -348,6 +373,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -376,6 +402,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -406,6 +433,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -429,6 +457,7 @@ export function useOrganizer() {
     processingRef.current = true;
     const controller = new AbortController();
     abortRef.current = controller;
+    revokePreviousSuccess();
     dispatch({ type: "SET_PROCESSING" });
 
     try {
@@ -458,6 +487,13 @@ export function useOrganizer() {
     abortRef.current = null;
     processingRef.current = false;
     dispatch({ type: "SET_ERROR", message: "Operation cancelled.", recoverable: false });
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      abortRef.current?.abort();
+      if (successUrlRef.current) URL.revokeObjectURL(successUrlRef.current);
+    };
   }, []);
 
   return {

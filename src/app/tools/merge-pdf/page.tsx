@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -164,6 +165,41 @@ export default function MergePdfPage() {
           <details className="faq-item"><summary>Is there a limit on file size?</summary><p>There is no hard limit, but performance depends on your device and browser. Very large files may take longer.</p></details>
           <details className="faq-item"><summary>Can I rearrange pages across documents?</summary><p>Yes. You can reorder pages from all documents in any order before merging.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/split-pdf">Split PDF</Link> |{" "}
+          <Link href="/tools/extract-pdf-pages">Extract PDF Pages</Link> |{" "}
+          <Link href="/tools/delete-pdf-pages">Delete PDF Pages</Link> |{" "}
+          <Link href="/tools/reorder-pdf-pages">Reorder PDF Pages</Link>
+        </p>
+      </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Merge PDF</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Combining invoices</h3><p>Merge multiple invoice PDFs into a single file for easier record-keeping and sharing with accountants or clients.</p></li>
+          <li className="use-case"><h3>Merging scanned chapters</h3><p>Combine separately scanned book chapters or sections into one complete document for reading or printing.</p></li>
+          <li className="use-case"><h3>Assembling reports</h3><p>Join cover pages, body content, and appendices from separate PDFs into a polished final report.</p></li>
+          <li className="use-case"><h3>Combining contracts</h3><p>Merge signature pages, terms, and exhibits into one complete contract package before sending for review.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations & Known Issues</h2>
+        <ul>
+          <li><strong>Large files may be slow.</strong> Merging very large or many PDFs can be memory-intensive and may slow down on older devices.</li>
+          <li><strong>Password-protected PDFs need password removal first.</strong> Encrypted or locked PDFs cannot be read by the browser. Remove passwords before merging.</li>
+          <li><strong>Digital signatures may be invalidated.</strong> Merging signed PDFs typically breaks digital signature verification since the document content changes.</li>
+          <li><strong>Form fields may not merge correctly.</strong> Interactive form fields from different PDFs may conflict or be lost during the merge process.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Browser & Device Support</h2>
+        <p>This tool works in all modern browsers: Chrome, Firefox, Edge, and Safari. Processing performance varies by device memory — larger files perform best on desktop with 8 GB RAM or more. Mobile devices may struggle with very large merges.</p>
       </section>
     </main>
     </ErrorBoundary>

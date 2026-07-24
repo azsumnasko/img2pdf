@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Convert PNG images to PDF privately. Preserve transparency and quality. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/png-to-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -49,7 +57,7 @@ export default function PngToPdfLayout({ children }: { children: React.ReactNode
                   name: "Does PNG transparency remain in the PDF?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. Local2PDF preserves PNG transparency when converting to PDF, ensuring your images with transparent backgrounds retain that quality.",
+                    text: "PNG transparency is composited onto a white background in the final PDF.",
                   },
                 },
                 {

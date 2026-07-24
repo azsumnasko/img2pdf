@@ -1,12 +1,5 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
-
-export const metadata: Metadata = {
-  title: "Screenshot to PDF — Convert Screenshots to PDF Free | No Upload",
-  description: "Convert screenshots to PDF privately. Paste from clipboard (Ctrl+V), drag and drop, or select files. No upload, no signup. Free converter.",
-  alternates: { canonical: "https://local2pdf.com/tools/screenshot-to-pdf" },
-};
 
 export default function ScreenshotToPdfPage() {
   return (

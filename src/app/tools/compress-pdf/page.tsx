@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState, useMemo } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -203,6 +204,15 @@ export default function CompressPdfPage() {
           <details className="faq-item"><summary>How much can a PDF be compressed?</summary><p>Results vary by content. PDFs with large images often see significant size reduction, while already well-compressed files may show little change. This tool is in beta — results will improve over time.</p></details>
           <details className="faq-item"><summary>Will compression reduce quality?</summary><p>Safe compression may produce only small savings. Image-heavy mode re-renders pages at lower quality which always changes the visual output.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/resize-pdf-pages">Resize PDF Pages</Link> |{" "}
+          <Link href="/tools/merge-pdf">Merge PDF</Link> |{" "}
+          <Link href="/tools/crop-pdf">Crop PDF</Link>
+        </p>
       </section>
     </main>
     </ErrorBoundary>

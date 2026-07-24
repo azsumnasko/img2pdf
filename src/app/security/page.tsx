@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     description:
       "How Local2PDF keeps your data safe with browser-local processing, no file uploads, and strong security practices.",
     url: "https://local2pdf.com/security",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -71,19 +79,6 @@ export default function SecurityPage() {
         URL revocation and structured cleanup to prevent memory leaks.
       </p>
 
-      <h2>Password-Protected Files</h2>
-      <p>
-        If you use password protection features, the password is applied
-        client-side to the generated PDF. Your password is never transmitted
-        over the network or persisted to any storage.
-      </p>
-
-      <h2>Security Headers</h2>
-      <p>
-        Our hosting provider applies standard security headers including
-        Content-Security-Policy, X-Frame-Options, X-Content-Type-Options,
-        Referrer-Policy, and strict Transport Security (HSTS).
-      </p>
 
       <h2>Vulnerability Disclosure</h2>
       <p>

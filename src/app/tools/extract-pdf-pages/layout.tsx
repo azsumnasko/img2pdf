@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Extract pages from any PDF. Combine into one file or get separate pages. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/extract-pdf-pages",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -46,7 +54,9 @@ export default function ExtractPdfPagesLayout({ children }: { children: React.Re
               "mainEntity": [
                 { "@type": "Question", "name": "Can I extract specific page ranges?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enter the pages you want as ranges (e.g., 1-5, 8, 12-15) and choose to combine them into one PDF or get separate files." } },
                 { "@type": "Question", "name": "Will extracting pages reduce quality?", "acceptedAnswer": { "@type": "Answer", "text": "No. Extracted pages are copied directly from the original file without re-encoding, so quality is fully preserved." } },
-                { "@type": "Question", "name": "Are my PDF contents visible to anyone?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens locally in your browser. Your PDF and its contents never leave your device." } }
+                { "@type": "Question", "name": "Are my PDF contents visible to anyone?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens locally in your browser. Your PDF and its contents never leave your device." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),

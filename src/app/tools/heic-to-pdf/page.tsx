@@ -1,12 +1,5 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
-
-export const metadata: Metadata = {
-  title: "HEIC to PDF — Convert iPhone Photos to PDF Free | No Upload",
-  description: "Convert HEIC photos from iPhone to PDF without uploading. HEIC images processed locally in your browser with WASM decoder. Free and private.",
-  alternates: { canonical: "https://local2pdf.com/tools/heic-to-pdf" },
-};
 
 export default function HeicToPdfPage() {
   return (

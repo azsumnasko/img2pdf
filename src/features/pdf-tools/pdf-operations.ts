@@ -6,6 +6,9 @@ const POINTS_PER_MM = 72 / 25.4;
 export async function loadPdfDocument(file: File): Promise<PdfDocumentInfo> {
   const buffer = await file.arrayBuffer();
   const pdfDoc = await PDFDocument.load(buffer, { ignoreEncryption: true });
+  if (pdfDoc.isEncrypted) {
+    throw new Error(`The PDF "${file.name}" is password-protected. Please remove the password before using this tool.`);
+  }
   const pages: PdfDocumentInfo["pages"] = [];
 
   for (let i = 0; i < pdfDoc.getPageCount(); i++) {

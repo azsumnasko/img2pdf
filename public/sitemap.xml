@@ -26,7 +26,6 @@
   <url><loc>https://local2pdf.com/tools/pdf-to-jpg</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://local2pdf.com/tools/pdf-to-png</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://local2pdf.com/tools/pdf-to-text</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://local2pdf.com/tools/extract-images-from-pdf</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 
   <!-- Improve PDF -->
   <url><loc>https://local2pdf.com/tools/add-page-numbers-to-pdf</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -39,6 +38,8 @@
   <url><loc>https://local2pdf.com/about</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://local2pdf.com/contact</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://local2pdf.com/security</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://local2pdf.com/compatibility</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://local2pdf.com/changelog</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://local2pdf.com/privacy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://local2pdf.com/terms</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
 

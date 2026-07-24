@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Combine multiple PDF pages onto one sheet with N-up layouts. Choose 2-up, 4-up, 6-up, 8-up, or 9-up. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/n-up-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -46,7 +54,9 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
               "mainEntity": [
                 { "@type": "Question", "name": "What N-up layouts are available?", "acceptedAnswer": { "@type": "Answer", "text": "You can choose 2-up, 4-up, 6-up, 8-up, or 9-up. Each layout places that many original pages onto a single sheet." } },
                 { "@type": "Question", "name": "Can I adjust spacing between pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can set a custom padding value to add space between the pages on each sheet." } },
-                { "@type": "Question", "name": "In what order are pages arranged?", "acceptedAnswer": { "@type": "Answer", "text": "Pages flow left-to-right, top-to-bottom across the sheet. For example, a 4-up layout places pages 1-4 on one sheet, 5-8 on the next." } }
+                { "@type": "Question", "name": "In what order are pages arranged?", "acceptedAnswer": { "@type": "Answer", "text": "Pages flow left-to-right, top-to-bottom across the sheet. For example, a 4-up layout places pages 1-4 on one sheet, 5-8 on the next." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -201,6 +202,15 @@ export default function CropPdfPage() {
           <details className="faq-item"><summary>Is visual crop selection available?</summary><p>Not yet — visual crop (dragging to select crop area on the page preview) is planned for a future update. Currently, you enter numeric margin values.</p></details>
           <details className="faq-item"><summary>Does cropping affect PDF quality?</summary><p>No. Pages are resized while keeping content at its original quality. The trimmed areas are simply removed from the page boundary.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/resize-pdf-pages">Resize PDF Pages</Link> |{" "}
+          <Link href="/tools/rotate-pdf">Rotate PDF</Link> |{" "}
+          <Link href="/tools/n-up-pdf">N-Up PDF</Link>
+        </p>
       </section>
     </main>
     </ErrorBoundary>

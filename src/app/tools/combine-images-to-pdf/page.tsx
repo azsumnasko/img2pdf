@@ -1,12 +1,5 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
-
-export const metadata: Metadata = {
-  title: "Combine Images into PDF — Merge JPG, PNG, WebP Free | No Upload",
-  description: "Combine multiple images into one PDF. Reorder, rotate, and adjust layout. Up to 25 images. No upload — all local and private processing.",
-  alternates: { canonical: "https://local2pdf.com/tools/combine-images-to-pdf" },
-};
 
 export default function CombineImagesPage() {
   return (

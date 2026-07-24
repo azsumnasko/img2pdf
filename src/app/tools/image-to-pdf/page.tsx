@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useRef } from "react";
 import { useProject } from "@/lib/useProject";
 import { revokeThumbnail } from "@/features/image-to-pdf/image-processor";
@@ -186,6 +187,15 @@ export default function ImageToPdfPage() {
 
       <MakerPromo />
 
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/jpg-to-pdf">JPG to PDF</Link> |{" "}
+          <Link href="/tools/png-to-pdf">PNG to PDF</Link> |{" "}
+          <Link href="/tools/webp-to-pdf">WebP to PDF</Link> |{" "}
+          <Link href="/tools/heic-to-pdf">HEIC to PDF</Link>
+        </p>
+      </section>
     </main>
     </ErrorBoundary>
   );

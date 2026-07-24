@@ -1,13 +1,5 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
-
-export const metadata: Metadata = {
-  title: "JPG to PDF — Convert JPEG Images to PDF Free",
-  description: "Convert JPG and JPEG images to PDF instantly in your browser. No upload, no signup, no watermark. Combine multiple JPEGs into one PDF. Free and private.",
-  alternates: { canonical: "https://local2pdf.com/tools/jpg-to-pdf" },
-  openGraph: { title: "JPG to PDF — Free JPEG to PDF Converter", description: "Convert JPEG images to PDF privately in your browser.", url: "https://local2pdf.com/tools/jpg-to-pdf", type: "website" },
-};
 
 export default function JpgToPdfPage() {
   return (

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Local2PDF",
   },
   description:
-    "Convert JPG, PNG, and WebP images to PDF privately. No upload, no signup, no watermark. Free for up to 25 pages per conversion.",
+    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark. Image-to-PDF: up to 25 pages per conversion.",
   metadataBase: new URL("https://local2pdf.com"),
   openGraph: {
     type: "website",
@@ -17,6 +17,14 @@ export const metadata: Metadata = {
     title: "Local2PDF — Convert Images to PDF Privately and Free",
     description:
       "Convert images to PDF entirely in your browser. Your files never leave your device.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
   robots: {
     index: true,
@@ -51,6 +59,9 @@ export default function RootLayout({
                 description:
                   "Privacy-first browser PDF tools that process supported files locally on the user's device.",
                 email: "support@local2pdf.com",
+                sameAs: [
+                  // Add social media and other profile URLs here
+                ],
               },
               {
                 "@context": "https://schema.org",

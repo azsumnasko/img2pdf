@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Merge multiple images into one PDF privately. Reorder, resize, and customize. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/combine-images-to-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -49,7 +57,7 @@ export default function CombineImagesToPdfLayout({ children }: { children: React
                   name: "What image formats are supported when combining to PDF?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "You can combine JPG, PNG, WebP, and HEIC images into a single PDF. The tool also supports BMP, TIFF, and SVG formats depending on browser support.",
+                    text: "The tool supports common image formats: JPG, PNG, WebP, and HEIC.",
                   },
                 },
                 {

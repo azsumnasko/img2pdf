@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -192,6 +193,15 @@ export default function ExtractImagesFromPdfPage() {
           <details className="faq-item"><summary>How does image extraction work here?</summary><p>This tool renders each PDF page to a high-resolution PNG using the browser's PDF engine. True embedded image extraction (which would pull out the original JPEG/PNG data) is more complex and may be added in a future update.</p></details>
           <details className="faq-item"><summary>Is the extracted image lossless?</summary><p>PNG output is lossless — text and graphics stay sharp. For photos compressed inside the PDF, rendering quality depends on the original image resolution.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/pdf-to-png">PDF to PNG</Link> |{" "}
+          <Link href="/tools/pdf-to-jpg">PDF to JPG</Link> |{" "}
+          <Link href="/tools/image-to-pdf">Image to PDF</Link>
+        </p>
       </section>
     </main>
     </ErrorBoundary>

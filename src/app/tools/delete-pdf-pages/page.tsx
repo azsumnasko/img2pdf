@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -175,6 +176,15 @@ export default function DeletePdfPagesPage() {
           <details className="faq-item"><summary>Can I undo a page deletion?</summary><p>Your original file is never modified. If you change your mind, click Start Over and select the file again.</p></details>
           <details className="faq-item"><summary>What happens if I delete all pages?</summary><p>Deleting all pages is blocked — a PDF must contain at least one page. Deselect at least one page before proceeding.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/extract-pdf-pages">Extract PDF Pages</Link> |{" "}
+          <Link href="/tools/split-pdf">Split PDF</Link> |{" "}
+          <Link href="/tools/rotate-pdf">Rotate PDF</Link>
+        </p>
       </section>
     </main>
     </ErrorBoundary>

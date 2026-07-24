@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -162,6 +163,34 @@ export default function ReorderPdfPagesPage() {
           <details className="faq-item"><summary>Can I rotate pages while reordering?</summary><p>Yes. You can rotate individual pages using the rotate buttons on each page thumbnail.</p></details>
           <details className="faq-item"><summary>Is the reorder permanent?</summary><p>The original file is not modified. You download a new PDF with your preferred page order.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/merge-pdf">Merge PDF</Link> |{" "}
+          <Link href="/tools/rotate-pdf">Rotate PDF</Link> |{" "}
+          <Link href="/tools/delete-pdf-pages">Delete PDF Pages</Link>
+        </p>
+      </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Reorder PDF Pages</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Fixing scanner order mistakes</h3><p>When pages were scanned or inserted in the wrong sequence, reorder them to the correct reading order without rescanning.</p></li>
+          <li className="use-case"><h3>Organizing presentation handouts</h3><p>Arrange slides or handout pages in the optimal sequence for a meeting or presentation flow.</p></li>
+          <li className="use-case"><h3>Arranging chapters</h3><p>Reorder book or report chapters into a logical structure when they were compiled or scanned out of order.</p></li>
+          <li className="use-case"><h3>Moving appendices</h3><p>Relocate supplementary sections (appendices, references, glossaries) to the end of the document for cleaner layout.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li><strong>Pages are moved individually.</strong> There is no multi-select drag to move several pages at once. Each page must be repositioned one at a time using drag-and-drop or arrow buttons.</li>
+          <li><strong>Reordering is per-document.</strong> To reorder pages across multiple PDF files, merge the documents first using our <Link href="/tools/merge-pdf">Merge PDF</Link> tool, then return here to reorder.</li>
+          <li><strong>Page quality is preserved.</strong> Reordering does not rasterize or reprocess page content — all original quality, fonts, and vector graphics remain intact.</li>
+        </ul>
       </section>
     </main>
     </ErrorBoundary>

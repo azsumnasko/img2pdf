@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Compress PDF Locally — Reduce File Size",
   description:
-    "Compress PDF files to reduce file size without upload. Lossy and safe compression modes — all processing stays on your device.",
+    "Compress PDF files to reduce file size without upload. All processing stays on your device.",
   alternates: { canonical: "https://local2pdf.com/tools/compress-pdf" },
   openGraph: {
   title: "Compress PDF Locally — Reduce File Size",
@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Compress PDF files to save space while keeping quality. Reduce file size entirely in your browser. Free and private.",
     url: "https://local2pdf.com/tools/compress-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -44,7 +52,7 @@ export default function CompressPdfLayout({ children }: { children: React.ReactN
             {
               "@type": "FAQPage",
               "mainEntity": [
-                { "@type": "Question", "name": "What is the difference between lossy and safe compression?", "acceptedAnswer": { "@type": "Answer", "text": "Safe compression reduces file size without visible quality loss. Lossy compression achieves smaller files by re-encoding images, which may slightly reduce quality." } },
+                { "@type": "Question", "name": "How does compression work?", "acceptedAnswer": { "@type": "Answer", "text": "Compression is available as a single action. Safe optimization reduces overhead. Image-heavy mode re-renders pages at lower quality." } },
                 { "@type": "Question", "name": "How much can a PDF be compressed?", "acceptedAnswer": { "@type": "Answer", "text": "Results vary by content. Image-heavy PDFs can shrink by 50-80% with lossy compression, while text-only PDFs may see smaller reductions." } },
                 { "@type": "Question", "name": "Is my file private during compression?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All compression is performed locally in your browser. Your PDF is never uploaded to any server." } }
               ]

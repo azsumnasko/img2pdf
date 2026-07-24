@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Insert page numbers into your PDF with full control over position, style, and format. Private, browser-based processing.",
     url: "https://local2pdf.com/tools/add-page-numbers-to-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -46,7 +54,9 @@ export default function AddPageNumbersToPdfLayout({ children }: { children: Reac
               "mainEntity": [
                 { "@type": "Question", "name": "Where can I position page numbers?", "acceptedAnswer": { "@type": "Answer", "text": "You can place numbers at the top or bottom of the page, aligned left, center, or right. Margins and starting page are also configurable." } },
                 { "@type": "Question", "name": "Can I customize the number format?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can change the font, font size, color, and prefix/suffix text (e.g., 'Page 1 of 10')." } },
-                { "@type": "Question", "name": "Will adding page numbers overwrite existing content?", "acceptedAnswer": { "@type": "Answer", "text": "No. Page numbers are added as a new layer and are placed in the margin area, so they will not overlap with existing page content." } }
+                { "@type": "Question", "name": "Will adding page numbers overwrite existing content?", "acceptedAnswer": { "@type": "Answer", "text": "No. Page numbers are added as a new layer and are placed in the margin area, so they will not overlap with existing page content." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),

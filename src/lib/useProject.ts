@@ -1,4 +1,4 @@
-import { useReducer, useCallback, useRef } from "react";
+import { useReducer, useCallback, useRef, useEffect } from "react";
 import {
   projectReducer,
   createEmptyProject,
@@ -70,7 +70,11 @@ export function useProject() {
       }
     }
 
-    if (genRef.current !== gen) { convertingRef.current = false; return; }
+    if (genRef.current !== gen) {
+      for (const p of validPages) revokeThumbnail(p.thumbnailUrl);
+      convertingRef.current = false;
+      return;
+    }
 
     if (validPages.length === 0 && errors.length > 0) {
       dispatch({ type: "SET_ERROR", errors, recoverable: false });
@@ -113,7 +117,11 @@ export function useProject() {
       }
     }
 
-    if (genRef.current !== gen) { convertingRef.current = false; return; }
+    if (genRef.current !== gen) {
+      for (const p of validPages) revokeThumbnail(p.thumbnailUrl);
+      convertingRef.current = false;
+      return;
+    }
 
     if (validPages.length > 0) {
       dispatch({ type: "ADD_PAGES", pages: validPages, validationWarnings: errors.length > 0 ? errors : undefined });
@@ -156,6 +164,15 @@ export function useProject() {
   const setPageOrientation = useCallback((id: string, o: PageOrientation) => dispatch({ type: "SET_PAGE_ORIENTATION", pageId: id, orientation: o }), []);
 
   const convertingRef = useRef(false);
+  const successUrlRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    successUrlRef.current = project.state.phase === "success" ? project.state.result.objectUrl : null;
+  }, [project.state]);
+
+  const revokePreviousSuccess = () => {
+    if (successUrlRef.current) { URL.revokeObjectURL(successUrlRef.current); successUrlRef.current = null; }
+  };
 
   const startConversion = useCallback(async () => {
     if (convertingRef.current || project.pages.length === 0) return;
@@ -163,6 +180,7 @@ export function useProject() {
     const controller = new AbortController();
     abortRef.current = controller;
     const jobId = `job-${Date.now()}`;
+    revokePreviousSuccess();
     dispatch({ type: "SET_CONVERTING", jobId });
     const startTime = performance.now();
 
@@ -216,6 +234,13 @@ export function useProject() {
 
   const estimatedSize = estimatePdfSize(project.pages, project.settings);
   const selectedCount = project.pages.filter((p) => p.selected).length;
+
+  useEffect(() => {
+    return () => {
+      abortRef.current?.abort();
+      if (successUrlRef.current) URL.revokeObjectURL(successUrlRef.current);
+    };
+  }, []);
 
   return {
     project, addFiles, addMoreFiles, dismissWarnings,

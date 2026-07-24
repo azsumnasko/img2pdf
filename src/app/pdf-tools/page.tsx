@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     description: "Free PDF tools that work locally in your browser. Merge, split, convert, and compress PDFs without uploading.",
     url: "https://local2pdf.com/pdf-tools",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

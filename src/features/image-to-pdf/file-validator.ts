@@ -133,8 +133,7 @@ export async function validateFile(
         width = img.naturalWidth;
         height = img.naturalHeight;
       } else {
-        width = 1;
-        height = 1;
+        return { error: { fileIndex: index, fileName: file.name, errorCode: "DECODE_FAILED", message: "Could not decode HEIC image. Try in Safari or convert to JPG/PNG first." } };
       }
     } else {
       const objectUrl = URL.createObjectURL(file);

@@ -3,6 +3,21 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+  alternates: { canonical: "https://local2pdf.com/privacy" },
+  openGraph: {
+    title: "Privacy Policy",
+    description: "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+    url: "https://local2pdf.com/privacy",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
+  },
 };
 
 export default function PrivacyPage() {

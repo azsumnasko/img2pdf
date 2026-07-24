@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 pages per conversion.",
     url: "https://local2pdf.com/tools/image-to-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 

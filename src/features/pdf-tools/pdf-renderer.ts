@@ -56,6 +56,37 @@ export async function getPdfPageCount(pdfBuffer: ArrayBuffer): Promise<number> {
   }
 }
 
+export async function renderPagesToBlobs(
+  pdfBuffer: ArrayBuffer,
+  pages: number[],
+  type: "image/jpeg" | "image/png",
+  scale: number,
+  quality: number,
+  onProgress?: (current: number, total: number) => void
+): Promise<Array<{ pageNumber: number; blob: Blob }>> {
+  const results: Array<{ pageNumber: number; blob: Blob }> = [];
+
+  try {
+    const doc = await loadPdfDocument(pdfBuffer);
+
+    for (let i = 0; i < pages.length; i++) {
+      const pageNum = pages[i]!;
+      const result = await renderPageToCanvas(pdfBuffer, pageNum, scale, doc);
+      if (result) {
+        const blob = await canvasToBlob(result.canvas, type, quality);
+        results.push({ pageNumber: pageNum, blob });
+        result.canvas.width = 0;
+        result.canvas.height = 0;
+      }
+      onProgress?.(i + 1, pages.length);
+    }
+  } catch {
+    return [];
+  }
+
+  return results;
+}
+
 export async function renderPagesToCanvas(
   pdfBuffer: ArrayBuffer,
   pages: number[],

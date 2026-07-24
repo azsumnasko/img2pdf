@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Crop and trim PDF page margins. Resize pages by removing unwanted whitespace. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/crop-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -44,9 +52,11 @@ export default function CropPdfLayout({ children }: { children: React.ReactNode 
             {
               "@type": "FAQPage",
               "mainEntity": [
-                { "@type": "Question", "name": "Can I preview the crop before applying?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each page is rendered as a thumbnail so you can visually adjust the crop boundaries and see the result in real time." } },
+                { "@type": "Question", "name": "Can I preview the crop before applying?", "acceptedAnswer": { "@type": "Answer", "text": "Crop margins are entered as numeric values (in mm) on each side. Visual crop selection is under development." } },
                 { "@type": "Question", "name": "Does cropping permanently remove content?", "acceptedAnswer": { "@type": "Answer", "text": "No. Cropping changes the visible page area (crop box). Content outside the crop box is hidden but still present in the file." } },
-                { "@type": "Question", "name": "Can I apply the same crop to all pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can define crop margins once and apply them uniformly to every page, or adjust each page individually." } }
+                { "@type": "Question", "name": "Can I apply the same crop to all pages?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can define crop margins once and apply them uniformly to every page, or adjust each page individually." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),

@@ -12,6 +12,14 @@ export const metadata: Metadata = {
       "Render any PDF page to a high-resolution PNG. Free, private, and runs entirely in your browser.",
     url: "https://local2pdf.com/tools/extract-images-from-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -47,7 +55,9 @@ export default function ExtractImagesFromPdfLayout({ children }: { children: Rea
               "mainEntity": [
                 { "@type": "Question", "name": "What image format is used for extraction?", "acceptedAnswer": { "@type": "Answer", "text": "Pages are rendered and exported as high-resolution PNG images. You can adjust the output resolution for quality vs. file size." } },
                 { "@type": "Question", "name": "Can I extract images from all pages at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select 'All pages' to extract every page as a separate image, or pick individual pages to extract only the ones you need." } },
-                { "@type": "Question", "name": "Will the extracted images include text as well?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each page is rendered as a whole, so all visible content including text, images, and graphics is captured in the output." } }
+                { "@type": "Question", "name": "Will the extracted images include text as well?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each page is rendered as a whole, so all visible content including text, images, and graphics is captured in the output." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),

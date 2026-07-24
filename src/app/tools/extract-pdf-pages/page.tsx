@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -179,6 +180,73 @@ export default function ExtractPdfPagesPage() {
           <details className="faq-item"><summary>Can I extract pages into separate files?</summary><p>Yes. Choose "Extract as separate files" to get each selected page as its own PDF, or as a ZIP archive.</p></details>
           <details className="faq-item"><summary>Is the original file modified?</summary><p>No. Your original PDF stays untouched. You download a new file with only the extracted pages.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/split-pdf">Split PDF</Link> |{" "}
+          <Link href="/tools/delete-pdf-pages">Delete PDF Pages</Link> |{" "}
+          <Link href="/tools/merge-pdf">Merge PDF</Link>
+        </p>
+      </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Extract PDF Pages</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Pulling out specific forms</h3><p>Extract a single form from a large document packet so you can fill it out and submit it independently.</p></li>
+          <li className="use-case"><h3>Extracting a signed page</h3><p>Isolate a signature or approval page from a contract to include as a standalone record.</p></li>
+          <li className="use-case"><h3>Saving selected chapters as separate documents</h3><p>Pull out only the chapters or sections you need from a lengthy PDF, leaving the rest behind.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li><strong>Extracted pages maintain original quality.</strong> Pages are copied as-is from the source PDF with no re-compression or quality loss.</li>
+          <li><strong>Combine mode creates one PDF from selected pages.</strong> When combining, the original page order is preserved in the output file.</li>
+          <li><strong>Separate files come as a ZIP for multiple pages.</strong> When extracting as separate files, selecting more than one page produces a ZIP archive rather than triggering multiple downloads.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Extract vs Split vs Delete</h2>
+        <table className="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Extract</th>
+              <th>Delete</th>
+              <th>Split</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>What it does</strong></td>
+              <td>Choose pages you <strong>want</strong> to keep as a new PDF</td>
+              <td>Remove pages you <strong>don&apos;t want</strong> (modifies the original)</td>
+              <td>Produce multiple separate files from one PDF</td>
+            </tr>
+            <tr>
+              <td><strong>Best for</strong></td>
+              <td>Saving a few pages you need from a large document</td>
+              <td>Cleaning up a document by removing unwanted pages</td>
+              <td>Breaking one PDF into many individual files</td>
+            </tr>
+            <tr>
+              <td><strong>Output</strong></td>
+              <td>One new PDF (or ZIP for separate files)</td>
+              <td>One modified PDF</td>
+              <td>Multiple PDFs (or one ZIP)</td>
+            </tr>
+            <tr>
+              <td><strong>Original file</strong></td>
+              <td>Unchanged</td>
+              <td>Unchanged (you download the modified copy)</td>
+              <td>Unchanged</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
     </ErrorBoundary>

@@ -32,6 +32,18 @@ export function FAQ() {
       q: "Is this tool free?",
       a: "Yes. Local2PDF is free to use with no hidden costs. The site is supported by advertising placed away from the tool controls.",
     },
+    {
+      q: "Can I merge multiple PDF files?",
+      a: "Yes. Use the Merge PDF tool to combine several PDFs into a single document. Drag and drop to arrange the order before merging.",
+    },
+    {
+      q: "How do I split a PDF into separate pages?",
+      a: "Use the Split PDF tool to extract every page of a PDF as an individual file, or extract specific pages using the Extract Pages tool.",
+    },
+    {
+      q: "Can I rotate PDF pages?",
+      a: "Yes. The Rotate PDF tool lets you rotate individual pages or the entire document by 90, 180, or 270 degrees — all processed locally in your browser.",
+    },
   ];
 
   return (

@@ -1,12 +1,5 @@
-﻿import type { Metadata } from "next";
-import Link from "next/link";
+﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
-
-export const metadata: Metadata = {
-  title: "PNG to PDF — Convert PNG Images to PDF Free | No Upload",
-  description: "Convert PNG images to PDF online. Preserve transparency, adjust page size and margins. No upload needed — processed on your device. Free and private.",
-  alternates: { canonical: "https://local2pdf.com/tools/png-to-pdf" },
-};
 
 export default function PngToPdfPage() {
   return (

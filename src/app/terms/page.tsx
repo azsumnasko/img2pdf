@@ -2,7 +2,22 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Local2PDF terms of use.",
+  description: "Terms of use for Local2PDF — a privacy-first PDF toolkit that processes files locally in your browser. Covers acceptable use, disclaimers, intellectual property, and limitations of liability.",
+  alternates: { canonical: "https://local2pdf.com/terms" },
+  openGraph: {
+    title: "Terms of Use",
+    description: "Terms of use for Local2PDF — a privacy-first PDF toolkit that processes files locally in your browser.",
+    url: "https://local2pdf.com/terms",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
+  },
 };
 
 export default function TermsPage() {

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
 import { PdfDropzone } from "@/components/tool/PdfDropzone";
@@ -198,6 +199,34 @@ export default function SplitPdfPage() {
           <details className="faq-item"><summary>Is my PDF uploaded to any server?</summary><p>No. Splitting happens entirely in your browser. Your file never leaves your device.</p></details>
           <details className="faq-item"><summary>Can I split by custom page ranges?</summary><p>Yes. Use ranges like "1-3,5,8-10" to extract specific pages into separate files.</p></details>
         </div>
+      </section>
+
+      <section className="tool-seo">
+        <h2>Related PDF Tools</h2>
+        <p>
+          <Link href="/tools/merge-pdf">Merge PDF</Link> |{" "}
+          <Link href="/tools/extract-pdf-pages">Extract PDF Pages</Link> |{" "}
+          <Link href="/tools/delete-pdf-pages">Delete PDF Pages</Link>
+        </p>
+      </section>
+
+      <section className="how-it-works">
+        <h2>When to Use Split PDF</h2>
+        <ul className="use-cases">
+          <li className="use-case"><h3>Splitting bank statements</h3><p>Extract individual monthly statements from a combined annual statement PDF for separate filing or submission.</p></li>
+          <li className="use-case"><h3>Extracting chapters</h3><p>Pull out individual chapters from a large book or report PDF so each can be shared or read independently.</p></li>
+          <li className="use-case"><h3>Separating scanned batches</h3><p>Break apart a bulk scan that contains multiple documents (receipts, forms, etc.) into individual PDFs.</p></li>
+          <li className="use-case"><h3>Splitting for email attachment limits</h3><p>Divide a PDF that exceeds email size limits into smaller, sendable chunks without compressing quality.</p></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Limitations</h2>
+        <ul>
+          <li><strong>Custom ranges use 1-based page numbers.</strong> When entering ranges, page numbering starts at 1 (not 0). The first page is page 1.</li>
+          <li><strong>ZIP downloads need browser support.</strong> When splitting into many files, a ZIP archive is generated. This requires a browser that supports <code>JSZip</code> (all modern browsers do).</li>
+          <li><strong>Password-protected PDFs are not supported.</strong> Encrypted or locked PDFs cannot be processed. Remove the password before splitting.</li>
+        </ul>
       </section>
     </main>
     </ErrorBoundary>

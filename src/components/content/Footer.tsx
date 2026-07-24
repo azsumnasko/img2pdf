@@ -16,7 +16,7 @@ export function Footer() {
           <Link href="/security">Security</Link>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Use</Link>
-          <a href="#" onClick={(e) => { e.preventDefault(); }} className="consent-settings-link">Privacy choices</a>
+          <Link href="/privacy#choices" className="consent-settings-link">Cookie settings</Link>
         </nav>
         <p className="footer-copy">
           &copy; {new Date().getFullYear()} Local2PDF. All processing happens on your device.

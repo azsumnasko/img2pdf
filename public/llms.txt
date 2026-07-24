@@ -2,6 +2,15 @@
 
 > Local2PDF is a privacy-first PDF toolkit. Supported tools process selected files locally in the browser and do not upload document contents to Local2PDF servers.
 
+## Quick Facts
+
+- **Operator:** Firmify EOOD (Bulgaria)
+- **Pricing:** Free for all PDF tools. No account, no watermark, unlimited conversions.
+- **Image-to-PDF limit:** Up to 25 images per conversion. PDF tools have device-dependent limits.
+- **Processing:** Browser-local. Files are not uploaded.
+- **Supported formats:** JPG, PNG, WebP, HEIC (images); PDF input for all organizer/convert tools.
+- **Contact:** support@local2pdf.com | privacy@local2pdf.com | security@local2pdf.com
+
 ## Official information
 
 - [About](https://local2pdf.com/about): Operator, product identity and official facts.
@@ -25,6 +34,17 @@
 - [Extract Pages](https://local2pdf.com/tools/extract-pdf-pages): Extract selected pages.
 - [Add Page Numbers](https://local2pdf.com/tools/add-page-numbers-to-pdf): Add pagination.
 - [Compress PDF](https://local2pdf.com/tools/compress-pdf): Reduce PDF file size.
+- [JPG to PDF](https://local2pdf.com/tools/jpg-to-pdf): Convert JPEG images to PDF.
+- [PNG to PDF](https://local2pdf.com/tools/png-to-pdf): Convert PNG images to PDF.
+- [WebP to PDF](https://local2pdf.com/tools/webp-to-pdf): Convert WebP images to PDF.
+- [HEIC to PDF](https://local2pdf.com/tools/heic-to-pdf): Convert HEIC images to PDF.
+- [Combine Images to PDF](https://local2pdf.com/tools/combine-images-to-pdf): Merge multiple image formats into one PDF.
+- [Photos to PDF](https://local2pdf.com/tools/photos-to-pdf): Convert phone photos to PDF.
+- [Screenshot to PDF](https://local2pdf.com/tools/screenshot-to-pdf): Convert screenshots to PDF.
+- [Crop PDF](https://local2pdf.com/tools/crop-pdf): Crop PDF pages.
+- [Resize PDF Pages](https://local2pdf.com/tools/resize-pdf-pages): Resize PDF pages.
+- [N-Up PDF](https://local2pdf.com/tools/n-up-pdf): Place multiple pages per sheet.
+- [Extract Images](https://local2pdf.com/tools/extract-images-from-pdf): Extract images from PDF files.
 
 ## Important limitations
 

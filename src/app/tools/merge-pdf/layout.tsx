@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Combine multiple PDFs into one file. All processing happens in your browser — your files stay on your device.",
     url: "https://local2pdf.com/tools/merge-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -47,7 +55,9 @@ export default function MergePdfLayout({ children }: { children: React.ReactNode
                 { "@type": "Question", "name": "Are my PDFs uploaded when merging?", "acceptedAnswer": { "@type": "Answer", "text": "No. The merge happens entirely in your browser. Your files never leave your device." } },
                 { "@type": "Question", "name": "Can I rearrange pages before merging?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can drag and reorder pages from all selected documents before merging." } },
                 { "@type": "Question", "name": "Is there a limit on file size?", "acceptedAnswer": { "@type": "Answer", "text": "There is no hard limit, but performance depends on your device and available memory." } },
-                { "@type": "Question", "name": "Can I merge different file formats?", "acceptedAnswer": { "@type": "Answer", "text": "This tool works with PDF files. To merge images into a PDF, use our JPG/PNG to PDF converter instead." } }
+                { "@type": "Question", "name": "Can I merge different file formats?", "acceptedAnswer": { "@type": "Answer", "text": "This tool works with PDF files. To merge images into a PDF, use our JPG/PNG to PDF converter instead." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),

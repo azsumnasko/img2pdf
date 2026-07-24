@@ -13,6 +13,14 @@ export const metadata: Metadata = {
       "Local2PDF is a privacy-first PDF toolkit that processes files entirely in your browser. No uploads, no accounts, no watermarks.",
     url: "https://local2pdf.com/about",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -39,10 +47,10 @@ export default function AboutPage() {
       <section>
         <h2>Our Products</h2>
         <p>
-          <a href="https://firmify.com">Firmify</a> — Company registration and business management tools.
+          <a href="https://firmify.bg">Firmify</a> — Company registration and business management tools.
         </p>
         <p>
-          <a href="https://storykind.com">StoryKind</a> — AI-powered children's story creation.
+          <a href="https://storykind.tech">StoryKind</a> — AI-powered children's story creation.
         </p>
         <p>
           <a href="/pdf-tools">Local2PDF</a> — Private PDF tools for your browser.

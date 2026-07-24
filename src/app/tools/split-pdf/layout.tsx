@@ -11,6 +11,14 @@ export const metadata: Metadata = {
       "Split a PDF into separate files. Choose every page, custom ranges, or every N pages. All in your browser.",
     url: "https://local2pdf.com/tools/split-pdf",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Local2PDF — Private PDF tools in your browser",
+      },
+    ],
   },
 };
 
@@ -46,7 +54,9 @@ export default function SplitPdfLayout({ children }: { children: React.ReactNode
               "mainEntity": [
                 { "@type": "Question", "name": "What split options are available?", "acceptedAnswer": { "@type": "Answer", "text": "You can split by every page, by custom page ranges (e.g., 1-3,5,7-9), or extract every N pages." } },
                 { "@type": "Question", "name": "Are my files uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. All splitting is done locally in your browser. Your PDF never leaves your device." } },
-                { "@type": "Question", "name": "Will splitting a PDF reduce its quality?", "acceptedAnswer": { "@type": "Answer", "text": "No. Each split file retains the original page quality since pages are extracted without re-encoding." } }
+                { "@type": "Question", "name": "Will splitting a PDF reduce its quality?", "acceptedAnswer": { "@type": "Answer", "text": "No. Each split file retains the original page quality since pages are extracted without re-encoding." } },
+                { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
+                { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]
             },
           ]),
