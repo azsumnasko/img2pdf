@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -190,7 +191,8 @@ export default function RotatePdfPage() {
           <li><strong>Some PDF viewers may ignore rotation metadata.</strong> Most modern viewers (Chrome, Edge, Adobe Acrobat) respect the rotation flag, but some older or minimal PDF viewers may display pages in their original orientation.</li>
         </ul>
       </section>
-    </main>
+          <ToolGuide id="rotate-pdf" />
+</main>
     </ErrorBoundary>
   );
 }

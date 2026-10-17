@@ -81,7 +81,8 @@ export default function AboutPage() {
         <p>
           Operated by Firmify EOOD in Bulgaria. We build privacy-respecting tools that keep your
           data on your device. Our mission is to provide useful document utilities without
-          compromising your privacy.
+          compromising your privacy. Guides on the <a href="/blog">Local2PDF blog</a> are published
+          by Firmify EOOD.
         </p>
       </section>
 

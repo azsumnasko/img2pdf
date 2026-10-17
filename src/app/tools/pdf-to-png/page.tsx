@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -200,7 +201,8 @@ export default function PdfToPngPage() {
         <h2>Browser / Device Support</h2>
         <p>Works in all modern browsers: Chrome, Firefox, Safari, and Edge. Processing is done via the Canvas API. Large PDFs (50+ pages) may be slower on mobile devices.</p>
       </section>
-    </main>
+          <ToolGuide id="pdf-to-png" />
+</main>
     </ErrorBoundary>
   );
 }

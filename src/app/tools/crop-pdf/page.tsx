@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -228,7 +229,8 @@ export default function CropPdfPage() {
           <li><strong>All pages receive the same trim values.</strong> Visual crop selection is under development. Cropped content is permanently removed from the output. Content is not reflowed — cropping only changes page dimensions.</li>
         </ul>
       </section>
-    </main>
+          <ToolGuide id="crop-pdf" />
+</main>
     </ErrorBoundary>
   );
 }

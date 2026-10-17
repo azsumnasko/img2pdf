@@ -41,6 +41,10 @@ const ENTRIES: Entry[] = [
   { path: "/tools/compress-pdf", changeFrequency: "weekly", priority: 0.5 },
 
   { path: "/about", changeFrequency: "monthly", priority: 0.4 },
+  { path: "/blog", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/blog/image-to-pdf-limit", changeFrequency: "monthly", priority: 0.4 },
+  { path: "/blog/how-local2pdf-processes-files", changeFrequency: "monthly", priority: 0.4 },
+  { path: "/blog/when-to-compress-a-pdf-locally", changeFrequency: "monthly", priority: 0.4 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.3 },
   { path: "/security", changeFrequency: "monthly", priority: 0.4 },
   { path: "/compatibility", changeFrequency: "monthly", priority: 0.4 },

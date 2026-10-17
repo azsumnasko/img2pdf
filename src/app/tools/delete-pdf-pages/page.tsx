@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import Link from "next/link";
 import { useCallback, useMemo, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -195,7 +196,8 @@ export default function DeletePdfPagesPage() {
           <li className="use-case"><h3>Cleaning up a document before sharing</h3><p>Remove irrelevant or outdated pages to present a polished, streamlined document to colleagues or clients.</p></li>
         </ul>
       </section>
-    </main>
+          <ToolGuide id="delete-pdf-pages" />
+</main>
     </ErrorBoundary>
   );
 }

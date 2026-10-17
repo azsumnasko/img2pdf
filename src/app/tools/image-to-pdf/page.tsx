@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import Link from "next/link";
 import { useCallback, useEffect, useRef } from "react";
 import { useProject } from "@/lib/useProject";
@@ -230,7 +231,8 @@ export default function ImageToPdfPage() {
           <Link href="/tools/combine-images-to-pdf">Combine Images to PDF</Link>
         </p>
       </section>
-    </main>
+          <ToolGuide id="image-to-pdf" />
+</main>
     </ErrorBoundary>
   );
 }

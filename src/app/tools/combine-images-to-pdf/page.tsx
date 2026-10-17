@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+﻿import { ToolGuide } from "@/components/content/ToolGuide";
+import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 
 export default function CombineImagesPage() {
@@ -38,6 +39,7 @@ export default function CombineImagesPage() {
         <Link href="/tools/png-to-pdf">PNG to PDF</Link> |{" "}
         <Link href="/tools/heic-to-pdf">HEIC to PDF</Link>
       </p>
-    </main>
+          <ToolGuide id="combine-images-to-pdf" />
+</main>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import Link from "next/link";
 import { useCallback, useState, useMemo } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -230,7 +231,8 @@ export default function CompressPdfPage() {
           <li><strong>Safe compression may produce little to no size reduction for already-optimized PDFs.</strong> Image-heavy mode re-renders pages which always changes visual output and loses text selectability, form fields, and vector graphics.</li>
         </ul>
       </section>
-    </main>
+          <ToolGuide id="compress-pdf" />
+</main>
     </ErrorBoundary>
   );
 }

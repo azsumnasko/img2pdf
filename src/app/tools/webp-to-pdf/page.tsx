@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+﻿import { ToolGuide } from "@/components/content/ToolGuide";
+import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 
 export default function WebpToPdfPage() {
@@ -147,6 +148,7 @@ export default function WebpToPdfPage() {
           <Link href="/tools/combine-images-to-pdf">Combine Images to PDF</Link>
         </p>
       </section>
-    </main>
+          <ToolGuide id="webp-to-pdf" />
+</main>
   );
 }

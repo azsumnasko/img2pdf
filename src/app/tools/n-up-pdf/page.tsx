@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -236,7 +237,8 @@ export default function NUpPdfPage() {
           <li><strong>Pages are scaled down to fit the layout,</strong> which may make small text hard to read. The tool creates reading-order layouts, not booklet imposition. Very large PDFs may take longer to process.</li>
         </ul>
       </section>
-    </main>
+          <ToolGuide id="n-up-pdf" />
+</main>
     </ErrorBoundary>
   );
 }

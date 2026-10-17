@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
   title: "Convert Images to PDF — Private & Free",
     description:
-      "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 pages per conversion.",
+      "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 images per conversion.",
     url: "https://local2pdf.com/tools/image-to-pdf",
     type: "website",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Convert Images to PDF — Private & Free",
-    description: "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 pages per conversion.",
+    description: "Convert images to PDF privately. No upload, no signup, no watermark. Free for up to 25 images per conversion.",
     images: ["/og/image-to-pdf.png"],
   },
 

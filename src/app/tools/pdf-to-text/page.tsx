@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -181,7 +182,8 @@ export default function PdfToTextPage() {
         <h2>Browser / Device Support</h2>
         <p>Works in all modern browsers. Text extraction uses the PDF&apos;s built-in text layer. Scanned/image-only PDFs will produce no text — this is a PDF limitation, not a browser limitation.</p>
       </section>
-    </main>
+          <ToolGuide id="pdf-to-text" />
+</main>
     </ErrorBoundary>
   );
 }

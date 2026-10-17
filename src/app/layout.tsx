@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Local2PDF",
   },
   description:
-    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark. Image-to-PDF: up to 25 pages per conversion.",
+    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark. Image-to-PDF: up to 25 images per conversion.",
   metadataBase: new URL("https://local2pdf.com"),
   openGraph: {
     type: "website",
@@ -62,8 +62,18 @@ export default function RootLayout({
                 url: "https://local2pdf.com/",
                 logo: "https://local2pdf.com/icons/icon-512.svg",
                 description:
-                  "Privacy-first browser PDF tools that process supported files locally on the user's device.",
+                  "Privacy-first browser PDF tools operated by Firmify EOOD. Supported files are processed locally on the user's device.",
                 email: "support@local2pdf.com",
+                parentOrganization: {
+                  "@type": "Organization",
+                  "@id": "https://firmify.bg/#organization",
+                  name: "Firmify EOOD",
+                  url: "https://firmify.bg",
+                  address: {
+                    "@type": "PostalAddress",
+                    addressCountry: "BG",
+                  },
+                },
                 sameAs: [
                   "https://github.com/azsumnasko/img2pdf",
                   "https://www.producthunt.com/products/local2pdf",

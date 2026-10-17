@@ -185,7 +185,7 @@ export default function HomePage() {
                   name: "How many images can I convert at once?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "The free version supports up to 25 pages per conversion. You can run unlimited conversions.",
+                    text: "Image-to-PDF is limited to 25 images per conversion. Merge, split, compress, and the other PDF tools do not use that cap — their limits depend on your device. You can run unlimited conversions.",
                   },
                 },
                 {

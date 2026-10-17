@@ -1001,6 +1001,26 @@ p { color: var(--color-text-secondary); }
   line-height: 1.7;
 }
 
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-8) 0 0;
+}
+
+.blog-list li {
+  margin-bottom: var(--space-8);
+}
+
+.blog-list h2 {
+  margin-top: var(--space-2);
+}
+
+.blog-meta,
+.blog-byline {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+}
+
 /* ---- How It Works ---- */
 .how-it-works {
   max-width: var(--tool-max);

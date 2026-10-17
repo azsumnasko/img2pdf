@@ -15,6 +15,7 @@ export function Footer() {
           <Link href="/compatibility">Compatibility</Link>
           <Link href="/changelog">Changelog</Link>
           <Link href="/about">About</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/security">Security</Link>
           <Link href="/privacy">Privacy Policy</Link>

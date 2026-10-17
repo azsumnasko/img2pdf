@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolGuide } from "@/components/content/ToolGuide";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import { useOrganizer } from "@/lib/useOrganizer";
@@ -237,7 +238,8 @@ export default function ResizePdfPagesPage() {
           <Link href="/tools/add-page-numbers-to-pdf">Add Page Numbers</Link>
         </p>
       </section>
-    </main>
+          <ToolGuide id="resize-pdf-pages" />
+</main>
     </ErrorBoundary>
   );
 }

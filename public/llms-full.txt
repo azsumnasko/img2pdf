@@ -32,6 +32,7 @@
 
 ## Official Pages
 - [About](https://local2pdf.com/about): Operator, product identity and official facts.
+- [Blog](https://local2pdf.com/blog): Articles by Firmify EOOD, the operator of Local2PDF.
 - [Security](https://local2pdf.com/security): Local processing architecture and limitations.
 - [Privacy](https://local2pdf.com/privacy): Data handling, analytics and advertising for full PDF toolkit.
 - [Contact](https://local2pdf.com/contact): Get support and help.
