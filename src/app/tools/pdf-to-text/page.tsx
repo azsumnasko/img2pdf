@@ -158,6 +158,7 @@ export default function PdfToTextPage() {
 
       <section className="tool-seo" style={{ marginTop: "var(--space-10)", maxWidth: "var(--tool-max)", marginLeft: "auto", marginRight: "auto" }}>
         <h2>How do I extract text from a PDF?</h2>
+        <p id="faq-primary-answer">Select a PDF that already has a text layer and download the words. A scan without embedded text stays blank. The file is not uploaded.</p>
         <ol>
           <li><strong>Select your PDF file</strong> — click or drag and drop your PDF onto the dropzone.</li>
           <li><strong>Click Extract Text</strong> — the tool reads the text layer embedded in your PDF.</li>

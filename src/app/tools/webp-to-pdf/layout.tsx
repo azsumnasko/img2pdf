@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "WebP to PDF Locally — Private & Free",
   description:
-    "Convert WebP images to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup, no watermark.",
+    "Convert WebP images to a PDF in your browser. Set the page size, orientation, and margins, then download. No upload, no signup, and no watermark. 25 images max.",
   alternates: { canonical: "https://local2pdf.com/tools/webp-to-pdf" },
   openGraph: {
   title: "WebP to PDF Locally — Private & Free",
@@ -120,7 +120,15 @@ export default function WebpToPdfLayout({ children }: { children: React.ReactNod
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/webp-to-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

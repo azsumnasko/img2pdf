@@ -94,7 +94,15 @@ export default function ExtractImagesFromPdfLayout({ children }: { children: Rea
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/extract-images-from-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

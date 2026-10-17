@@ -93,7 +93,15 @@ export default function CropPdfLayout({ children }: { children: React.ReactNode 
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/crop-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

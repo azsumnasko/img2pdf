@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Delete PDF Pages Locally — Remove Pages Free",
   description:
-    "Remove unwanted pages from a PDF directly in your browser. No upload, no signup, no watermark. Select and delete pages fast.",
+    "Remove pages from a PDF in your browser. Select the pages, delete them, and download a new file. No upload, no signup, no watermark. The original stays put.",
   alternates: { canonical: "https://local2pdf.com/tools/delete-pdf-pages" },
   openGraph: {
   title: "Delete PDF Pages Locally — Remove Pages Free",
@@ -93,7 +93,15 @@ export default function DeletePdfPagesLayout({ children }: { children: React.Rea
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/delete-pdf-pages",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

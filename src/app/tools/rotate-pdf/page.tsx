@@ -161,7 +161,7 @@ export default function RotatePdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Can I rotate only certain pages?</summary><p>Yes. Click individual pages or select multiple to rotate only those you want.</p></details>
+          <details className="faq-item"><summary>Can I rotate only certain pages?</summary><p id="faq-primary-answer">Yes. Click individual pages or select multiple to rotate only those you want.</p></details>
           <details className="faq-item"><summary>Is rotation lossless?</summary><p>Yes. Rotations are applied at the PDF metadata level so quality is preserved.</p></details>
         </div>
       </section>

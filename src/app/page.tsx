@@ -8,9 +8,9 @@ import { MakerPromo } from "@/components/content/MakerPromo";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Private PDF Tools — No Upload, Free & Local",
+  title: { absolute: "Private PDF Tools — Free, No Upload, On Your Device" },
   description:
-    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark. Image-to-PDF: up to 25 images.",
+    "Free private PDF tools in your browser. Merge, split, rotate, convert, and compress. No uploads, no signup, no watermark. Up to 25 images per image-to-PDF job.",
   alternates: { canonical: "https://local2pdf.com" },
   openGraph: {
     title: "Local2PDF — Private PDF Tools & Image to PDF Converter",
@@ -284,7 +284,7 @@ export default function HomePage() {
               "@type": "WebPage",
               "@id": "https://local2pdf.com/#webpage",
               url: "https://local2pdf.com/",
-              name: "Private PDF Tools — No Upload, Free & Local",
+              name: "Private PDF Tools — Free, No Upload, On Your Device",
               speakable: {
                 "@type": "SpeakableSpecification",
                 cssSelector: ["#faq-image-limit-answer"],

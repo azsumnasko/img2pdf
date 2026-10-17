@@ -128,7 +128,7 @@ export default function PhotosToPdfPage() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Do I need to install an app?</summary>
-            <p>No. Use your mobile browser. Nothing is installed from an app store.</p>
+            <p id="faq-primary-answer">No. Use your mobile browser. Nothing is installed from an app store.</p>
           </details>
           <details className="faq-item">
             <summary>Are my photos uploaded?</summary>

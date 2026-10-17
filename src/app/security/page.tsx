@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Security at Local2PDF — Browser-Local Processing" },
+  title: { absolute: "Security at Local2PDF — Browser-Local File Processing" },
   description:
     "How Local2PDF keeps your files safe with browser-local processing. No document uploads, Network-tab verification, and open-source PDF libraries you can inspect.",
   alternates: {
     canonical: "https://local2pdf.com/security",
   },
   openGraph: {
-    title: "Security at Local2PDF — Browser-Local Processing",
+    title: "Security at Local2PDF — Browser-Local File Processing",
     description:
       "How Local2PDF keeps your files safe with browser-local processing. No document uploads, Network-tab verification, and open-source PDF libraries.",
     url: "https://local2pdf.com/security",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Security at Local2PDF — Browser-Local Processing",
+    title: "Security at Local2PDF — Browser-Local File Processing",
     description:
       "How Local2PDF keeps your files safe with browser-local processing. No document uploads and open-source PDF libraries.",
   },
@@ -78,24 +78,25 @@ export default function SecurityPage() {
 
       <h2>Network Requests</h2>
       <p>
-        The only network requests made after the initial page load are for
-        analytics (if enabled) and advertising (if displayed). Your images,
+        After the page loads, the browser may request Local2PDF&apos;s own HTML,
+        CSS, and JavaScript. Display advertising is currently off; ads.txt lists
+        no authorized sellers. Analytics run only if you allow them. Your images,
         PDF contents, and filenames are never included in any outgoing request.
       </p>
 
       <h2>Third-Party Dependencies</h2>
       <p>
-        We use{" "}
-        <a href="https://github.com/parallax/jsPDF" rel="noopener noreferrer" target="_blank">
-          jsPDF
-        </a>{" "}
-        and{" "}
+        Page rendering uses{" "}
+        <a href="https://mozilla.github.io/pdf.js/" rel="noopener noreferrer" target="_blank">
+          PDF.js
+        </a>
+        . Creating and editing the PDF uses{" "}
         <a href="https://pdf-lib.js.org/" rel="noopener noreferrer" target="_blank">
           pdf-lib
-        </a>{" "}
-        for PDF generation. Both are well-established open-source libraries with
-        active maintainers. We pin dependency versions and review updates before
-        deploying.
+        </a>
+        . Both libraries run in your browser. Local2PDF does not send the file
+        to those projects, and it does not upload the document to a conversion
+        server. We pin dependency versions and review updates before deploying.
       </p>
 
       <h2>Analytics</h2>
@@ -108,10 +109,10 @@ export default function SecurityPage() {
 
       <h2>Advertising</h2>
       <p>
-        This site may display advertisements. Ads are clearly labeled and
-        are never placed inside the converter tool or near action buttons.
-        Advertising partners may use cookies for frequency capping and
-        measurement, subject to your consent where required.
+        Display advertising is currently off; ads.txt lists no authorized sellers.
+        The site does not load an ad network. If advertising is enabled later,
+        ads will be labeled and kept outside the converter and away from action
+        buttons, and partners may use cookies only with your consent.
       </p>
 
       <h2>Local Storage</h2>
@@ -128,6 +129,29 @@ export default function SecurityPage() {
         URL revocation and structured cleanup to prevent memory leaks.
       </p>
 
+
+      <h2>What never leaves the device</h2>
+      <p>
+        The tools read the file you select, work on it in memory, and offer a download.
+        Filenames, page contents, extracted text, and the finished PDF are not included in
+        analytics. Closing the tab drops the in-memory copy. Keep your own original until you
+        have opened the download.
+      </p>
+      <p>
+        A password-protected PDF has to be unlocked before the browser can read it. PDF to Text
+        returns only text that is already embedded; it does not OCR a scan. A very large file
+        can run out of memory. Those are device limits. They are not a reason the file must be
+        uploaded.
+      </p>
+
+      <h2>How to check</h2>
+      <p>
+        Open developer tools, choose the Network panel, and run a tool on a small file you can
+        afford to experiment with. You should not see a request whose body is that PDF or image.
+        The request list can still show the site&apos;s own scripts. Display advertising is
+        currently off, so you should not see an ad-seller request either. Repeat the check on
+        Image to PDF if you want the same evidence for pictures.
+      </p>
 
       <h2>Vulnerability Disclosure</h2>
       <p>

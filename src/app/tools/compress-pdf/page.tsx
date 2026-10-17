@@ -202,7 +202,7 @@ export default function CompressPdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>How much can a PDF be compressed?</summary><p>Results vary by content. PDFs with large images often see significant size reduction, while already well-compressed files may show little change. This tool is in beta — results will improve over time.</p></details>
+          <details className="faq-item"><summary>How much can a PDF be compressed?</summary><p id="faq-primary-answer">Results vary by content. PDFs with large images often see significant size reduction, while already well-compressed files may show little change. This tool is in beta — results will improve over time.</p></details>
           <details className="faq-item"><summary>Will compression reduce quality?</summary><p>Safe compression may produce only small savings. Image-heavy mode re-renders pages at lower quality which always changes the visual output.</p></details>
         </div>
       </section>

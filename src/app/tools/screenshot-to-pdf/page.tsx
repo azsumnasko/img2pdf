@@ -123,7 +123,7 @@ export default function ScreenshotToPdfPage() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Can I paste screenshots directly?</summary>
-            <p>
+            <p id="faq-primary-answer">
               Yes on most desktop browsers. Press Ctrl+V or Cmd+V after capturing your screen.
             </p>
           </details>

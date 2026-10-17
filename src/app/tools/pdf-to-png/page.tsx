@@ -178,6 +178,7 @@ export default function PdfToPngPage() {
 
       <section className="tool-seo" style={{ marginTop: "var(--space-10)", maxWidth: "var(--tool-max)", marginLeft: "auto", marginRight: "auto" }}>
         <h2>How do I convert a PDF to PNG?</h2>
+        <p id="faq-primary-answer">Select the PDF, choose a resolution, and download PNG pages. Rendering stays in your browser, so the file is not uploaded.</p>
         <ol>
           <li><strong>Select your PDF file</strong> — click or drag and drop your PDF onto the dropzone.</li>
           <li><strong>Choose DPI resolution</strong> — 200 DPI delivers sharp results for diagrams and text.</li>

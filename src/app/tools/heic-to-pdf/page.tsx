@@ -112,7 +112,7 @@ export default function HeicToPdfPage() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Do you upload my iPhone photos?</summary>
-            <p>No. HEIC decoding and PDF creation happen locally in the browser.</p>
+            <p id="faq-primary-answer">No. HEIC decoding and PDF creation happen locally in the browser.</p>
           </details>
           <details className="faq-item">
             <summary>Does this work in Chrome on Windows?</summary>

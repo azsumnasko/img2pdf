@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Resize PDF Pages Locally — Free",
+    title: "Resize PDF Pages Locally — A4, Letter, Custom",
   description:
-    "Resize PDF pages to standard formats (A4, A3, Letter, Legal) or custom dimensions. Scale to fit or center without scaling — all in your browser.",
+    "Resize PDF pages to A4, Letter, Legal, or a custom size in your browser. Scale to fit or center the content. No upload, no signup, and no watermark. Free.",
   alternates: { canonical: "https://local2pdf.com/tools/resize-pdf-pages" },
   openGraph: {
-  title: "Resize PDF Pages Locally — Free",
+  title: "Resize PDF Pages Locally — A4, Letter, Custom",
     description:
       "Resize PDF pages to A4, Letter, or custom sizes. Scale to fit or center content. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/resize-pdf-pages",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Resize PDF Pages Locally — Free",
+    title: "Resize PDF Pages Locally — A4, Letter, Custom",
     description: "Resize PDF pages to A4, Letter, or custom sizes. Scale to fit or center content. Free, private, browser-based.",
     images: ["/og/resize-pdf-pages.png"],
   },
@@ -93,7 +93,15 @@ export default function ResizePdfPagesLayout({ children }: { children: React.Rea
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/resize-pdf-pages",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

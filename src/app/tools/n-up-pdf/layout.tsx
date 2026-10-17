@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "N-Up PDF Locally — Multiple Pages Per Sheet",
   description:
-    "Arrange multiple PDF pages on a single sheet. Create 2-up, 4-up, or 8-up layouts with adjustable padding. No upload, no signup.",
+    "Place several PDF pages on one sheet in your browser. Choose 2-up, 4-up, or 8-up, then download. No upload, no signup, and no watermark on the new file.",
   alternates: { canonical: "https://local2pdf.com/tools/n-up-pdf" },
   openGraph: {
   title: "N-Up PDF Locally — Multiple Pages Per Sheet",
@@ -93,7 +93,15 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/n-up-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

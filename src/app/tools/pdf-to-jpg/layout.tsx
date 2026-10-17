@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "PDF to JPG Locally — No Upload, High Quality",
   description:
-    "Convert PDF pages to high-quality JPG images. Choose resolution (up to 300 DPI) and quality. All processing happens in your browser — no upload, no signup, no watermark.",
+    "Convert PDF pages to JPG images in your browser. Choose the resolution and quality, then download. No upload, no signup, and no watermark on the export.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-jpg" },
   openGraph: {
   title: "PDF to JPG Locally — No Upload, High Quality",
@@ -126,7 +126,15 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/pdf-to-jpg",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

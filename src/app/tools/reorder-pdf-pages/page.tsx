@@ -163,7 +163,7 @@ export default function ReorderPdfPagesPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Can I rotate pages while reordering?</summary><p>Yes. You can rotate individual pages using the rotate buttons on each page thumbnail.</p></details>
+          <details className="faq-item"><summary>Can I rotate pages while reordering?</summary><p id="faq-primary-answer">Yes. You can rotate individual pages using the rotate buttons on each page thumbnail.</p></details>
           <details className="faq-item"><summary>Is the reorder permanent?</summary><p>The original file is not modified. You download a new PDF with your preferred page order.</p></details>
         </div>
       </section>

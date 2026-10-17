@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: { absolute: "Changelog — Local2PDF Updates" },
+  title: { absolute: "Changelog — New Local2PDF Product Updates and Notes" },
   description:
-    "Track Local2PDF updates: the blog by Atanas Ignatov, the 25-image image-to-PDF limit wording, and new private PDF tools. See what changed and when.",
+    "See what changed in Local2PDF, including the blog by Atanas Ignatov, the 25-image limit, and private browser PDF tools. Your files stay on your device.",
   alternates: { canonical: "https://local2pdf.com/changelog" },
   openGraph: {
     title: "Changelog — Local2PDF Updates",
@@ -35,6 +35,8 @@ const entries = [
       "Published the Local2PDF blog with three guides by Atanas Ignatov, manager of Firmify EOOD.",
       "Clarified that the 25-image cap applies only to image-to-PDF (and related image landings), not to merge, split, compress, or other PDF tools.",
       "Linked Firmify EOOD as parentOrganization in schema and expanded About with the named author.",
+      "Stated on Security and Privacy that display advertising is off, matching ads.txt.",
+      "Added a browser support table covering minimum version, HEIC, and offline use.",
     ],
   },
   {

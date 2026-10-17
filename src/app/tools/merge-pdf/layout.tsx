@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Merge PDF Locally — Private, No Upload",
   description:
-    "Combine multiple PDF files into one document privately in your browser. No upload, no signup, no watermark. Rearrange pages before merging.",
+    "Combine several PDF files into one document in your browser. Drag pages into order, then download. No upload, no signup, and no watermark. Originals stay put.",
   alternates: { canonical: "https://local2pdf.com/tools/merge-pdf" },
   openGraph: {
   title: "Merge PDF Locally — Private, No Upload",
@@ -93,7 +93,15 @@ export default function MergePdfLayout({ children }: { children: React.ReactNode
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/merge-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

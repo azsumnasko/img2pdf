@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "PDF to PNG Locally — Lossless Export",
   description:
-    "Convert PDF pages to lossless PNG images. Perfect for diagrams, text, and screenshots. All processing happens in your browser — no upload, no signup, no watermark.",
+    "Convert PDF pages to PNG images in your browser. Use PNG when text and diagrams must stay sharp. No upload, no signup, and no watermark. The PDF stays local.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-png" },
   openGraph: {
   title: "PDF to PNG Locally — Lossless Export",
@@ -120,7 +120,15 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/pdf-to-png",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

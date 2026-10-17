@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Rotate PDF Pages Locally — Private & Free",
   description:
-    "Rotate PDF pages left, right, or 180° in your browser. No upload, no signup, no watermark. Fix upside-down or sideways pages fast.",
+    "Rotate PDF pages left, right, or upside down in your browser. Fix one page or the whole file, then download. No upload, no signup, and no watermark. Free.",
   alternates: { canonical: "https://local2pdf.com/tools/rotate-pdf" },
   openGraph: {
   title: "Rotate PDF Pages Locally — Private & Free",
@@ -93,7 +93,15 @@ export default function RotatePdfLayout({ children }: { children: React.ReactNod
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/rotate-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

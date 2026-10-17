@@ -107,7 +107,7 @@ export default function WebpToPdfPage() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Are WebP files uploaded to Local2PDF?</summary>
-            <p>No. Decoding and PDF creation happen in your browser. Files stay on your device.</p>
+            <p id="faq-primary-answer">No. Decoding and PDF creation happen in your browser. Files stay on your device.</p>
           </details>
           <details className="faq-item">
             <summary>Why convert WebP instead of sending the images as-is?</summary>

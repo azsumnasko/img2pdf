@@ -190,7 +190,7 @@ export default function ExtractImagesFromPdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>How does image extraction work here?</summary><p>This tool renders each PDF page to a high-resolution PNG using the browser's PDF engine. True embedded image extraction (which would pull out the original JPEG/PNG data) is more complex and may be added in a future update.</p></details>
+          <details className="faq-item"><summary>How does image extraction work here?</summary><p id="faq-primary-answer">This tool renders each PDF page to a high-resolution PNG using the browser's PDF engine. True embedded image extraction (which would pull out the original JPEG/PNG data) is more complex and may be added in a future update.</p></details>
           <details className="faq-item"><summary>Is the extracted image lossless?</summary><p>PNG output is lossless — text and graphics stay sharp. For photos compressed inside the PDF, rendering quality depends on the original image resolution.</p></details>
         </div>
       </section>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BLOG_AUTHOR, BLOG_POSTS } from "@/content/blog";
 
 export const metadata: Metadata = {
-  title: { absolute: "Local2PDF Blog — Private PDF Notes" },
+  title: { absolute: "Local2PDF Blog — Practical Guides for Private PDFs" },
   description:
     "Notes from Atanas Ignatov, manager of Firmify EOOD, on private browser PDF tools, the 25-image limit on image-to-PDF, and local processing. No file uploads.",
   alternates: { canonical: "https://local2pdf.com/blog" },
@@ -27,6 +27,45 @@ export const metadata: Metadata = {
 export default function BlogIndexPage() {
   return (
     <main className="content-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "@id": "https://local2pdf.com/blog#blog",
+              name: "Local2PDF Blog",
+              url: "https://local2pdf.com/blog",
+              description:
+                "Notes from Atanas Ignatov, manager of Firmify EOOD, on private browser PDF tools.",
+              author: {
+                "@type": "Person",
+                name: BLOG_AUTHOR.name,
+                jobTitle: BLOG_AUTHOR.jobTitle,
+                url: BLOG_AUTHOR.url,
+              },
+              publisher: { "@id": "https://local2pdf.com/#organization" },
+              blogPost: BLOG_POSTS.map((post) => ({
+                "@type": "BlogPosting",
+                headline: post.title,
+                url: `https://local2pdf.com/blog/${post.slug}`,
+                datePublished: post.date,
+              })),
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              itemListElement: BLOG_POSTS.map((post, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                name: post.title,
+                url: `https://local2pdf.com/blog/${post.slug}`,
+              })),
+            },
+          ]),
+        }}
+      />
       <h1>Local2PDF blog</h1>
       <p>
         Written by {BLOG_AUTHOR.name}, {BLOG_AUTHOR.role}. These notes cover how

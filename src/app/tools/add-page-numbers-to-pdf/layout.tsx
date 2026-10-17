@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Add Page Numbers to PDF — Free",
+    title: "Add Page Numbers to a PDF — Free and Local",
   description:
-    "Add page numbers to any PDF with customizable position, alignment, format, and color. No upload, no signup — all in your browser.",
+    "Add page numbers to a PDF in your browser. Choose the position, format, and start page, then download. No upload, no signup, and no watermark. Done locally.",
   alternates: { canonical: "https://local2pdf.com/tools/add-page-numbers-to-pdf" },
   openGraph: {
-  title: "Add Page Numbers to PDF — Free",
+  title: "Add Page Numbers to a PDF — Free and Local",
     description:
       "Insert page numbers into your PDF with full control over position, style, and format. Private, browser-based processing.",
     url: "https://local2pdf.com/tools/add-page-numbers-to-pdf",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Add Page Numbers to PDF — Free",
+    title: "Add Page Numbers to a PDF — Free and Local",
     description: "Insert page numbers into your PDF with full control over position, style, and format. Private, browser-based processing.",
     images: ["/og/add-page-numbers-to-pdf.png"],
   },
@@ -93,7 +93,15 @@ export default function AddPageNumbersToPdfLayout({ children }: { children: Reac
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/add-page-numbers-to-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

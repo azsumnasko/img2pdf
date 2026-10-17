@@ -178,7 +178,7 @@ export default function ExtractPdfPagesPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Can I extract pages into separate files?</summary><p>Yes. Choose "Extract as separate files" to get each selected page as its own PDF, or as a ZIP archive.</p></details>
+          <details className="faq-item"><summary>Can I extract pages into separate files?</summary><p id="faq-primary-answer">Yes. Choose "Extract as separate files" to get each selected page as its own PDF, or as a ZIP archive.</p></details>
           <details className="faq-item"><summary>Is the original file modified?</summary><p>No. Your original PDF stays untouched. You download a new file with only the extracted pages.</p></details>
         </div>
       </section>

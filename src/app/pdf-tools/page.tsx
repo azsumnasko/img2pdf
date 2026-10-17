@@ -7,7 +7,7 @@ import type { PdfToolCategory } from "@/features/pdf-tools/types";
 export const metadata: Metadata = {
   title: "All PDF Tools — Edit & Convert Locally",
   description:
-    "Free PDF tools that work entirely in your browser. Merge, split, rotate, compress, and convert PDFs. No upload, no signup, no watermark. Files stay on your device.",
+    "Free PDF tools that run in your browser. Merge, split, rotate, compress, and convert files locally. No upload, no signup, and no watermark. Files stay local.",
   alternates: { canonical: "https://local2pdf.com/pdf-tools" },
   openGraph: {
     title: "All PDF Tools — Edit & Convert Locally",

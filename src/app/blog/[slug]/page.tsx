@@ -1,7 +1,27 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_AUTHOR, BLOG_POSTS, getPost } from "@/content/blog";
+
+function RichText({ text }: { text: string }) {
+  const nodes: ReactNode[] = [];
+  const re = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g;
+  let last = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = re.exec(text))) {
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+    nodes.push(
+      <a key={key++} href={match[2]} rel="noopener noreferrer" target="_blank">
+        {match[1]}
+      </a>,
+    );
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return <>{nodes}</>;
+}
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -83,8 +103,15 @@ export default async function BlogPostPage({ params }: Props) {
         By <a href={BLOG_AUTHOR.url}>{BLOG_AUTHOR.name}</a>, {BLOG_AUTHOR.role}.{" "}
         <Link href="/about">About the operator</Link>.
       </p>
-      {post.paragraphs.map((paragraph) => (
-        <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+      {post.sections.map((section) => (
+        <section key={section.heading}>
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>
+              <RichText text={paragraph} />
+            </p>
+          ))}
+        </section>
       ))}
     </main>
   );

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Split PDF Locally — Separate Pages Free",
   description:
-    "Split a PDF into individual pages or custom ranges in your browser. No upload, no signup, no watermark. Extract pages fast and free.",
+    "Split a PDF into separate pages or custom ranges in your browser, then download each piece. No upload, no signup, and no watermark. The original stays put.",
   alternates: { canonical: "https://local2pdf.com/tools/split-pdf" },
   openGraph: {
   title: "Split PDF Locally — Separate Pages Free",
@@ -92,7 +92,15 @@ export default function SplitPdfLayout({ children }: { children: React.ReactNode
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/split-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

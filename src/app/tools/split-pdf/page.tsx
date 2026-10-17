@@ -197,7 +197,7 @@ export default function SplitPdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Is my PDF uploaded to any server?</summary><p>No. Splitting happens entirely in your browser. Your file never leaves your device.</p></details>
+          <details className="faq-item"><summary>Is my PDF uploaded to any server?</summary><p id="faq-primary-answer">No. Splitting happens entirely in your browser. Your file never leaves your device.</p></details>
           <details className="faq-item"><summary>Can I split by custom page ranges?</summary><p>Yes. Use ranges like "1-3,5,8-10" to extract specific pages into separate files.</p></details>
         </div>
       </section>

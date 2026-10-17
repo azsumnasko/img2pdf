@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "PDF to Text Locally — Extract Text Free",
   description:
-    "Extract text from PDF files directly in your browser. Fast extraction from text-based PDFs. No upload, no signup, no watermark — completely private.",
+    "Extract selectable text from a PDF in your browser. A scan with no text layer returns no words. No upload, no signup, and no watermark. The file stays local.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-text" },
   openGraph: {
   title: "PDF to Text Locally — Extract Text Free",
@@ -126,7 +126,15 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/pdf-to-text",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

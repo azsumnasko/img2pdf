@@ -78,9 +78,10 @@ export default function PrivacyPage() {
       </p>
       <p>
         Neither the contents nor the metadata of your selected documents, images, or generated
-        files are uploaded. Normal website requests (such as analytics, advertising, and consent
-        dialogs) may still occur according to your consent choices, but these requests never
-        include your file data.
+        files are uploaded. Normal website requests (such as analytics, if you allow them, and
+        consent dialogs) may still occur according to your consent choices. Display advertising
+        is currently off; ads.txt lists no authorized sellers. These requests never include your
+        file data.
       </p>
 
       <h2>2. Information We Collect</h2>
@@ -99,10 +100,10 @@ export default function PrivacyPage() {
 
       <h2>4. Advertising</h2>
       <p>
-        This site may display advertisements to support its operation. Advertisements are
-        clearly labeled and are never placed inside the toolkit interface or near action
-        buttons. Advertising partners may use cookies for frequency capping and measurement,
-        subject to your consent where required.
+        Display advertising is currently off; ads.txt lists no authorized sellers. The site
+        does not load an ad network. If advertising is enabled later, ads will be labeled
+        and kept outside the tool and away from action buttons, and partners may use cookies
+        only with your consent.
       </p>
 
       <h2>5. Cookies and Local Storage</h2>

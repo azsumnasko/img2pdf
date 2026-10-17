@@ -52,10 +52,10 @@ export function FAQ() {
       <h2 id="faq-title">Frequently asked questions</h2>
       <div className="faq-list">
         {items.map((item, i) => (
-          <details key={i} className="faq-item">
-            <summary>{item.q}</summary>
+          <div key={i} className="faq-item">
+            <h3>{item.q}</h3>
             <p id={"answerId" in item ? item.answerId : undefined}>{item.a}</p>
-          </details>
+          </div>
         ))}
       </div>
     </section>

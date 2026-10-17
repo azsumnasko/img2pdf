@@ -1114,6 +1114,14 @@ p { color: var(--color-text-secondary); }
   overflow: hidden;
 }
 
+.faq-item h3 {
+  margin: 0;
+  padding: var(--space-4) var(--space-4) 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .faq-item summary {
   padding: var(--space-4);
   font-weight: 600;

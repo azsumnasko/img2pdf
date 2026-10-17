@@ -174,7 +174,7 @@ export default function DeletePdfPagesPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Can I undo a page deletion?</summary><p>Your original file is never modified. If you change your mind, click Start Over and select the file again.</p></details>
+          <details className="faq-item"><summary>Can I undo a page deletion?</summary><p id="faq-primary-answer">Your original file is never modified. If you change your mind, click Start Over and select the file again.</p></details>
           <details className="faq-item"><summary>What happens if I delete all pages?</summary><p>Deleting all pages is blocked — a PDF must contain at least one page. Deselect at least one page before proceeding.</p></details>
         </div>
       </section>

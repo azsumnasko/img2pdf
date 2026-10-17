@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Extract PDF Pages Locally — Private & Free",
   description:
-    "Extract specific pages from a PDF into a new file. No upload, no signup, no watermark. Select pages and extract in your browser.",
+    "Extract selected PDF pages into a new file in your browser. Keep them together or save each page. No upload, no signup, and no watermark on the download.",
   alternates: { canonical: "https://local2pdf.com/tools/extract-pdf-pages" },
   openGraph: {
   title: "Extract PDF Pages Locally — Private & Free",
@@ -92,7 +92,15 @@ export default function ExtractPdfPagesLayout({ children }: { children: React.Re
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/extract-pdf-pages",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

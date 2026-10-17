@@ -12,6 +12,7 @@ export default function CombineImagesPage() {
         <Link href="/tools/image-to-pdf" className="btn btn--primary btn--large">Combine images into PDF now</Link>
       </div>
       <h2>How do I combine images into one PDF?</h2>
+      <p id="faq-primary-answer">Add up to 25 images, arrange them, and download one PDF. JPG, PNG, WebP, and HEIC can share the job. The pictures stay on your device.</p>
       <ol>
         <li>Select up to 25 images from your device</li>
         <li>Drag to arrange them in the correct order</li>
@@ -19,7 +20,7 @@ export default function CombineImagesPage() {
         <li>Click Convert — the combined PDF downloads instantly</li>
       </ol>
       <section className="how-it-works">
-        <h2>How do I combine images into one PDF?</h2>
+        <h2>What happens after I arrange the images?</h2>
         <ol>
           <li>Add images of any supported format — JPG, PNG, WebP, or HEIC — into the tool</li>
           <li>Drag to arrange pages in the correct order and rotate images as needed</li>

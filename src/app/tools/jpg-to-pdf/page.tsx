@@ -128,7 +128,7 @@ export default function JpgToPdfPage() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Are my JPG files uploaded?</summary>
-            <p>
+            <p id="faq-primary-answer">
               No. Conversion happens entirely in your browser. Your images never leave your device.
             </p>
           </details>

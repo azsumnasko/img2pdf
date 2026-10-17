@@ -3,9 +3,9 @@ import Link from "next/link";
 import { BLOG_AUTHOR } from "@/content/blog";
 
 export const metadata: Metadata = {
-  title: { absolute: "About Local2PDF — Privacy-First PDF Tools" },
+  title: { absolute: "About Local2PDF — Free Private PDF Tools, No Upload" },
   description:
-    "Local2PDF is a privacy-first PDF toolkit operated by Firmify EOOD in Bulgaria. Atanas Ignatov, manager of Firmify EOOD, writes the blog. Files stay on your device.",
+    "Local2PDF is a private PDF toolkit from Firmify EOOD in Bulgaria. Atanas Ignatov writes the blog. Files are processed in your browser and are not uploaded.",
   alternates: {
     canonical: "https://local2pdf.com/about",
   },
@@ -137,6 +137,50 @@ export default function AboutPage() {
         <p>
           You can verify this yourself: open your browser&apos;s Developer Tools (F12), go to the Network
           tab, and run any of our tools. You will see no requests containing your file contents.
+        </p>
+      </section>
+
+      <section>
+        <h2>What the 25-image limit covers</h2>
+        <p>
+          Image to PDF, and the format pages that use the same converter, accept up to 25 images
+          in one job. JPG, PNG, WebP, and HEIC each count toward that number, including a mixed
+          batch. The cap is per conversion. You can start another job immediately. There is no
+          account and no daily quota.
+        </p>
+        <p>
+          Merge, split, rotate, reorder, delete, extract, crop, resize, n-up, page numbers,
+          compress, PDF to JPG, PDF to PNG, and PDF to Text do not use that cap. Their limit is
+          the memory of the browser on your device. A page that says “25 pages” without saying
+          images is describing the wrong rule.
+        </p>
+      </section>
+
+      <section>
+        <h2>Libraries you can inspect</h2>
+        <p>
+          Local2PDF edits PDFs with{" "}
+          <a href="https://pdf-lib.js.org/" rel="noopener noreferrer" target="_blank">
+            pdf-lib
+          </a>{" "}
+          and draws pages with{" "}
+          <a href="https://mozilla.github.io/pdf.js/" rel="noopener noreferrer" target="_blank">
+            PDF.js
+          </a>
+          . Both run in the browser. The file is not sent to those projects, and it is not
+          uploaded to a Local2PDF conversion server. HEIC photos decode natively in Safari and
+          through a WebAssembly decoder in Chrome, Firefox, and Edge.
+        </p>
+      </section>
+
+      <section>
+        <h2>Browsers</h2>
+        <p>
+          Chrome, Firefox, and Edge 90 or newer, and Safari 15 or newer, can run the tools.
+          After the first visit, JPG, PNG, and WebP conversion can work offline. The{" "}
+          <Link href="/compatibility">compatibility page</Link> lists HEIC and offline support
+          for each browser. The <Link href="/security">security page</Link> explains what a
+          Network-tab check should show.
         </p>
       </section>
 

@@ -200,7 +200,7 @@ export default function CropPdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Is visual crop selection available?</summary><p>Not yet — visual crop (dragging to select crop area on the page preview) is planned for a future update. Currently, you enter numeric margin values.</p></details>
+          <details className="faq-item"><summary>Is visual crop selection available?</summary><p id="faq-primary-answer">Not yet — visual crop (dragging to select crop area on the page preview) is planned for a future update. Currently, you enter numeric margin values.</p></details>
           <details className="faq-item"><summary>Does cropping affect PDF quality?</summary><p>No. Pages are resized while keeping content at its original quality. The trimmed areas are simply removed from the page boundary.</p></details>
         </div>
       </section>

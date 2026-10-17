@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Reorder PDF Pages Locally — Drag, Sort & Save",
   description:
-    "Rearrange PDF pages online in your browser. Move pages left or right to reorder. No upload, no signup, no watermark — your file stays private.",
+    "Drag PDF pages into a new order in your browser, then download the rearranged file. The original stays on your device. No upload, no signup, and no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/reorder-pdf-pages" },
   openGraph: {
   title: "Reorder PDF Pages Locally — Drag, Sort & Save",
@@ -93,7 +93,15 @@ export default function ReorderPdfPagesLayout({ children }: { children: React.Re
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/reorder-pdf-pages",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

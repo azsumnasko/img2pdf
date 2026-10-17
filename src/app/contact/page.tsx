@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Local2PDF — Get Support & Help",
   description:
-    "Contact the Local2PDF team for support, privacy questions, security disclosures, or business inquiries. We aim to respond within 48 hours.",
+    "Email Local2PDF for support, privacy, or security. Use support@, privacy@, or security@local2pdf.com. There is no phone line. We aim to reply within 48 hours.",
   alternates: {
     canonical: "https://local2pdf.com/contact",
   },
@@ -73,6 +73,13 @@ export default function ContactPage() {
       <p>
         We aim to respond to all inquiries within 48 hours. Please use the appropriate contact below
         for the fastest response.
+      </p>
+      <p>
+        Local2PDF does not publish a phone number. Write to{" "}
+        <a href="mailto:support@local2pdf.com">support@local2pdf.com</a>,{" "}
+        <a href="mailto:privacy@local2pdf.com">privacy@local2pdf.com</a>, or{" "}
+        <a href="mailto:security@local2pdf.com">security@local2pdf.com</a>.
+        Support is by email because the tools run in your browser and there is no uploaded file for an agent to open.
       </p>
 
       <section>

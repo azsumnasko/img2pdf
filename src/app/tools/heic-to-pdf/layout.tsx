@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "HEIC to PDF Locally — Private & Free",
   description:
-    "Convert HEIC images (iPhone/iPad photos) to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup.",
+    "Convert iPhone HEIC photos to PDF in your browser. Set the page size, orientation, and margins, then download. No upload, no signup, and no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/heic-to-pdf" },
   openGraph: {
   title: "HEIC to PDF Locally — Private & Free",
@@ -120,7 +120,15 @@ export default function HeicToPdfLayout({ children }: { children: React.ReactNod
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/heic-to-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

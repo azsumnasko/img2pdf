@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Combine Images to PDF — Private & Free",
   description:
-    "Combine multiple images (JPG, PNG, WebP, HEIC) into a single PDF locally in your browser. Reorder pages, adjust layout. No upload, no signup.",
+    "Combine JPG, PNG, WebP, and HEIC images into one PDF in your browser. Reorder the pages, then download. No upload, no signup, and no watermark. Up to 25 images.",
   alternates: { canonical: "https://local2pdf.com/tools/combine-images-to-pdf" },
   openGraph: {
   title: "Combine Images to PDF — Private & Free",
@@ -126,7 +126,15 @@ export default function CombineImagesToPdfLayout({ children }: { children: React
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/combine-images-to-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}

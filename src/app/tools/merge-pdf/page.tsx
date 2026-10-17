@@ -162,7 +162,7 @@ export default function MergePdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Are my PDFs uploaded anywhere?</summary><p>No. Merging happens entirely in your browser. Your files never leave your device.</p></details>
+          <details className="faq-item"><summary>Are my PDFs uploaded anywhere?</summary><p id="faq-primary-answer">No. Merging happens entirely in your browser. Your files never leave your device.</p></details>
           <details className="faq-item"><summary>Is there a limit on file size?</summary><p>There is no hard limit, but performance depends on your device and browser. Very large files may take longer.</p></details>
           <details className="faq-item"><summary>Can I rearrange pages across documents?</summary><p>Yes. You can reorder pages from all documents in any order before merging.</p></details>
         </div>

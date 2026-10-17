@@ -191,7 +191,7 @@ export default function ImageToPdfPage() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Are my images uploaded to Local2PDF servers?</summary>
-            <p>No. All image processing happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.</p>
+            <p id="faq-primary-answer">No. All image processing happens entirely in your browser using local web APIs. Your files are never uploaded to our servers.</p>
           </details>
           <details className="faq-item">
             <summary>Which image formats can I convert to PDF?</summary>

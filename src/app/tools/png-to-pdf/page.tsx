@@ -116,7 +116,7 @@ export default function PngToPdfPage() {
         <div className="faq-list">
           <details className="faq-item">
             <summary>Are my PNG files uploaded?</summary>
-            <p>No. PNG to PDF conversion runs entirely in your browser on your device.</p>
+            <p id="faq-primary-answer">No. PNG to PDF conversion runs entirely in your browser on your device.</p>
           </details>
           <details className="faq-item">
             <summary>Will transparent PNGs look correct in the PDF?</summary>

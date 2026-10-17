@@ -224,7 +224,7 @@ export default function AddPageNumbersToPdfPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>Can I skip numbering the first page?</summary><p>Yes. Set "Start page" to 2 or any page number — pages before that will not be numbered.</p></details>
+          <details className="faq-item"><summary>Can I skip numbering the first page?</summary><p id="faq-primary-answer">Yes. Set "Start page" to 2 or any page number — pages before that will not be numbered.</p></details>
           <details className="faq-item"><summary>What formats are available?</summary><p>Plain numbers (1, 2, 3), "Page 1", "1 of N", and "Page 1 of N". Color and font size are adjustable. The typeface is Helvetica. N is the page count of the whole file.</p></details>
           <details className="faq-item"><summary>Will the number cover existing text?</summary><p>It is drawn at the margin you set, and it does not look for a blank spot. If a header or footer is already there, increase the margin so the number sits clear of it.</p></details>
         </div>

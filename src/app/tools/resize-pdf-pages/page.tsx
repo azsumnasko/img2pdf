@@ -225,7 +225,7 @@ export default function ResizePdfPagesPage() {
       <section className="faq">
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
-          <details className="faq-item"><summary>What does "Scale to fit" do?</summary><p>Content scaling behavior depends on the selected mode. &apos;Scale to fit&apos; preserves aspect ratio. &apos;Stretch&apos; changes it. Some modes only change the page size without repositioning content.</p></details>
+          <details className="faq-item"><summary>What does "Scale to fit" do?</summary><p id="faq-primary-answer">Content scaling behavior depends on the selected mode. &apos;Scale to fit&apos; preserves aspect ratio. &apos;Stretch&apos; changes it. Some modes only change the page size without repositioning content.</p></details>
           <details className="faq-item"><summary>What does "Center without scaling" do?</summary><p>Content keeps its original size and is centered on the new page. If the new page is smaller, content may be clipped. All resize modes change the PDF page dimensions. Content positioning and scaling is applied at the page level only.</p></details>
         </div>
       </section>

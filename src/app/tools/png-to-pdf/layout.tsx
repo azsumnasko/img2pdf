@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "PNG to PDF Locally — Private & Free",
   description:
-    "Convert PNG images to PDF locally in your browser. Preserve transparency, adjust page size and margins. No upload, no signup, no watermark.",
+    "Convert PNG images to PDF in your browser and keep sharp edges. Set the page size and margins, then download. No upload, no signup, and no watermark. Free.",
   alternates: { canonical: "https://local2pdf.com/tools/png-to-pdf" },
   openGraph: {
   title: "PNG to PDF Locally — Private & Free",
@@ -120,7 +120,15 @@ export default function PngToPdfLayout({ children }: { children: React.ReactNode
                 }
               ]
             },
-          ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              url: "https://local2pdf.com/tools/png-to-pdf",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-primary-answer"]
+              }
+            }]),
         }}
       />
       {children}
