@@ -73,6 +73,16 @@ export default function CompatibilityPage() {
         support matrix for the current tools: minimum version, how HEIC photos are decoded, and
         what still works after the app shell has been cached.
       </p>
+      <p className="mb-8 text-muted-foreground">
+        Use this page before you open a large job. Chrome, Firefox, and Edge need version 90 or
+        newer. Safari needs version 15 or newer. Those floors exist because the tools rely on the
+        File API, Canvas, WebAssembly, and Web Workers. HEIC photos decode natively in Safari and
+        Mobile Safari; Chrome, Firefox, Edge, and Mobile Chrome use a WebAssembly decoder that
+        stays on your device. After the first visit, JPG, PNG, and WebP conversion can continue
+        offline once the app shell is cached. HEIC on non-Safari browsers still needs that first
+        online visit so the decoder can load. The matrix below matches the facts published in
+        llms-full.txt and on the Security page.
+      </p>
 
       <div className="mb-12 overflow-x-auto">
         <table className="w-full border-collapse text-left text-sm">

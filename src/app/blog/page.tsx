@@ -83,6 +83,49 @@ export default function BlogIndexPage() {
         the published product rule is 25 images per image-to-PDF conversion. PDF tools such as
         merge, split, and compress use device memory, not that cap.
       </p>
+      <section>
+        <h2>What this blog is for</h2>
+        <p>
+          This blog is the product documentation for Local2PDF written as short guides. Each post
+          answers one question a user asks before they trust a browser tool with a document: how
+          large a job can be, whether the file leaves the device, and when a local compress is
+          the right choice. The author is Atanas Ignatov, manager of Firmify EOOD (UIC 208745197),
+          the Bulgarian company that operates Local2PDF. The same name appears on About, in the
+          BlogPosting schema on each article, and in the machine-readable summaries at llms.txt.
+        </p>
+        <p>
+          The first guide explains the 25-image limit. Image-to-PDF, JPG to PDF, PNG to PDF, WebP
+          to PDF, HEIC to PDF, Photos to PDF, Screenshot to PDF, and Combine Images to PDF share
+          one converter. That converter stops at 25 images in a single job. The next conversion
+          can start immediately. There is no daily quota and no account. Merge, split, rotate,
+          reorder, delete, extract, crop, resize, n-up, page numbers, compress, PDF to JPG, PDF
+          to PNG, and PDF to Text do not inherit that number. Their limits are the memory of the
+          browser on your device.
+        </p>
+        <p>
+          The second guide explains how Local2PDF processes a file. The document is read from
+          your device, changed in memory, and downloaded back to your device. Page rendering uses
+          PDF.js. Creating and editing the PDF uses pdf-lib. Both libraries run in the tab. You
+          can verify the claim yourself: open the Network panel, run a tool, and confirm that no
+          request carries the PDF or image body. The site can still load its own HTML, CSS, and
+          JavaScript. Display advertising is currently off; ads.txt lists no authorized sellers.
+        </p>
+        <p>
+          The third guide covers when to compress a PDF locally. Use the compressor when a file
+          is too large to email and you do not want to upload it. Safe mode trims overhead without
+          rebuilding pages and is the right first choice for text documents. Image-heavy mode
+          redraws pages and is meant for scans when a softer page is acceptable. Compression does
+          not use a 25-page cap. A signed PDF is a poor candidate for any edit, including
+          compression, because the signature covers the bytes that would change.
+        </p>
+        <p>
+          Read the posts in any order. If you only need the limit rule, start with the image
+          article. If you are checking privacy before converting a scan, start with the processing
+          article. If you are trying to fit a PDF into an email, start with the compression
+          article. Every tool on Local2PDF stays free, requires no signup, and adds no watermark
+          to the file you download.
+        </p>
+      </section>
       <ul className="blog-list">
         {BLOG_POSTS.map((post) => (
           <li key={post.slug}>

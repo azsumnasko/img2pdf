@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "PDF to PNG Locally — Lossless Export",
+    title: "PDF to PNG Locally — Lossless, Private",
   description:
     "Convert PDF pages to PNG images in your browser. Use PNG when text and diagrams must stay sharp. No upload, no signup, and no watermark. The PDF stays local.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-png" },
   openGraph: {
-  title: "PDF to PNG Locally — Lossless Export",
+  title: "PDF to PNG Locally — Lossless, Private",
     description:
       "Render PDF pages as PNG images privately. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-png",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PDF to PNG Locally — Lossless Export",
+    title: "PDF to PNG Locally — Lossless, Private",
     description: "Render PDF pages as PNG images privately. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
     images: ["/og/pdf-to-png.png"],
   },

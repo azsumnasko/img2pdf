@@ -90,6 +90,10 @@ export default async function BlogPostPage({ params }: Props) {
               },
             },
             publisher: { "@id": "https://local2pdf.com/#organization" },
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["#article-direct-answer"],
+            },
           }),
         }}
       />
@@ -103,11 +107,18 @@ export default async function BlogPostPage({ params }: Props) {
         By <a href={BLOG_AUTHOR.url}>{BLOG_AUTHOR.name}</a>, {BLOG_AUTHOR.role}.{" "}
         <Link href="/about">About the operator</Link>.
       </p>
-      {post.sections.map((section) => (
+      {post.sections.map((section, sectionIndex) => (
         <section key={section.heading}>
           <h2>{section.heading}</h2>
-          {section.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)}>
+          {section.paragraphs.map((paragraph, paragraphIndex) => (
+            <p
+              key={paragraph.slice(0, 48)}
+              id={
+                sectionIndex === 0 && paragraphIndex === 0
+                  ? "article-direct-answer"
+                  : undefined
+              }
+            >
               <RichText text={paragraph} />
             </p>
           ))}

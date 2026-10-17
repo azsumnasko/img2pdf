@@ -96,7 +96,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "when-to-compress-a-pdf-locally",
-    title: "When to compress a PDF locally",
+    title: "When to Compress a PDF Locally — No Upload",
     description:
       "Use local PDF compression for email-sized files. Safe mode keeps structure; image-heavy mode changes scans. No upload, and no 25-page cap on compress.",
     date: "2026-10-17",
