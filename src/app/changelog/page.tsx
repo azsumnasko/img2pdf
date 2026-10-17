@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Changelog — Local2PDF",
+  title: { absolute: "Changelog — Local2PDF Updates" },
   description:
-    "Track updates and new features for Local2PDF. See what PDF tools have been added and what changes have been made.",
+    "Track Local2PDF updates: the blog by Atanas Ignatov, the 25-image image-to-PDF limit wording, and new private PDF tools. See what changed and when.",
   alternates: { canonical: "https://local2pdf.com/changelog" },
   openGraph: {
-    title: "Changelog — Local2PDF",
+    title: "Changelog — Local2PDF Updates",
     description:
-      "Track updates and new features for Local2PDF. See what PDF tools have been added.",
+      "Track Local2PDF updates: the blog by Atanas Ignatov, the 25-image image-to-PDF limit, and new private PDF tools.",
     url: "https://local2pdf.com/changelog",
     type: "website",
     images: [
@@ -22,13 +22,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Changelog — Local2PDF",
+    title: "Changelog — Local2PDF Updates",
     description:
-      "Track updates and new features for Local2PDF. See what PDF tools have been added and what changes have been made.",
+      "Track Local2PDF updates: the blog by Atanas Ignatov, the 25-image image-to-PDF limit, and new private PDF tools.",
   },
 };
 
 const entries = [
+  {
+    date: "October 17, 2026",
+    changes: [
+      "Published the Local2PDF blog with three guides by Atanas Ignatov, manager of Firmify EOOD.",
+      "Clarified that the 25-image cap applies only to image-to-PDF (and related image landings), not to merge, split, compress, or other PDF tools.",
+      "Linked Firmify EOOD as parentOrganization in schema and expanded About with the named author.",
+    ],
+  },
   {
     date: "July 24, 2026",
     changes: [

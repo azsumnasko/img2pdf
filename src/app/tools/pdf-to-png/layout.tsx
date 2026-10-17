@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "PDF to PNG Locally — No Upload, Lossless Quality",
+    title: "PDF to PNG Locally — Lossless Export",
   description:
     "Convert PDF pages to lossless PNG images. Perfect for diagrams, text, and screenshots. All processing happens in your browser — no upload, no signup, no watermark.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-png" },
   openGraph: {
-  title: "PDF to PNG Locally — No Upload, Lossless Quality",
+  title: "PDF to PNG Locally — Lossless Export",
     description:
       "Render PDF pages as PNG images privately. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-png",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PDF to PNG Locally — No Upload, Lossless Quality",
+    title: "PDF to PNG Locally — Lossless Export",
     description: "Render PDF pages as PNG images privately. Lossless quality, adjustable DPI. No upload, no signup, no watermark.",
     images: ["/og/pdf-to-png.png"],
   },
@@ -97,7 +97,7 @@ export default function PdfToPngLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Convert PDF to PNG",
+              "name": "How do I convert a PDF to PNG?",
               "description": "Convert PDF pages to lossless PNG images. Perfect for diagrams, text, and screenshots. All processing happens in your browser — no upload, no signup, no watermark.",
               "step": [
                 {

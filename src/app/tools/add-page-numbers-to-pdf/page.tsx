@@ -213,7 +213,7 @@ export default function AddPageNumbersToPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to add page numbers to a PDF</h2>
+        <h2>How do I add page numbers to a PDF?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Select the PDF file you want to add page numbers to.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Customize numbering</h3><p>Choose position, alignment, format, font size, color, and start page.</p></div></li>

@@ -70,7 +70,7 @@ export default function MergePdfLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to merge PDF files",
+              "name": "How do I merge PDF files?",
               "description": "Combine multiple PDF files into one document privately in your browser. No upload, no signup, no watermark. Rearrange pages before merging.",
               "step": [
                 {

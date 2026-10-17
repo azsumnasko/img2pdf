@@ -97,7 +97,7 @@ export default function CombineImagesToPdfLayout({ children }: { children: React
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Combine Images into One PDF",
+              "name": "How do I combine images into one PDF?",
               "description": "Combine multiple images (JPG, PNG, WebP, HEIC) into a single PDF locally in your browser. Reorder pages, adjust layout. No upload, no signup.",
               "step": [
                 {

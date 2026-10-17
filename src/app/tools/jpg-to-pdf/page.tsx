@@ -19,7 +19,7 @@ export default function JpgToPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to Convert JPG to PDF</h2>
+        <h2>How do I convert JPG to PDF?</h2>
         <ol className="steps">
           <li className="step">
             <span className="step-number">1</span>

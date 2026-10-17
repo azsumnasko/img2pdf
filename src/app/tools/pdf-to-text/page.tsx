@@ -157,7 +157,7 @@ export default function PdfToTextPage() {
       </div>
 
       <section className="tool-seo" style={{ marginTop: "var(--space-10)", maxWidth: "var(--tool-max)", marginLeft: "auto", marginRight: "auto" }}>
-        <h2>How to Extract Text from PDF</h2>
+        <h2>How do I extract text from a PDF?</h2>
         <ol>
           <li><strong>Select your PDF file</strong> — click or drag and drop your PDF onto the dropzone.</li>
           <li><strong>Click Extract Text</strong> — the tool reads the text layer embedded in your PDF.</li>

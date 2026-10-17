@@ -97,7 +97,7 @@ export default function HeicToPdfLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Convert HEIC to PDF",
+              "name": "How do I convert HEIC to PDF?",
               "description": "Convert HEIC images (iPhone/iPad photos) to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup.",
               "step": [
                 {

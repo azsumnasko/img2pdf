@@ -69,7 +69,7 @@ export default function ExtractPdfPagesLayout({ children }: { children: React.Re
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to extract PDF pages",
+              "name": "How do I extract PDF pages?",
               "description": "Extract specific pages from a PDF into a new file. No upload, no signup, no watermark. Select pages and extract in your browser.",
               "step": [
                 {

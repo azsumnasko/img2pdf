@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Split PDF Locally — Separate Pages Without Upload",
+    title: "Split PDF Locally — Separate Pages Free",
   description:
     "Split a PDF into individual pages or custom ranges in your browser. No upload, no signup, no watermark. Extract pages fast and free.",
   alternates: { canonical: "https://local2pdf.com/tools/split-pdf" },
   openGraph: {
-  title: "Split PDF Locally — Separate Pages Without Upload",
+  title: "Split PDF Locally — Separate Pages Free",
     description:
       "Split a PDF into separate files. Choose every page, custom ranges, or every N pages. All in your browser.",
     url: "https://local2pdf.com/tools/split-pdf",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Split PDF Locally — Separate Pages Without Upload",
+    title: "Split PDF Locally — Separate Pages Free",
     description: "Split a PDF into separate files. Choose every page, custom ranges, or every N pages. All in your browser.",
     images: ["/og/split-pdf.png"],
   },
@@ -69,7 +69,7 @@ export default function SplitPdfLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to split PDF files",
+              "name": "How do I split a PDF?",
               "description": "Split a PDF into individual pages or custom ranges in your browser. No upload, no signup, no watermark. Extract pages fast and free.",
               "step": [
                 {

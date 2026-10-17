@@ -7,6 +7,7 @@ import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PdfPageGrid } from "@/components/tool/PdfPageGrid";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 import { ErrorBoundary } from "@/components/tool/ErrorBoundary";
+import { ToolGuide } from "@/components/content/ToolGuide";
 import { formatBytes } from "@/lib/format";
 
 export default function ExtractPdfPagesPage() {
@@ -166,7 +167,7 @@ export default function ExtractPdfPagesPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to extract PDF pages</h2>
+        <h2>How do I extract PDF pages?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Click or drag and drop the PDF you want to extract pages from.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Choose pages to extract</h3><p>Check the pages you want to extract. Select one or many.</p></div></li>
@@ -253,6 +254,8 @@ export default function ExtractPdfPagesPage() {
         <h2>Browser / Device Support</h2>
         <p>Works in all modern browsers. Extracted pages maintain original quality without rasterization. ZIP downloads for multiple files work in all modern browsers.</p>
       </section>
+
+      <ToolGuide id="extract-pdf-pages" />
     </main>
     </ErrorBoundary>
   );

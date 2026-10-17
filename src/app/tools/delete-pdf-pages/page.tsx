@@ -163,7 +163,7 @@ export default function DeletePdfPagesPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to delete PDF pages</h2>
+        <h2>How do I delete PDF pages?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Click or drag and drop the PDF you want to remove pages from.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Check pages to delete</h3><p>Select the pages you want to remove by checking their boxes. You can select all or individual pages.</p></div></li>

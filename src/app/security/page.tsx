@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Security at Local2PDF",
+  title: { absolute: "Security at Local2PDF — Browser-Local Processing" },
   description:
-    "How Local2PDF keeps your data safe with browser-local processing, no file uploads, and strong security practices.",
+    "How Local2PDF keeps your files safe with browser-local processing. No document uploads, Network-tab verification, and open-source PDF libraries you can inspect.",
   alternates: {
     canonical: "https://local2pdf.com/security",
   },
   openGraph: {
-    title: "Security at Local2PDF",
+    title: "Security at Local2PDF — Browser-Local Processing",
     description:
-      "How Local2PDF keeps your data safe with browser-local processing, no file uploads, and strong security practices.",
+      "How Local2PDF keeps your files safe with browser-local processing. No document uploads, Network-tab verification, and open-source PDF libraries.",
     url: "https://local2pdf.com/security",
     images: [
       {
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Security at Local2PDF",
+    title: "Security at Local2PDF — Browser-Local Processing",
     description:
-      "How Local2PDF keeps your data safe with browser-local processing, no file uploads, and strong security practices.",
+      "How Local2PDF keeps your files safe with browser-local processing. No document uploads and open-source PDF libraries.",
   },
 };
 
@@ -85,9 +85,17 @@ export default function SecurityPage() {
 
       <h2>Third-Party Dependencies</h2>
       <p>
-        We use jsPDF and PDF-lib for PDF generation. Both are well-established
-        open-source libraries with active maintainers. We pin dependency
-        versions and review updates before deploying.
+        We use{" "}
+        <a href="https://github.com/parallax/jsPDF" rel="noopener noreferrer" target="_blank">
+          jsPDF
+        </a>{" "}
+        and{" "}
+        <a href="https://pdf-lib.js.org/" rel="noopener noreferrer" target="_blank">
+          pdf-lib
+        </a>{" "}
+        for PDF generation. Both are well-established open-source libraries with
+        active maintainers. We pin dependency versions and review updates before
+        deploying.
       </p>
 
       <h2>Analytics</h2>

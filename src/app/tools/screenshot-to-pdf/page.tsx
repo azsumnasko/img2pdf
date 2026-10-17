@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
+import { ToolGuide } from "@/components/content/ToolGuide";
 
 export default function ScreenshotToPdfPage() {
   return (
@@ -27,7 +28,7 @@ export default function ScreenshotToPdfPage() {
       </section>
 
       <section className="how-it-works">
-        <h2>How to Convert Screenshots to PDF</h2>
+        <h2>How do I convert screenshots to PDF?</h2>
         <ol className="steps">
           <li className="step">
             <span className="step-number">1</span>
@@ -165,6 +166,8 @@ export default function ScreenshotToPdfPage() {
           <Link href="/tools/pdf-to-png">PDF to PNG</Link>
         </p>
       </section>
+
+      <ToolGuide id="screenshot-to-pdf" />
     </main>
   );
 }

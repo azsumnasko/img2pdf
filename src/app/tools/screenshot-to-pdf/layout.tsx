@@ -97,7 +97,7 @@ export default function ScreenshotToPdfLayout({ children }: { children: React.Re
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Convert Screenshots to PDF",
+              "name": "How do I convert screenshots to PDF?",
               "description": "Convert screenshots to PDF locally in your browser. Paste from clipboard or select screenshot files. Adjust page size and orientation. No upload, no signup.",
               "step": [
                 {

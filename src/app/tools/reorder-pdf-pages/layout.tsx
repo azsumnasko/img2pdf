@@ -70,7 +70,7 @@ export default function ReorderPdfPagesLayout({ children }: { children: React.Re
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to reorder PDF pages",
+              "name": "How do I reorder PDF pages?",
               "description": "Rearrange PDF pages online in your browser. Move pages left or right to reorder. No upload, no signup, no watermark — your file stays private.",
               "step": [
                 {

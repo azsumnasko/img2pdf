@@ -7,6 +7,7 @@ import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PdfPageGrid } from "@/components/tool/PdfPageGrid";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 import { ErrorBoundary } from "@/components/tool/ErrorBoundary";
+import { ToolGuide } from "@/components/content/ToolGuide";
 import { formatBytes } from "@/lib/format";
 
 type SplitMode = "all-pages" | "custom-ranges" | "every-n-pages";
@@ -185,7 +186,7 @@ export default function SplitPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to split PDF files</h2>
+        <h2>How do I split a PDF?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Select the PDF you want to split — it stays in your browser.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Choose split mode</h3><p>Split every page, by custom ranges, or every N pages.</p></div></li>
@@ -233,6 +234,8 @@ export default function SplitPdfPage() {
         <h2>Browser / Device Support</h2>
         <p>Works in all modern browsers with JavaScript enabled. ZIP downloads for multi-file output require browser support for JSZip (all modern browsers supported).</p>
       </section>
+
+      <ToolGuide id="split-pdf" />
     </main>
     </ErrorBoundary>
   );

@@ -191,7 +191,7 @@ export default function CompressPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to compress a PDF</h2>
+        <h2>How do I compress a PDF?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Choose the PDF file you want to compress — it stays in your browser.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Compress</h3><p>Click "Compress PDF" and the tool optimizes internal structures to reduce file size.</p></div></li>

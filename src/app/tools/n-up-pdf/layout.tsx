@@ -70,7 +70,7 @@ export default function NUpPdfLayout({ children }: { children: React.ReactNode }
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to create an N-Up PDF",
+              "name": "How do I create an N-Up PDF?",
               "description": "Arrange multiple PDF pages on a single sheet. Create 2-up, 4-up, or 8-up layouts with adjustable padding. No upload, no signup.",
               "step": [
                 {

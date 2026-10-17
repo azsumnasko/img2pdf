@@ -70,7 +70,7 @@ export default function RotatePdfLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to rotate PDF pages",
+              "name": "How do I rotate PDF pages?",
               "description": "Rotate PDF pages left, right, or 180° in your browser. No upload, no signup, no watermark. Fix upside-down or sideways pages fast.",
               "step": [
                 {

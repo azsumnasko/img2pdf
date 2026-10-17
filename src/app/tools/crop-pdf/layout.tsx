@@ -70,7 +70,7 @@ export default function CropPdfLayout({ children }: { children: React.ReactNode 
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to crop PDF pages",
+              "name": "How do I crop PDF pages?",
               "description": "Crop or trim margins from PDF pages. Remove whitespace and adjust page boundaries — all in your browser.",
               "step": [
                 {

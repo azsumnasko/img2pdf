@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Terms of use for Local2PDF — a privacy-first PDF toolkit that processes files locally in your browser. Covers acceptable use, disclaimers, intellectual property, and limitations of liability.",
+  description: "Terms of use for Local2PDF, a privacy-first PDF toolkit that processes files locally in your browser. Covers acceptable use, disclaimers, and liability.",
   alternates: { canonical: "https://local2pdf.com/terms" },
   openGraph: {
     title: "Terms of Use",

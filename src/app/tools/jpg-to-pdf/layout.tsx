@@ -97,7 +97,7 @@ export default function JpgToPdfLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Convert JPG to PDF",
+              "name": "How do I convert JPG to PDF?",
               "description": "Convert JPG images to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup, no watermark — your files stay private.",
               "step": [
                 {

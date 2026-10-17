@@ -10,7 +10,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Private PDF Tools — No Upload, Free & Local",
   description:
-    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark.",
+    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark. Image-to-PDF: up to 25 images.",
   alternates: { canonical: "https://local2pdf.com" },
   openGraph: {
     title: "Local2PDF — Private PDF Tools & Image to PDF Converter",
@@ -217,7 +217,7 @@ export default function HomePage() {
                   name: "Is this tool free?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes. Local2PDF is free to use with no hidden costs. The site is supported by advertising placed away from the tool controls.",
+                    text: "Yes. Local2PDF is free to use with no hidden costs. Display advertising is currently off; ads.txt lists no authorized sellers.",
                   },
                 },
                 {
@@ -249,7 +249,7 @@ export default function HomePage() {
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              name: "How to use Local2PDF",
+              name: "How do I use Local2PDF?",
               description:
                 "Process PDF files privately in your browser with Local2PDF — no uploads, no signup, no watermark.",
               step: [
@@ -278,6 +278,17 @@ export default function HomePage() {
                   text: "Get your converted, merged, or modified file instantly. No signup, no watermark — everything stays on your device.",
                 },
               ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://local2pdf.com/#webpage",
+              url: "https://local2pdf.com/",
+              name: "Private PDF Tools — No Upload, Free & Local",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq-image-limit-answer"],
+              },
             },
           ]),
         }}

@@ -26,6 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       authors: [BLOG_AUTHOR.name],
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Local2PDF — Private PDF tools in your browser",
+        },
+      ],
     },
   };
 }

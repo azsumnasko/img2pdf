@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "PDF to Text Locally — Extract Text Without Upload",
+    title: "PDF to Text Locally — Extract Text Free",
   description:
     "Extract text from PDF files directly in your browser. Fast extraction from text-based PDFs. No upload, no signup, no watermark — completely private.",
   alternates: { canonical: "https://local2pdf.com/tools/pdf-to-text" },
   openGraph: {
-  title: "PDF to Text Locally — Extract Text Without Upload",
+  title: "PDF to Text Locally — Extract Text Free",
     description:
       "Extract text from PDFs privately in your browser. No upload, no signup, no watermark.",
     url: "https://local2pdf.com/tools/pdf-to-text",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PDF to Text Locally — Extract Text Without Upload",
+    title: "PDF to Text Locally — Extract Text Free",
     description: "Extract text from PDFs privately in your browser. No upload, no signup, no watermark.",
     images: ["/og/pdf-to-text.png"],
   },
@@ -97,7 +97,7 @@ export default function PdfToTextLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Extract Text from PDF",
+              "name": "How do I extract text from a PDF?",
               "description": "Extract text from PDF files directly in your browser. Fast extraction from text-based PDFs. No upload, no signup, no watermark — completely private.",
               "step": [
                 {

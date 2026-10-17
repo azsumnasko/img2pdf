@@ -15,6 +15,7 @@ export function FAQ() {
     {
       q: "How many images can I convert at once?",
       a: "Image-to-PDF is limited to 25 images per conversion. Merge, split, compress, and the other PDF tools do not use that cap — their limits depend on your device. You can run unlimited conversions.",
+      answerId: "faq-image-limit-answer",
     },
     {
       q: "Which image formats are supported?",
@@ -30,7 +31,7 @@ export function FAQ() {
     },
     {
       q: "Is this tool free?",
-      a: "Yes. Local2PDF is free to use with no hidden costs. The site is supported by advertising placed away from the tool controls.",
+      a: "Yes. Local2PDF is free to use with no hidden costs. Display advertising is currently off; ads.txt lists no authorized sellers.",
     },
     {
       q: "Can I merge multiple PDF files?",
@@ -53,7 +54,7 @@ export function FAQ() {
         {items.map((item, i) => (
           <details key={i} className="faq-item">
             <summary>{item.q}</summary>
-            <p>{item.a}</p>
+            <p id={"answerId" in item ? item.answerId : undefined}>{item.a}</p>
           </details>
         ))}
       </div>

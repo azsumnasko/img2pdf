@@ -179,7 +179,7 @@ export default function ExtractImagesFromPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to extract images from PDF</h2>
+        <h2>How do I extract images from a PDF?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Click or drag and drop the PDF you want to extract images from.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Choose pages &amp; resolution</h3><p>Select the pages and pick a DPI — 300 DPI is best for print-quality extraction.</p></div></li>

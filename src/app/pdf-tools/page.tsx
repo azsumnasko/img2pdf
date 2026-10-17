@@ -5,13 +5,14 @@ import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 import type { PdfToolCategory } from "@/features/pdf-tools/types";
 
 export const metadata: Metadata = {
-    title: "All PDF Tools — Edit, Convert & Organize PDFs Locally",
+  title: "All PDF Tools — Edit & Convert Locally",
   description:
-    "Free PDF tools that work entirely in your browser. Merge, split, rotate, compress, and convert PDFs. No upload, no signup, no watermark.",
+    "Free PDF tools that work entirely in your browser. Merge, split, rotate, compress, and convert PDFs. No upload, no signup, no watermark. Files stay on your device.",
   alternates: { canonical: "https://local2pdf.com/pdf-tools" },
   openGraph: {
-  title: "All PDF Tools — Edit, Convert & Organize PDFs Locally",
-    description: "Free PDF tools that work locally in your browser. Merge, split, convert, and compress PDFs without uploading.",
+    title: "All PDF Tools — Edit & Convert Locally",
+    description:
+      "Free PDF tools that work locally in your browser. Merge, split, convert, and compress PDFs without uploading. No signup or watermark.",
     url: "https://local2pdf.com/pdf-tools",
     type: "website",
     images: [

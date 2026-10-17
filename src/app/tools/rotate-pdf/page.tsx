@@ -150,7 +150,7 @@ export default function RotatePdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to rotate PDF pages</h2>
+        <h2>How do I rotate PDF pages?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Click or drag and drop the PDF you want to rotate.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Rotate pages</h3><p>Use the rotate buttons on each page or select multiple pages to rotate in batch.</p></div></li>

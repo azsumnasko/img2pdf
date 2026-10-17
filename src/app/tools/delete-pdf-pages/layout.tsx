@@ -70,7 +70,7 @@ export default function DeletePdfPagesLayout({ children }: { children: React.Rea
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to delete PDF pages",
+              "name": "How do I delete PDF pages?",
               "description": "Remove unwanted pages from a PDF directly in your browser. No upload, no signup, no watermark. Select and delete pages fast.",
               "step": [
                 {

@@ -97,7 +97,7 @@ export default function PdfToJpgLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Convert PDF to JPG",
+              "name": "How do I convert a PDF to JPG?",
               "description": "Convert PDF pages to high-quality JPG images. Choose resolution (up to 300 DPI) and quality. All processing happens in your browser — no upload, no signup, no watermark.",
               "step": [
                 {

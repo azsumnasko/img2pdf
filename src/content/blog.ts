@@ -24,7 +24,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "image-to-pdf-limit",
     title: "The 25-image limit applies only to image-to-PDF",
     description:
-      "Local2PDF caps image-to-PDF at 25 images per conversion. Merge, split, compress, and other PDF tools are not limited to 25 pages.",
+      "Local2PDF caps image-to-PDF at 25 images per conversion. Merge, split, compress, and other PDF tools use device memory — not a 25-page rule. Batch and merge if you need more.",
     date: "2026-10-17",
     paragraphs: [
       "Local2PDF is free, and the only fixed job size is on image conversion: up to 25 images in one PDF. That includes JPG, PNG, WebP, and HEIC, whether you start from Image to PDF or from a format page such as JPG to PDF. It is a per-conversion cap, not a daily quota. You can convert again immediately.",
@@ -41,11 +41,11 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "how-local2pdf-processes-files",
     title: "How Local2PDF processes files on your device",
     description:
-      "Local2PDF, operated by Firmify EOOD, reads and writes PDFs in the browser. Document contents are not uploaded.",
+      "Local2PDF, operated by Firmify EOOD, reads and writes PDFs in the browser. Document contents are not uploaded. Verify it yourself in the Network tab.",
     date: "2026-10-17",
     paragraphs: [
       "Local2PDF is a browser toolkit operated by Firmify EOOD. The tools that convert, merge, split, and edit PDFs run in the page you already have open. The file is read from your device, processed in memory, and downloaded back to your device. The document is not sent to a Local2PDF server to be converted.",
-      "You can check that yourself. Open developer tools, choose the Network panel, and run a tool. You should not see a request that carries the PDF or image body. The site can still load its own HTML, scripts, and — if ads are enabled — advertising resources. Those requests are not your document.",
+      "You can check that yourself. Open developer tools, choose the Network panel, and run a tool. You should not see a request that carries the PDF or image body. The site can still load its own HTML and scripts. Display advertising is currently off. Those site requests are not your document.",
       "Local processing has limits that a server product hides. A very large PDF can run out of memory. A password-protected file has to be unlocked before the browser can read it. PDF to Text only returns text that is already embedded; it does not OCR a scan. Changing a signed PDF can invalidate the signature. Those limits are product facts, not reasons to upload the file somewhere else.",
       "Firmify EOOD also publishes Firmify and StoryKind. Local2PDF is the document product: free, no account, and no watermark on the file you download. Atanas Ignatov, manager of Firmify EOOD, writes these notes. The company, not a hosting vendor, is the operator named on the About page.",
       "Local processing covers the tools that read your file: image conversion, merge, split, rotate, reorder, delete, extract, crop, resize, n-up, page numbers, compress, and PDF to JPG, PNG, or text. The site itself is still a website. Loading the page fetches HTML, CSS, and JavaScript from the host. If you accept analytics or advertising, those services can make their own requests. Those requests are not a copy of the PDF. The privacy policy separates that site traffic from document contents.",
@@ -58,7 +58,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "when-to-compress-a-pdf-locally",
     title: "When to compress a PDF locally",
     description:
-      "Use local PDF compression for email-sized files. Safe mode keeps structure; image-heavy mode changes the pages.",
+      "Use local PDF compression for email-sized files. Safe mode keeps structure; image-heavy mode changes scans. No upload, and no 25-page cap on compress.",
     date: "2026-10-17",
     paragraphs: [
       "Compress a PDF locally when the file is too large to email and you do not want to upload it to a converter. Local2PDF’s compressor runs in the browser. It is in beta, and the amount you save depends on the file.",

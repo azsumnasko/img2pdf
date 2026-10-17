@@ -97,7 +97,7 @@ export default function PhotosToPdfLayout({ children }: { children: React.ReactN
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How It Works",
+              "name": "How do I convert photos to PDF?",
               "description": "Convert photos to PDF locally in your browser. Ideal for photo albums and photo prints. Adjust page size, orientation, and margins. No upload, no signup.",
               "step": [
                 {

@@ -1,7 +1,7 @@
 export function HowItWorks() {
   return (
     <section className="how-it-works" aria-labelledby="how-it-works-title">
-      <h2 id="how-it-works-title">How it works</h2>
+      <h2 id="how-it-works-title">How do I use Local2PDF?</h2>
       <ol className="steps">
         <li className="step">
           <span className="step-number" aria-hidden="true">1</span>

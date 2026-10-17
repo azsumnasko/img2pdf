@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Resize PDF Pages Locally — Change Page Size Free",
+    title: "Resize PDF Pages Locally — Free",
   description:
     "Resize PDF pages to standard formats (A4, A3, Letter, Legal) or custom dimensions. Scale to fit or center without scaling — all in your browser.",
   alternates: { canonical: "https://local2pdf.com/tools/resize-pdf-pages" },
   openGraph: {
-  title: "Resize PDF Pages Locally — Change Page Size Free",
+  title: "Resize PDF Pages Locally — Free",
     description:
       "Resize PDF pages to A4, Letter, or custom sizes. Scale to fit or center content. Free, private, browser-based.",
     url: "https://local2pdf.com/tools/resize-pdf-pages",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Resize PDF Pages Locally — Change Page Size Free",
+    title: "Resize PDF Pages Locally — Free",
     description: "Resize PDF pages to A4, Letter, or custom sizes. Scale to fit or center content. Free, private, browser-based.",
     images: ["/og/resize-pdf-pages.png"],
   },
@@ -70,7 +70,7 @@ export default function ResizePdfPagesLayout({ children }: { children: React.Rea
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to resize PDF pages",
+              "name": "How do I resize PDF pages?",
               "description": "Resize PDF pages to standard formats (A4, A3, Letter, Legal) or custom dimensions. Scale to fit or center without scaling — all in your browser.",
               "step": [
                 {

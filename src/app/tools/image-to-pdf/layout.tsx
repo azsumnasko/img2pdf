@@ -97,7 +97,7 @@ export default function ImageToPdfLayout({ children }: { children: React.ReactNo
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How It Works",
+              "name": "How do I convert images to PDF?",
               "description": "Convert JPG, PNG, WebP, and HEIC to PDF free. Combine up to 25 images into one PDF. No signup, no watermark, no upload. Your files stay on your device.",
               "step": [
                 {

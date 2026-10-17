@@ -71,7 +71,7 @@ export default function ExtractImagesFromPdfLayout({ children }: { children: Rea
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to extract images from PDF",
+              "name": "How do I extract images from a PDF?",
               "description": "Render PDF pages to high-resolution PNGs right in your browser. No upload, no signup — all processing stays on your device.",
               "step": [
                 {

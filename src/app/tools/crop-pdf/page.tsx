@@ -189,7 +189,7 @@ export default function CropPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to crop PDF pages</h2>
+        <h2>How do I crop PDF pages?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Choose the PDF file you want to trim margins from.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Set margin values</h3><p>Enter the amount to trim from the top, right, bottom, and left of each page in millimeters.</p></div></li>

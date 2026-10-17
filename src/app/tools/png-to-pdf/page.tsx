@@ -18,7 +18,7 @@ export default function PngToPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to Convert PNG to PDF</h2>
+        <h2>How do I convert PNG to PDF?</h2>
         <ol className="steps">
           <li className="step">
             <span className="step-number">1</span>

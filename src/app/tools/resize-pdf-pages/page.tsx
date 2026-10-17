@@ -214,7 +214,7 @@ export default function ResizePdfPagesPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to resize PDF pages</h2>
+        <h2>How do I resize PDF pages?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Choose the PDF file you want to resize.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Choose target size &amp; mode</h3><p>Pick a preset (A4, Letter, etc.) or enter custom dimensions. Choose scale-to-fit, center, or extend canvas.</p></div></li>

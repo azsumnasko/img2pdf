@@ -94,7 +94,7 @@ export default function ImageToPdfPage() {
         </p>
         <div className="tool-hero-badges">
           <PrivacyBadge />
-          <span className="limit-badge">Free: up to {MAX_PAGES} pages per conversion. Unlimited conversions.</span>
+          <span className="limit-badge">Free: up to {MAX_PAGES} images per conversion. Unlimited conversions.</span>
         </div>
       </div>
 
@@ -211,7 +211,7 @@ export default function ImageToPdfPage() {
       <MakerPromo />
 
       <section className="how-it-works">
-        <h2>How It Works</h2>
+        <h2>How do I convert images to PDF?</h2>
         <ol>
           <li>Drop images or paste from clipboard — JPG, PNG, WebP, and HEIC formats are all supported</li>
           <li>Arrange pages, choose paper size (A4, US Letter, or custom), adjust margins and quality settings</li>

@@ -97,7 +97,7 @@ export default function PngToPdfLayout({ children }: { children: React.ReactNode
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Convert PNG to PDF",
+              "name": "How do I convert PNG to PDF?",
               "description": "Convert PNG images to PDF locally in your browser. Preserve transparency, adjust page size and margins. No upload, no signup, no watermark.",
               "step": [
                 {

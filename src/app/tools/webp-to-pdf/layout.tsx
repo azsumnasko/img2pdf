@@ -97,7 +97,7 @@ export default function WebpToPdfLayout({ children }: { children: React.ReactNod
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to Convert WebP to PDF",
+              "name": "How do I convert WebP to PDF?",
               "description": "Convert WebP images to PDF locally in your browser. Adjust page size, orientation, and margins. No upload, no signup, no watermark.",
               "step": [
                 {

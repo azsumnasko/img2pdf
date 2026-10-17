@@ -7,6 +7,7 @@ import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PdfPageGrid } from "@/components/tool/PdfPageGrid";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 import { ErrorBoundary } from "@/components/tool/ErrorBoundary";
+import { ToolGuide } from "@/components/content/ToolGuide";
 import { formatBytes } from "@/lib/format";
 
 export default function MergePdfPage() {
@@ -150,7 +151,7 @@ export default function MergePdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to merge PDF files</h2>
+        <h2>How do I merge PDF files?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDFs</h3><p>Click or drag and drop the PDF files you want to combine.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Reorder your pages</h3><p>Drag and drop to rearrange pages. Rotate individual pages if needed.</p></div></li>
@@ -201,6 +202,8 @@ export default function MergePdfPage() {
         <h2>Browser & Device Support</h2>
         <p>This tool works in all modern browsers: Chrome, Firefox, Edge, and Safari. Processing performance varies by device memory — larger files perform best on desktop with 8 GB RAM or more. Mobile devices may struggle with very large merges.</p>
       </section>
+
+      <ToolGuide id="merge-pdf" />
     </main>
     </ErrorBoundary>
   );

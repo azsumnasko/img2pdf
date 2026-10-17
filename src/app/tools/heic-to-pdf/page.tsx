@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
+import { ToolGuide } from "@/components/content/ToolGuide";
 
 export default function HeicToPdfPage() {
   return (
@@ -19,7 +20,7 @@ export default function HeicToPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to Convert HEIC to PDF</h2>
+        <h2>How do I convert HEIC to PDF?</h2>
         <ol className="steps">
           <li className="step">
             <span className="step-number">1</span>
@@ -153,6 +154,8 @@ export default function HeicToPdfPage() {
           <Link href="/tools/combine-images-to-pdf">Combine Images to PDF</Link>
         </p>
       </section>
+
+      <ToolGuide id="heic-to-pdf" />
     </main>
   );
 }

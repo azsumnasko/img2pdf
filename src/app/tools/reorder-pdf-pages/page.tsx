@@ -7,6 +7,7 @@ import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PdfPageGrid } from "@/components/tool/PdfPageGrid";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 import { ErrorBoundary } from "@/components/tool/ErrorBoundary";
+import { ToolGuide } from "@/components/content/ToolGuide";
 import { formatBytes } from "@/lib/format";
 
 export default function ReorderPdfPagesPage() {
@@ -151,7 +152,7 @@ export default function ReorderPdfPagesPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to reorder PDF pages</h2>
+        <h2>How do I reorder PDF pages?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Click or drag and drop the PDF whose pages you want to reorder.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Rearrange pages</h3><p>Drag pages into the desired order, or use the arrow buttons to move pages left or right.</p></div></li>
@@ -194,6 +195,8 @@ export default function ReorderPdfPagesPage() {
           <li><strong>Page quality is preserved.</strong> Reordering does not rasterize or reprocess page content — all original quality, fonts, and vector graphics remain intact.</li>
         </ul>
       </section>
+
+      <ToolGuide id="reorder-pdf-pages" />
     </main>
     </ErrorBoundary>
   );

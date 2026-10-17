@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | Local2PDF",
   },
   description:
-    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark. Image-to-PDF: up to 25 images per conversion.",
+    "Free PDF tools that work privately in your browser. Merge, split, rotate, convert, and compress PDFs. No uploads, no signup, no watermark. Image-to-PDF: up to 25 images per job.",
   metadataBase: new URL("https://local2pdf.com"),
   openGraph: {
     type: "website",

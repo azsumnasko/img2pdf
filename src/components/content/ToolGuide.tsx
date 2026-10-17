@@ -27,6 +27,67 @@ const GUIDES: Record<string, { heading: string; paragraphs: string[] }> = {
       "People use this for trip albums, homework photo sets, site-visit reports, and client proof packs. A single PDF is easier to email than a folder of mismatched formats, and recipients do not need a HEIC or WebP viewer.",
       "Transparent PNGs are placed on white. Animated WebP is not a multi-page animation; you get a still. Live Photos contribute the still frame. If a batch is larger than 25 images, convert it in parts and join the PDFs with Merge PDF.",
       "Processing is local. The images are read in the browser, drawn onto pages, and saved as a download. Local2PDF does not store the album.",
+      "After you download the PDF, open two or three pages in a reader before you delete the originals. If a phone photo looks soft, raise the quality preset and convert that batch again. For a clean print set, number the merged file with Add Page Numbers once every batch is joined.",
+    ],
+  },
+  "merge-pdf": {
+    heading: "Merge PDF files without uploading them",
+    paragraphs: [
+      "Merge PDF combines several PDF files into one document in your browser. There is no 25-page product cap. How many files you can join depends on the memory of the device you are using. A short set of invoices is routine; a stack of large scanned books can be slow on a phone.",
+      "Drop the files in, then drag pages from every source into the order you want. You can rotate a sideways page before you merge. The download is a new PDF. The originals on disk stay where they are until you replace them yourself.",
+      "Typical jobs are combining invoices for an accountant, joining scanned chapters into one book, assembling a cover with a body and an appendix, and packing contract exhibits into a single file. If you only need a few pages from a large source, extract those pages first and then merge the shorter files.",
+      "Password-protected PDFs must be unlocked before the browser can read them. Merging a signed PDF usually invalidates the digital signature, because the document bytes change. Interactive form fields from different files can conflict; open the result and check any fillable pages you still need.",
+      "Nothing is uploaded. Close other tabs if a large merge stalls, then try again with fewer files or smaller sources. After the download, keep the originals until you have opened the merged file in your reader.",
+    ],
+  },
+  "split-pdf": {
+    heading: "Split a PDF into separate files on your device",
+    paragraphs: [
+      "Split PDF turns one PDF into several smaller PDFs in the browser. There is no 25-page product cap. You can split every page into its own file, cut the document every N pages, or enter custom ranges such as 1-3,5,8-10. Page numbers in those ranges start at 1.",
+      "When the output is many files, the tool packs them into a ZIP so the browser can offer one download. That ZIP is built locally. The source PDF is never sent to a Local2PDF server.",
+      "People split bank statements by month, pull chapters out of a report, break a bulk scan of receipts into separate files, and cut a file that is too large for an email attachment. If you only want a handful of pages as one new PDF, Extract PDF Pages is the shorter path.",
+      "Encrypted PDFs must have their password removed first. Very large documents are limited by device memory. Custom ranges that skip pages produce one file per range, not one file per skipped gap. Keep the original until you have checked the first and last page of each result.",
+      "Split does not reorder or rotate pages. Fix orientation with Rotate PDF, or rearrange with Reorder PDF Pages, before you cut the file if the reading order is wrong. All of that still stays on your device.",
+    ],
+  },
+  "reorder-pdf-pages": {
+    heading: "Reorder PDF pages without an upload",
+    paragraphs: [
+      "Reorder PDF Pages lets you drag pages into a new sequence and download a new PDF. There is no 25-image or 25-page product cap. The practical limit is browser memory. Each page moves one at a time with drag-and-drop or the arrow controls; there is no multi-select drag.",
+      "Use this when a scanner fed pages out of order, when a presentation handout needs a different flow, when chapters were compiled wrong, or when an appendix should move to the end. You can rotate a page while you reorder if it is sideways.",
+      "Reordering does not rasterize the page. Fonts, vectors, and image quality stay as they were in the source. The original file on disk is unchanged until you overwrite it. Digital signatures usually break once the page order changes.",
+      "To reorder pages that currently live in several files, merge those PDFs first, then return here. To remove pages instead of moving them, use Delete PDF Pages. To keep a selection as a new file while leaving the rest alone, use Extract PDF Pages.",
+      "Processing is local. Open the downloaded PDF and skim the first few pages before you discard the source. On a slow device, close other tabs if the thumbnails take a long time to appear.",
+    ],
+  },
+  "extract-pdf-pages": {
+    heading: "Extract selected PDF pages locally",
+    paragraphs: [
+      "Extract PDF Pages copies the pages you check into a new file and leaves the source PDF untouched. There is no 25-page product cap. You can combine the selection into one PDF or download each selected page as its own file. Several separate files come as a ZIP.",
+      "This is the right tool when you want a few pages from a large packet: a single form, a signed page, or a chapter. Split PDF is better when you need every page or every N pages as separate files. Delete PDF Pages is better when the goal is a cleaned copy of the whole document with some pages removed.",
+      "Combine mode keeps the original order of the pages you selected. Quality is preserved; pages are copied, not re-rendered as images. Password-protected files must be unlocked first. Changing a signed document for any reason can invalidate the signature on the copy you create.",
+      "After you extract, you can merge the new file with other PDFs, add page numbers, or rotate a sideways page. None of those steps upload the document. Keep the original until you have opened the extract and confirmed the page count.",
+      "Very large source files are limited by device memory. If the preview is slow, close other tabs or extract a smaller selection first. The work stays in the browser from the moment you choose the file until you download the result.",
+    ],
+  },
+  "heic-to-pdf": {
+    heading: "Convert HEIC photos to PDF in the browser",
+    paragraphs: [
+      "HEIC to PDF turns iPhone and iPad photos into a PDF you can send to anyone. Up to 25 images go into one conversion, the same cap as Image to PDF. Safari decodes HEIC natively. Other browsers use an on-device decoder that loads once and then runs locally.",
+      "HEIC files are small on the camera roll, but many Windows apps and email systems still prefer PDF or JPEG. Converting before you share avoids a back-and-forth about formats. Live Photos contribute the still frame, not the short video.",
+      "Arrange the pages, pick A4 or Letter for print, or fit-to-image when each photo should keep its shape. Rotate any sideways shot before you convert. If you have more than 25 photos, convert in batches and join the PDFs with Merge PDF.",
+      "You can mix HEIC with JPEG, PNG, and WebP on Combine Images to PDF or the main Image to PDF tool. Starting here is enough when every file is HEIC. The photos are not uploaded to Local2PDF. After the first successful decode, later conversions on the same device are usually faster.",
+      "Very large albums can be heavy on older phones. Close other tabs, or convert a smaller batch, if the page stalls. Keep the originals until you have opened the PDF and checked a few pages.",
+    ],
+  },
+  "screenshot-to-pdf": {
+    heading: "Turn screenshots into a PDF without uploading them",
+    paragraphs: [
+      "Screenshot to PDF builds a document from PNG or JPEG captures in your browser. The same 25-image cap as Image to PDF applies. That is a per-conversion limit, not a daily quota. PDF tools such as merge and split do not use that number.",
+      "Screenshots often show emails, dashboards, or customer data. Local processing means those pixels stay on your device. Transparent PNG edges are placed on white so every PDF reader shows the same page.",
+      "Use this for bug reports, onboarding guides, and short how-to packs. Order the captures so the story reads top to bottom. Fit-to-image keeps UI chrome sharp; A4 or Letter is better when you will print. If a flow has more than 25 frames, convert in parts and merge the PDFs afterward.",
+      "For a single screenshot format you already know, PNG to PDF or JPG to PDF is the same converter with a narrower landing page. Combine Images to PDF is the right entry when the set mixes screenshots with phone photos.",
+      "Nothing is uploaded. After you download, open the PDF and confirm the sequence before you delete the source images. On a long capture set, closing other tabs keeps memory free for the render.",
     ],
   },
   "pdf-to-jpg": {
@@ -66,6 +127,7 @@ const GUIDES: Record<string, { heading: string; paragraphs: string[] }> = {
       "This is not the same as cropping. Crop removes a margin from the current page. Resize changes the destination size and how the existing content sits inside it. If a scan has a black border, crop first, then resize if the paper size is still wrong.",
       "Vector text stays in the PDF when you are changing the page box rather than re-rendering the page as an image. That keeps search and copy working in normal files. Very large page counts depend on device memory. A signed PDF can lose a valid signature once the bytes change.",
       "The file never leaves the browser. Download the resized PDF and keep the original until you have checked a couple of pages in your reader.",
+      "If pages are sideways, rotate them before you resize so the new paper size matches the reading direction. For a packet that must be both A4 and numbered, resize first, then use Add Page Numbers so the margin matches the final page box.",
     ],
   },
   "rotate-pdf": {
@@ -84,6 +146,7 @@ const GUIDES: Record<string, { heading: string; paragraphs: string[] }> = {
       "Typical cleanups are blank pages at the end of a scan, a cover sheet you do not want to forward, and a confidential appendix that should not leave your machine. Because the edit is local, that appendix is not uploaded in order to be removed.",
       "If you need those pages as their own file, use Extract PDF Pages instead of deleting them. If the pages are only in the wrong order, use Reorder PDF Pages. Deletion is permanent in the output file: the new PDF simply does not contain the checked pages.",
       "Interactive forms and outlines can shift when pages disappear. Digital signatures usually break because the document bytes changed. Very large files are limited by browser memory, not by a fixed page count. Close other tabs if the preview is slow.",
+      "After you download, open the cleaned file and confirm the page count before you overwrite the source. If you later need a continuous page sequence, number the cleaned PDF with Add Page Numbers. None of those steps leave your device.",
     ],
   },
   "webp-to-pdf": {

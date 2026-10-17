@@ -197,7 +197,7 @@ export default function NUpPdfPage() {
       </div>
 
       <section className="how-it-works">
-        <h2>How to create an N-Up PDF</h2>
+        <h2>How do I create an N-Up PDF?</h2>
         <ol className="steps">
           <li className="step"><span className="step-number">1</span><div><h3>Select your PDF</h3><p>Choose the PDF file you want to rearrange into an N-up layout.</p></div></li>
           <li className="step"><span className="step-number">2</span><div><h3>Choose layout &amp; settings</h3><p>Pick how many pages per sheet (2-up, 4-up, etc.), output size, and padding between pages.</p></div></li>

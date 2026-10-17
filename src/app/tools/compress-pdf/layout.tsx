@@ -68,7 +68,7 @@ export default function CompressPdfLayout({ children }: { children: React.ReactN
             {
               "@context": "https://schema.org",
               "@type": "HowTo",
-              "name": "How to compress a PDF",
+              "name": "How do I compress a PDF?",
               "description": "Compress PDF files to reduce file size without upload. All processing stays on your device.",
               "step": [
                 {

@@ -65,7 +65,7 @@ export function useProject() {
           });
           totalBytes += file.size;
         } else {
-          errors.push({ fileIndex: i, fileName: file.name, errorCode: "TOO_MANY_FILES", message: `Up to ${MAX_PAGES} pages per conversion.` });
+          errors.push({ fileIndex: i, fileName: file.name, errorCode: "TOO_MANY_FILES", message: `Up to ${MAX_PAGES} images per conversion.` });
         }
       }
     }

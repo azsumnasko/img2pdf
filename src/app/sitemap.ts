@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 const BASE = "https://local2pdf.com";
-const LAST_MOD = new Date("2026-07-24");
+const LAST_MOD = new Date("2026-10-17");
 
 type Entry = {
   path: string;
