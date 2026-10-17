@@ -51,9 +51,15 @@ export default async function BlogPostPage({ params }: Props) {
             mainEntityOfPage: url,
             url,
             author: {
-              "@type": "Organization",
+              "@type": "Person",
               name: BLOG_AUTHOR.name,
+              jobTitle: BLOG_AUTHOR.jobTitle,
               url: BLOG_AUTHOR.url,
+              worksFor: {
+                "@type": "Organization",
+                name: BLOG_AUTHOR.worksForName,
+                url: BLOG_AUTHOR.worksForUrl,
+              },
             },
             publisher: { "@id": "https://local2pdf.com/#organization" },
           }),

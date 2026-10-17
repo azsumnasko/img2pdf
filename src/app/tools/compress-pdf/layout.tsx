@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Compress PDF Locally — Reduce File Size",
   description:
-    "Compress PDF files to reduce file size without upload. All processing stays on your device.",
+    "Compress a PDF in your browser to shrink email attachments. Safe mode keeps structure; image-heavy mode is for scans. Your file stays on your device. Free.",
   alternates: { canonical: "https://local2pdf.com/tools/compress-pdf" },
   openGraph: {
   title: "Compress PDF Locally — Reduce File Size",
     description:
-      "Compress PDF files to reduce file size. Processing happens entirely in your browser. Free and private.",
+      "Compress a PDF in your browser to shrink email attachments. Safe mode keeps structure; image-heavy mode is for scans. Your file stays on your device. Free.",
     url: "https://local2pdf.com/tools/compress-pdf",
     type: "website",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Compress PDF Locally — Reduce File Size",
-    description: "Compress PDF files to reduce file size. Processing happens entirely in your browser. Free and private.",
+    description: "Compress a PDF in your browser to shrink email attachments. Safe mode keeps structure; image-heavy mode is for scans. Your file stays on your device. Free.",
     images: ["/og/compress-pdf.png"],
   },
 

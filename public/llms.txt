@@ -14,7 +14,7 @@
 ## Official information
 
 - [About](https://local2pdf.com/about): Operator, product identity and official facts.
-- [Blog](https://local2pdf.com/blog): Articles by Firmify EOOD, the operator of Local2PDF.
+- [Blog](https://local2pdf.com/blog): Articles by Atanas Ignatov, manager of Firmify EOOD, the operator of Local2PDF.
 - [Security](https://local2pdf.com/security): Local processing architecture and limitations.
 - [Privacy](https://local2pdf.com/privacy): Data handling, analytics and advertising.
 - [Contact](https://local2pdf.com/contact): Get support and help.

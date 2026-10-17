@@ -5,12 +5,12 @@ import { BLOG_AUTHOR, BLOG_POSTS } from "@/content/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Notes from Firmify EOOD, the operator of Local2PDF, on private browser PDF tools, limits, and local processing.",
+    "Notes from Atanas Ignatov, manager of Firmify EOOD, on private browser PDF tools, the 25-image limit, and local processing.",
   alternates: { canonical: "https://local2pdf.com/blog" },
   openGraph: {
     title: "Local2PDF Blog",
     description:
-      "Notes from Firmify EOOD on private browser PDF tools, the image-to-PDF limit, and local processing.",
+      "Notes from Atanas Ignatov, manager of Firmify EOOD, on private browser PDF tools and local processing.",
     url: "https://local2pdf.com/blog",
     type: "website",
   },
@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
     <main className="content-page">
       <h1>Local2PDF blog</h1>
       <p>
-        Written by {BLOG_AUTHOR.name}, the company that operates Local2PDF. These notes cover how
+        Written by {BLOG_AUTHOR.name}, {BLOG_AUTHOR.role}. These notes cover how
         the tools behave, including the 25-image cap on image-to-PDF and what stays on your device.
       </p>
       <ul className="blog-list">

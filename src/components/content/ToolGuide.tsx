@@ -104,6 +104,16 @@ const GUIDES: Record<string, { heading: string; paragraphs: string[] }> = {
       "The new file is a PDF, not a printer spool. You can still merge it or split it afterward. A signed source will not keep a valid signature after the pages are redrawn into a new layout. The work is done in the browser, and the file is not uploaded.",
     ],
   },
+  "add-page-numbers-to-pdf": {
+    heading: "Add page numbers without uploading the PDF",
+    paragraphs: [
+      "Add Page Numbers writes a number onto each page of an existing PDF and downloads a new file. The work happens in the browser. It is not an image conversion, so the 25-image cap does not apply. A long contract, a thesis, or a slide printout can all be numbered. The practical limit is the memory of the device you are using, not a fixed page count.",
+      "You choose where the number sits: top or bottom of the page, and left, center, or right. The format is one of four patterns: a plain number, “Page 1”, “1 of N”, or “Page 1 of N”. N is the total number of pages in the file, including pages you chose not to number. The typeface is Helvetica. Font size runs from 6 to 48 points, and the default is 10. You also pick a color and a margin in millimetres. The default margin is 15 mm.",
+      "Start page and start number are separate. Start page is the first page that receives a number, so setting it to 2 leaves a cover unnumbered. Start number is the figure printed on that first numbered page. A document that should begin at page 12, after a front section numbered elsewhere, uses start number 12. Pages before the start page are copied through unchanged.",
+      "The number is drawn at the margin you set. It does not search for empty space. If a header, footer, or photo already occupies that edge, raise the margin until the number sits clear of it. Number the file after you rotate, crop, or resize, because those edits change where the edge is. Merging several PDFs first, then numbering the combined file, gives one continuous sequence.",
+      "The original file on your device is not replaced until you save over it. Changing the PDF can invalidate a digital signature, so keep the signed original if the signature still matters. Password-protected files have to be openable in the browser before numbers can be added. Nothing in this tool uploads the document to a Local2PDF server.",
+    ],
+  },
   "crop-pdf": {
     heading: "Crop PDF margins on your device",
     paragraphs: [

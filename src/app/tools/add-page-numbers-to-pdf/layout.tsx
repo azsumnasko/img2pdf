@@ -61,8 +61,8 @@ export default function AddPageNumbersToPdfLayout({ children }: { children: Reac
               "@context": "https://schema.org", "@type": "FAQPage",
               "mainEntity": [
                 { "@type": "Question", "name": "Where can I position page numbers?", "acceptedAnswer": { "@type": "Answer", "text": "You can place numbers at the top or bottom of the page, aligned left, center, or right. Margins and starting page are also configurable." } },
-                { "@type": "Question", "name": "Can I customize the number format?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can change the font, font size, color, and prefix/suffix text (e.g., 'Page 1 of 10')." } },
-                { "@type": "Question", "name": "Will adding page numbers overwrite existing content?", "acceptedAnswer": { "@type": "Answer", "text": "No. Page numbers are added as a new layer and are placed in the margin area, so they will not overlap with existing page content." } },
+                { "@type": "Question", "name": "Can I customize the number format?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose a plain number, Page 1, 1 of N, or Page 1 of N. N is the page count of the whole file. Font size and color are adjustable. The typeface is Helvetica." } },
+                { "@type": "Question", "name": "Will adding page numbers overwrite existing content?", "acceptedAnswer": { "@type": "Answer", "text": "The number is drawn at the margin you set. It does not look for empty space. If a header or footer already occupies that edge, increase the margin so the number does not cover it." } },
                 { "@type": "Question", "name": "Are my files uploaded to Local2PDF servers?", "acceptedAnswer": { "@type": "Answer", "text": "No. All processing happens entirely in your browser. Your files never leave your device." } },
                 { "@type": "Question", "name": "Is this tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All Local2PDF tools are completely free. No signup, no watermark, and unlimited use." } }
               ]

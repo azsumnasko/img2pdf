@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+  description:
+    "Local2PDF privacy policy: PDF and image tools run in your browser, files are not uploaded, and this page covers logs, analytics, cookies, and ads in full.",
   alternates: { canonical: "https://local2pdf.com/privacy" },
   openGraph: {
     title: "Privacy Policy",
-    description: "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+    description:
+      "Local2PDF privacy policy: PDF and image tools run in your browser, files are not uploaded, and this page covers logs, analytics, cookies, and ads in full.",
     url: "https://local2pdf.com/privacy",
     type: "website",
     images: [
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Privacy Policy",
     description:
-      "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+      "Local2PDF privacy policy: PDF and image tools run in your browser, files are not uploaded, and this page covers logs, analytics, cookies, and ads in full.",
   },
 };
 
@@ -38,7 +40,7 @@ export default function PrivacyPage() {
               "@type": "WebPage",
               name: "Privacy Policy",
               description:
-                "Local2PDF privacy policy — all processing happens locally, your files are never uploaded.",
+                "Local2PDF privacy policy: PDF and image tools run in your browser, files are not uploaded, and this page covers logs, analytics, cookies, and ads in full.",
               url: "https://local2pdf.com/privacy",
               publisher: {
                 "@id": "https://local2pdf.com/#organization",

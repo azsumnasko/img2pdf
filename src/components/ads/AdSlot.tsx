@@ -10,7 +10,10 @@ const SLOT_DIMENSIONS: Record<string, { minHeight: number; maxWidth: number }> =
   rail: { minHeight: 250, maxWidth: 300 },
 };
 
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+
 export function AdSlot({ id, type = "content" }: AdSlotProps) {
+  if (!ADSENSE_CLIENT || !/^ca-pub-\d{10,}$/.test(ADSENSE_CLIENT)) return null;
   const dims = SLOT_DIMENSIONS[type]!;
 
   return (
@@ -29,7 +32,7 @@ export function AdSlot({ id, type = "content" }: AdSlotProps) {
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
-          data-ad-client="ca-pub-XXXXXXXXXXXX"
+          data-ad-client={ADSENSE_CLIENT}
           data-ad-slot={id}
           data-ad-format={type === "rail" ? "vertical" : "auto"}
           data-full-width-responsive="true"

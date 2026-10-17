@@ -7,6 +7,7 @@ import { PdfDropzone } from "@/components/tool/PdfDropzone";
 import { PrivacyBadge } from "@/components/tool/PrivacyBadge";
 import { ErrorBoundary } from "@/components/tool/ErrorBoundary";
 import { formatBytes } from "@/lib/format";
+import { ToolGuide } from "@/components/content/ToolGuide";
 
 type Position = "top" | "bottom";
 type Alignment = "left" | "center" | "right";
@@ -224,7 +225,8 @@ export default function AddPageNumbersToPdfPage() {
         <h2>Frequently asked questions</h2>
         <div className="faq-list">
           <details className="faq-item"><summary>Can I skip numbering the first page?</summary><p>Yes. Set "Start page" to 2 or any page number — pages before that will not be numbered.</p></details>
-          <details className="faq-item"><summary>What formats are available?</summary><p>Plain numbers (1, 2, 3), "Page 1", "1 of N", and "Page 1 of N" — with customizable color and font size.</p></details>
+          <details className="faq-item"><summary>What formats are available?</summary><p>Plain numbers (1, 2, 3), "Page 1", "1 of N", and "Page 1 of N". Color and font size are adjustable. The typeface is Helvetica. N is the page count of the whole file.</p></details>
+          <details className="faq-item"><summary>Will the number cover existing text?</summary><p>It is drawn at the margin you set, and it does not look for a blank spot. If a header or footer is already there, increase the margin so the number sits clear of it.</p></details>
         </div>
       </section>
 
@@ -245,6 +247,7 @@ export default function AddPageNumbersToPdfPage() {
           <li className="use-case"><h3>Organizing business reports</h3><p>Add professional page numbers to quarterly reports, proposals, and internal documentation for easy navigation.</p></li>
         </ul>
       </section>
+      <ToolGuide id="add-page-numbers-to-pdf" />
     </main>
     </ErrorBoundary>
   );

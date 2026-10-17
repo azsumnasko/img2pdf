@@ -10,6 +10,7 @@ Allow: /
 
 # Product facts
 # Operator: Firmify EOOD (Bulgaria)
+# Blog author: Atanas Ignatov, manager of Firmify EOOD
 # Processing: browser-local — document contents are not uploaded to Local2PDF servers
 # Pricing: free; no account; no watermark
 # Contact: support@local2pdf.com

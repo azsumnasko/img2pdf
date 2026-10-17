@@ -79,10 +79,10 @@ export default function AboutPage() {
       <section>
         <h2>Who We Are</h2>
         <p>
-          Operated by Firmify EOOD in Bulgaria. We build privacy-respecting tools that keep your
+          Operated by Firmify EOOD in Bulgaria. Atanas Ignatov, manager of Firmify EOOD, writes
+          the <a href="/blog">Local2PDF blog</a>. We build privacy-respecting tools that keep your
           data on your device. Our mission is to provide useful document utilities without
-          compromising your privacy. Guides on the <a href="/blog">Local2PDF blog</a> are published
-          by Firmify EOOD.
+          compromising your privacy.
         </p>
       </section>
 

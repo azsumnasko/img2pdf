@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Crop PDF Pages Locally — Trim Margins Free",
   description:
-    "Crop or trim margins from PDF pages. Remove whitespace and adjust page boundaries — all in your browser.",
+    "Crop PDF margins in your browser. Trim scanner borders and extra whitespace from each page, then download the tighter file. Your PDF is not uploaded. Free.",
   alternates: { canonical: "https://local2pdf.com/tools/crop-pdf" },
   openGraph: {
   title: "Crop PDF Pages Locally — Trim Margins Free",
     description:
-      "Crop and trim PDF page margins. Resize pages by removing unwanted whitespace. Free, private, browser-based.",
+      "Crop PDF margins in your browser. Trim scanner borders and extra whitespace from each page, then download the tighter file. Your PDF is not uploaded. Free.",
     url: "https://local2pdf.com/tools/crop-pdf",
     type: "website",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Crop PDF Pages Locally — Trim Margins Free",
-    description: "Crop and trim PDF page margins. Resize pages by removing unwanted whitespace. Free, private, browser-based.",
+    description: "Crop PDF margins in your browser. Trim scanner borders and extra whitespace from each page, then download the tighter file. Your PDF is not uploaded. Free.",
     images: ["/og/crop-pdf.png"],
   },
 
